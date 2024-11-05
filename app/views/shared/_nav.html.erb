@@ -7,7 +7,12 @@
       <%= image_tag "logo-text.svg"%>
       </li>
       <li class="dropdown_nav">
-        <a href="#">Laboratoire <br>des plantes</a>
+        <%= link_to "" do %>
+          <p>Laboratoire <br>des plantes</p>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <a href="#">
+        Laboratoire <br>des plantes</a>
         <%= render "shared/mega_menu" %>
       </li>
       <li class="dropdown_nav">
