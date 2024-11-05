@@ -2,17 +2,22 @@
   <nav>
   <ul>
     <div>
-      <li>Logo</li>
+      <li id="logo_nav">
+      <%= image_tag "logo-feuille.svg"%>
+      <%= image_tag "logo-text.svg"%>
+      </li>
       <li class="dropdown_nav">
         <a href="#">Laboratoire des plantes</a>
-        <div class="mega_menu">
-          <div class="container_menu">
-            <p>verver</p>
-          </div>
-        </div>
+        <%= render "shared/mega_menu" %>
       </li>
-      <li><a href="#">Analyse</a></li>
-      <li><a href="#">Laboratoire cosmétologie</a></li>
+      <li class="dropdown_nav">
+        <a href="#">Analyse</a>
+        <%= render "shared/mega_menu" %>
+      </li>
+      <li class="dropdown_nav">
+        <a href="#">Laboratoire cosmétologie</a>
+        <%= render "shared/mega_menu" %>
+      </li>
       <li><a href="#">Nos actifs</a></li>
     </div>
     <div>
