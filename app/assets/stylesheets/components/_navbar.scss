@@ -133,6 +133,8 @@ nav > ul > li:hover > a {
     }
     .intro_menu {
       grid-area: intro;
+      display: flex;
+      gap: 28px;
       .intro_menu_img {
         img {}
       }
