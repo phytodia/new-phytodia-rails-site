@@ -90,9 +90,12 @@ nav > ul > li:hover > a {
   border: solid 1px;
   li, p, h2, h3 {margin: 0;}
   li {
+    //border-bottom: 4px solid;
     a {display: flex; align-items: end;
       gap: 8px;
       padding: 14px 16px;
+      //border-bottom: solid 4px;
+      //border-width: 90%;
     }
   }
   nav {
@@ -107,12 +110,12 @@ nav > ul > li:hover > a {
       list-style: none;
       justify-content: space-between;
       position: relative;
-      & > div {display: flex; align-items: flex-end;}
+      & > div {display: flex; align-items: flex-end; gap:24px;}
     }
     li {height: fit-content;}
   }
   #logo_nav {
-    margin-right: 24px;
+    //margin-right: 24px;
     padding: 14px 0;
   }
 }
