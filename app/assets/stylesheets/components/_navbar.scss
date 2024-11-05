@@ -89,6 +89,12 @@ nav > ul > li:hover > a {
 #navbar_2 {
   border: solid 1px;
   li, p, h2, h3 {margin: 0;}
+  li {
+    a {display: flex; align-items: end;
+      gap: 8px;
+      padding: 14px 16px;
+    }
+  }
   nav {
     border: solid 1px;
     width: 100%;
@@ -107,6 +113,7 @@ nav > ul > li:hover > a {
   }
   #logo_nav {
     margin-right: 24px;
+    padding: 14px 0;
   }
 }
 .dropdown_nav {

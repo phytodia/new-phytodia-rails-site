@@ -8,27 +8,31 @@
       </li>
       <li class="dropdown_nav">
         <%= link_to "" do %>
-          <p>Laboratoire <br>des plantes</p>
+          <span>Laboratoire <br>des plantes</span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
-        <a href="#">
-        Laboratoire <br>des plantes</a>
         <%= render "shared/mega_menu" %>
       </li>
       <li class="dropdown_nav">
-        <a href="#">Analyse</a>
+        <%= link_to "" do %>
+          <span>Analysesn Recherche<br> & Développement</span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
         <%= render "shared/mega_menu" %>
       </li>
       <li class="dropdown_nav">
-        <a href="#">Laboratoire cosmétologie</a>
+        <%= link_to "" do %>
+          <span>Laboratoire <br>cosmétologie</span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
         <%= render "shared/mega_menu" %>
       </li>
-      <li><a href="#">Nos actifs</a></li>
+      <li><a href="#"><span>Nos actifs</span></a></li>
     </div>
     <div>
-      <li>A propos</li>
-      <li>Blog</li>
-      <li>Nous contacter</li>
+      <li><%= link_to "À PROPOS" %></li>
+      <li><%= link_to "BLOG" %></li>
+      <li><%= link_to "NOUS CONTACTER" %></li>
       <div>
         <p>Langues</p>
       </div>
