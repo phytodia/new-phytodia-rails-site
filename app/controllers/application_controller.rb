@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   allow_browser versions: :modern
 
   around_action :switch_locale
+  before_action :langues_available
 
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
@@ -15,4 +16,9 @@ class ApplicationController < ActionController::Base
   #def default_url_options
   #  { locale: I18n.locale }
   #end
+  private
+  def langues_available
+    @langues = I18n.available_locales.select {|lang| lang == :fr || lang == :en}
+  end
+
 end

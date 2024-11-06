@@ -42,8 +42,13 @@
         <li><%= link_to "NOUS CONTACTER","", class:"btn_contact" %></li>
         <div id="selector_langues">
           <%= image_tag "globe.svg"%>
-          <%= link_to "FR" %>|
-          <%= link_to "EN" %>
+          <% @langues.each do |langue|%>
+            <% if locale == langue %>
+              <%= link_to langue.to_s.upcase, url_for(locale: langue),class:"current_langue" %>|
+            <% else %>
+              <%= link_to langue.to_s.upcase, url_for(locale: langue) %>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
