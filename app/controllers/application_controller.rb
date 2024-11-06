@@ -10,12 +10,10 @@ class ApplicationController < ActionController::Base
     I18n.with_locale(locale, &action)
   end
 
-  #def default_url_options
-  #  { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
-  #end
-  #def default_url_options
-  #  { locale: I18n.locale }
-  #end
+  def default_url_options
+    { locale: I18n.locale }
+  end
+
   private
   def langues_available
     @langues = I18n.available_locales.select {|lang| lang == :fr || lang == :en}
