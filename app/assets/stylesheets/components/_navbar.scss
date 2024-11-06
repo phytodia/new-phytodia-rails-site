@@ -1,105 +1,18 @@
 a {text-decoration: none;}
 
-#navbar {
-.container, .container_grid {
-  border: solid 1px;
-	margin: auto;
-  //width: 100%;
-	max-width: 1440px;
-}
-
-ul {
-	padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-	list-style: none;
-}
-
-nav > div {
-	//background: #0ca0d6;
-	font-size: 0;
-	position: relative;
-  display: flex;
-  //max-width: 1440px;
-  //width: 100%;
-}
-
-nav > div > ul > li {
-	display: inline-block;
-  font-size: 14px;
-  padding: 0 15px;
-  position: relative;
-}
-
-nav > div > ul > li > a {
-	//color: #fff;
-  	display: block;
-  	padding: 20px 0;
-  	border-bottom: 3px solid transparent;
-    transition: all .3s ease;
-}
-nav > ul > li:hover > a {
-	color: #444;
-  	border-bottom: 3px solid #444;
-}
-
-.mega-menu {
-	background: #eee;
-  	visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-  	position: absolute;
-  	left: 0;
-  	width: 100%;
-    padding-bottom: 20px;
-}
-.mega-menu h3 {color: #444;}
-
-.mega-menu .container {
-    display: flex;
-}
-.mega-menu .container_grid {
-  display: grid;
-}
-.mega-menu .item {
-	flex-grow: 1;
-    margin: 0 10px;
-}
-.mega-menu .item img {
-    width: 100%;
-}
-.mega-menu a {
-	border-bottom: 1px solid #ddd;
-  	color: #4ea3d8;
-  	display: block;
-  	padding: 10px 0;
-}
-.mega-menu a:hover {color: #2d6a91;}
-
-
-.dropdown {position: static;}
-
-  .dropdown:hover .mega-menu {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-
 #navbar_2 {
-  border: solid 1px;
+  //border: solid 1px;
   li, p, h2, h3 {margin: 0;}
-  li {
+  .header_nav_link a {
     //border-bottom: 4px solid;
-    a {display: flex; align-items: end;
-      gap: 8px;
-      padding: 14px 16px;
+    display: flex; align-items: end;
+    gap: 8px;
+    padding: 14px 16px;
       //border-bottom: solid 4px;
       //border-width: 90%;
-    }
   }
   nav {
-    border: solid 1px;
+    //border: solid 1px;
     width: 100%;
     max-width: 1440px;
     margin: auto;
@@ -158,8 +71,10 @@ nav > ul > li:hover > a {
     .links_menu {
       grid-area: links;
       .grid_links {
-        display: grid !important;
-        grid-template-columns: repeat(3,1fr) !important;
+        display: block !important;
+        //display: grid !important;
+        //grid-template-columns: repeat(3,1fr) !important;
+        columns: 3 !important;
       }
     }
   }
@@ -167,4 +82,15 @@ nav > ul > li:hover > a {
 .dropdown_nav:hover .mega_menu {
   visibility: visible;
   opacity: 1;
+}
+.header_nav_link > a {
+  border-bottom: 4px solid;
+  &:hover {border-bottom: 4px solid $green;}
+}
+.grid_links ul {
+  display: block !important;
+  li {padding:0;}
+}
+.grid_links li a {
+  padding: 0 !important;
 }
