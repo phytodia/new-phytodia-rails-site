@@ -1,7 +1,7 @@
 <div id="navbar_2">
   <nav>
   <ul>
-    <div>
+    <div class="primary_buttons_nav">
       <li id="logo_nav">
       <%= image_tag "logo-feuille.svg"%>
       <%= image_tag "logo-text.svg"%>
@@ -11,30 +11,40 @@
           <span>Laboratoire <br>des plantes</span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
-        <%= render "shared/mega_menu" %>
+        <%= render "shared/mega_menu_plantes" %>
       </li>
       <li class="dropdown_nav header_nav_link">
         <%= link_to "" do %>
           <span>Analyses, Recherche<br> & Développement</span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
-        <%= render "shared/mega_menu" %>
+        <%= render "shared/mega_menu_labo" %>
       </li>
       <li class="dropdown_nav header_nav_link">
         <%= link_to "" do %>
           <span>Laboratoire <br>cosmétologie</span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
-        <%= render "shared/mega_menu" %>
+        <%= render "shared/mega_menu_cosme" %>
       </li>
-      <li><a href="#"><span>Nos actifs</span></a></li>
+      <li class="dropdown_nav header_nav_link">
+        <%= link_to "" do %>
+          <span>Nos produits<br> & actifs</span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <%= render "shared/mega_menu_cosme" %>
+      </li>
     </div>
-    <div>
-      <li><%= link_to "À PROPOS" %></li>
-      <li><%= link_to "BLOG" %></li>
-      <li><%= link_to "NOUS CONTACTER" %></li>
-      <div>
-        <p>Langues</p>
+    <div class="second_buttons_nav">
+      <li><%= link_to "À PROPOS",class:"header_nav_link_secondary" %></li>
+      <li><%= link_to "BLOG",class:"header_nav_link_secondary" %></li>
+      <div id="contact_and_langues">
+        <li><%= link_to "NOUS CONTACTER","", class:"btn_contact" %></li>
+        <div id="selector_langues">
+          <%= image_tag "globe.svg"%>
+          <%= link_to "FR" %>|
+          <%= link_to "EN" %>
+        </div>
       </div>
     </div>
   </ul>

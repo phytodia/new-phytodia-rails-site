@@ -23,7 +23,7 @@ a {text-decoration: none;}
       list-style: none;
       justify-content: space-between;
       position: relative;
-      & > div {display: flex; align-items: flex-end; gap:24px;}
+      & > .primary_buttons_nav {display: flex; align-items: flex-end; gap:24px;}
     }
     li {height: fit-content;}
   }
@@ -93,4 +93,27 @@ a {text-decoration: none;}
 }
 .grid_links li a {
   padding: 0 !important;
+}
+
+.second_buttons_nav {
+  display: flex;
+  align-items: center;
+  gap:24px;
+  font-size: 0.9em;
+}
+#contact_and_langues {
+  border: solid 1px;
+  display: flex;
+  height: auto;
+  align-items: center;
+  border-radius: 25px;
+  background-color: $gray-light;
+  border: none;
+  li {display: flex;}
+}
+#selector_langues {
+  border: solid 1px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
