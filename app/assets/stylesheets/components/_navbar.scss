@@ -107,7 +107,8 @@ a {text-decoration: none;}
   height: auto;
   align-items: center;
   border-radius: 25px;
-  background-color: $gray-light;
+  //background-color: $gray-light;
+  background-color: rgba(63, 119, 58, 0.08);
   border: none;
   li {display: flex;}
 }
