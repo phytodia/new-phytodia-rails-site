@@ -7,21 +7,21 @@
       <%= image_tag "logo-text.svg"%>
       </li>
       <li class="dropdown_nav header_nav_link">
-        <%= link_to "" do %>
+        <%= link_to "#" do %>
           <span><%= t('navbar.laboratoire_plantes_html') %></span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
         <%= render "shared/mega_menu_plantes" %>
       </li>
       <li class="dropdown_nav header_nav_link">
-        <%= link_to "" do %>
+        <%= link_to "#" do %>
           <span><%= t('navbar.laboratoire_analyses_html') %></span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
         <%= render "shared/mega_menu_labo" %>
       </li>
       <li class="dropdown_nav header_nav_link">
-        <%= link_to "" do %>
+        <%= link_to "#" do %>
           <span><%= t('navbar.laboratoire_cosmetologie_html') %></span>
           <%= image_tag "chevron-bas.svg" %>
         <% end %>
@@ -36,8 +36,8 @@
       </li>
     </div>
     <div class="second_buttons_nav">
-      <li><%= link_to t('navbar.about'),class:"header_nav_link_secondary" %></li>
-      <li><%= link_to t('navbar.blog'),class:"header_nav_link_secondary" %></li>
+      <li><%= link_to t('navbar.about'),"",class:"header_nav_link_secondary" %></li>
+      <li><%= link_to t('navbar.blog'),"",class:"header_nav_link_secondary" %></li>
       <div id="contact_and_langues">
         <li><%= link_to t('contact.btn_contact').upcase,"", class:"btn_contact" %></li>
         <div id="selector_langues">
