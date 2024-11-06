@@ -1,3 +1,8 @@
-h1 {
+body {background-color: white;}
+.inside {
+  max-width: 1088px;
+}
+h1,h2,h3, p, a, li {
   font-family: "Rubik", sans-serif;
 }
+a {text-decoration: none; color: black;}

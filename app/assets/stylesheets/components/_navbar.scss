@@ -1,0 +1,124 @@
+a {text-decoration: none;}
+
+#navbar {
+  //border: solid 1px;
+  li, p, h2, h3 {margin: 0;}
+  .header_nav_link a {
+    //border-bottom: 4px solid;
+    display: flex; align-items: end;
+    gap: 8px;
+    padding: 14px 16px;
+      //border-bottom: solid 4px;
+      //border-width: 90%;
+  }
+  nav {
+    //border: solid 1px;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      justify-content: space-between;
+      position: relative;
+      & > .primary_buttons_nav {display: flex; align-items: flex-end; gap:24px;}
+    }
+    li {height: fit-content;}
+  }
+  #logo_nav {
+    //margin-right: 24px;
+    padding: 14px 0;
+  }
+}
+.dropdown_nav {
+  .mega_menu {
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  	position: absolute;
+  	left: 0;
+  	width: 100%;
+    min-height: 200px;
+    height: auto;
+    border: solid 1px;
+
+    .container_menu {
+      //border: solid 1px;
+      padding: 40px 64px;
+      height: 100%;
+      display: grid;
+      grid-template-areas:
+      "intro intro intro"
+      "links links links"
+      ;
+      row-gap: 34px;
+    }
+    .intro_menu {
+      grid-area: intro;
+      display: flex;
+      gap: 28px;
+      .intro_menu_img {
+        img {}
+      }
+      .intro_menu_text {
+
+      }
+    }
+    .links_menu {
+      grid-area: links;
+      .grid_links {
+        display: block !important;
+        //display: grid !important;
+        //grid-template-columns: repeat(3,1fr) !important;
+        columns: 3 !important;
+      }
+    }
+  }
+}
+.dropdown_nav:hover .mega_menu {
+  visibility: visible;
+  opacity: 1;
+}
+.header_nav_link > a {
+  border-bottom: 4px solid;
+  &:hover {border-bottom: 4px solid $green;}
+}
+.grid_links ul {
+  display: block !important;
+  li {padding:0;}
+}
+.grid_links li a {
+  padding: 0 !important;
+}
+
+.second_buttons_nav {
+  display: flex;
+  align-items: center;
+  gap:24px;
+  font-size: 0.9em;
+}
+#contact_and_langues {
+  border: solid 1px;
+  display: flex;
+  height: auto;
+  align-items: center;
+  border-radius: 25px;
+  //background-color: $gray-light;
+  background-color: rgba(63, 119, 58, 0.08);
+  border: none;
+  li {display: flex;}
+}
+#selector_langues {
+  //border: solid 1px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0px 12px;
+}
+.current_langue {
+  text-decoration: underline;
+}

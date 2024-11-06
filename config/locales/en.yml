@@ -29,3 +29,13 @@
 
 en:
   hello: "Hello world"
+  navbar:
+    laboratoire_plantes_html: "Plant<br> laboratory"
+    laboratoire_analyses_html: "Analysis, Research <br> & Development"
+    laboratoire_cosmetologie_html: "Cosmetology <br> Laboratory"
+    actifs: "Ingredients"
+    about: "ABOUT"
+    blog: "BLOG"
+
+  contact:
+    btn_contact: "Contact Us"

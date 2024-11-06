@@ -1,0 +1,57 @@
+<div id="navbar">
+  <nav>
+  <ul>
+    <div class="primary_buttons_nav">
+      <li id="logo_nav">
+      <%= image_tag "logo-feuille.svg"%>
+      <%= image_tag "logo-text.svg"%>
+      </li>
+      <li class="dropdown_nav header_nav_link">
+        <%= link_to "#" do %>
+          <span><%= t('navbar.laboratoire_plantes_html') %></span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <%= render "shared/mega_menu_plantes" %>
+      </li>
+      <li class="dropdown_nav header_nav_link">
+        <%= link_to "#" do %>
+          <span><%= t('navbar.laboratoire_analyses_html') %></span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <%= render "shared/mega_menu_labo" %>
+      </li>
+      <li class="dropdown_nav header_nav_link">
+        <%= link_to "#" do %>
+          <span><%= t('navbar.laboratoire_cosmetologie_html') %></span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <%= render "shared/mega_menu_cosme" %>
+      </li>
+      <li class="dropdown_nav header_nav_link">
+        <%= link_to "" do %>
+          <span><%= t('navbar.actifs')%></span>
+          <%= image_tag "chevron-bas.svg" %>
+        <% end %>
+        <%= render "shared/mega_menu_cosme" %>
+      </li>
+    </div>
+    <div class="second_buttons_nav">
+      <li><%= link_to t('navbar.about'),"",class:"header_nav_link_secondary" %></li>
+      <li><%= link_to t('navbar.blog'),"",class:"header_nav_link_secondary" %></li>
+      <div id="contact_and_langues">
+        <li><%= link_to t('contact.btn_contact').upcase,"", class:"btn_contact" %></li>
+        <div id="selector_langues">
+          <%= image_tag "globe.svg"%>
+          <% @langues.each do |langue|%>
+            <% if locale == langue %>
+              <%= link_to langue.to_s.upcase, url_for(locale: langue),class:"current_langue" %>
+            <% else %>
+              <%= link_to langue.to_s.upcase, url_for(locale: langue) %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </ul>
+  </nav>
+</div>
