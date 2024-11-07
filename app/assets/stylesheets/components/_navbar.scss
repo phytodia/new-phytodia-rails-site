@@ -36,6 +36,8 @@ a {text-decoration: none;}
   .mega_menu {
     background-color: white;
     border-radius: 0 0 50px 50px;
+    background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 52.55%, rgba(81, 153, 75, 0.08) 100%), #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08), 0px 16px 32px rgba(0, 0, 0, 0.16);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -44,7 +46,9 @@ a {text-decoration: none;}
   	width: 100%;
     min-height: 200px;
     height: auto;
-    border: solid 1px;
+    opacity: 1;
+    visibility: visible;
+    //border: solid 1px;
 
     .container_menu {
       //border: solid 1px;
@@ -55,7 +59,7 @@ a {text-decoration: none;}
       "intro intro intro"
       "links links links"
       ;
-      row-gap: 34px;
+      row-gap: 32px;
     }
     .intro_menu {
       grid-area: intro;
@@ -87,13 +91,6 @@ a {text-decoration: none;}
   border-bottom: 4px solid;
   &:hover {border-bottom: 4px solid $green;}
 }
-.grid_links ul {
-  display: block !important;
-  li {padding:0;}
-}
-.grid_links li a {
-  padding: 0 !important;
-}
 
 .second_buttons_nav {
   display: flex;
@@ -121,4 +118,22 @@ a {text-decoration: none;}
 }
 .current_langue {
   text-decoration: underline;
+}
+.more_infos_menu {
+  padding: 0;
+  color: $green;
+  display: flex;
+  gap: 4px;
+  a {padding: 0 !important; color: $green;}
+}
+
+.grid_links ul {
+  display: block !important;
+  li {
+    padding:0;
+    padding: 8px 16px
+  }
+}
+.grid_links li a {
+  padding: 0 !important;
 }
