@@ -44,10 +44,10 @@ a {text-decoration: none;}
   	position: absolute;
   	left: 0;
   	width: 100%;
-    min-height: 200px;
+    min-height: 400px;
     height: auto;
-    opacity: 1;
-    visibility: visible;
+    //opacity: 1;
+    //visibility: visible;
     //border: solid 1px;
 
     .container_menu {
@@ -78,7 +78,7 @@ a {text-decoration: none;}
         display: block !important;
         //display: grid !important;
         //grid-template-columns: repeat(3,1fr) !important;
-        columns: 3 !important;
+        columns: 3;
       }
     }
   }
@@ -124,16 +124,23 @@ a {text-decoration: none;}
   color: $green;
   display: flex;
   gap: 4px;
-  a {padding: 0 !important; color: $green;}
+  a {padding: 0; color: $green;}
 }
-
+.grid_links {
+  //list-style: circle !important;
+}
 .grid_links ul {
   display: block !important;
   li {
     padding:0;
-    padding: 8px 16px
+    padding: 8px 16px;
+    break-inside: avoid-column;
   }
 }
 .grid_links li a {
-  padding: 0 !important;
+  padding: 0;
+}
+.under_links {
+  padding-left: 1em !important;
+  li {color: rgba(0, 0, 0, 0.64);}
 }
