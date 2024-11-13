@@ -15,4 +15,11 @@
     height: 100%;
   }
   border-bottom: solid 8px $green;
+  #footer_logo {
+    width: fit-content;
+    img {width: fit-content;}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
