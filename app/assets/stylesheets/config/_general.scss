@@ -1,8 +1,13 @@
-body {background-color: white;}
+
 .inside {
   max-width: 1088px;
 }
-h1,h2,h3, p, a, li {
+h1,h2,h3, p, a, li, address {
   font-family: "Rubik", sans-serif;
 }
 a {text-decoration: none; color: black;}
+body {
+  margin: 0;
+  min-height: 100vh;
+  height: 100%;
+}

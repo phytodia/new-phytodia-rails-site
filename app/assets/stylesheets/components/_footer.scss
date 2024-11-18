@@ -1,0 +1,32 @@
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 264px;
+  //background-color: red;
+  background: linear-gradient(180deg, rgba(89, 168, 82, 2e-05) 42.32%, rgba(89, 168, 82, 0.096) 100%), #F6F4EE;
+  padding: 40px 0;
+  footer > nav {
+    border: solid 1px;
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr)auto;
+    height: 100%;
+  }
+  border-bottom: solid 8px $green;
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .made_in_france {
+    display: flex;
+    //flex-direction: column;
+    align-items: end;
+    img {width: fit-content;}
+  }
+  #footer_logo {
+    width: fit-content;
+  }
+}
