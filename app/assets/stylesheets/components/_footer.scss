@@ -1,5 +1,5 @@
 #footer {
-  position: fixed;
+  //position: fixed;
   bottom: 0;
   width: 100%;
   max-height: 264px;
@@ -7,26 +7,63 @@
   background: linear-gradient(180deg, rgba(89, 168, 82, 2e-05) 42.32%, rgba(89, 168, 82, 0.096) 100%), #F6F4EE;
   padding: 40px 0;
   footer > nav {
-    border: solid 1px;
+    //border: solid 1px;
     max-width: 1440px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr)auto;
+    //grid-template-columns: repeat(4,1fr)auto;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    column-gap: 2.5em;
+    grid-template-areas:
+    "logo logo logo logo logo"
+    "a b c d e"
+    "a b c d e"
+    ;
   }
   border-bottom: solid 8px $green;
   footer ul {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-bottom: 0px;
+
+    //font-size: 1em;
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
   }
   .made_in_france {
     display: flex;
     //flex-direction: column;
     align-items: end;
     img {width: fit-content;}
+    grid-area: e;
   }
   #footer_logo {
     width: fit-content;
+    grid-area: logo;
+  }
+  .col_footer {
+    &.1 {grid-area: a;}
+    &.2 {grid-area: b;}
+    &.3 {grid-area: c;}
+    &.4 {grid-area: d;}
+  }
+  //.col_footer.4 {text-align: right !important;}
+}
+
+@media only screen and (max-width: 40em) {
+  #footer {
+    max-height: 100%;
+  }
+  footer {padding-left: 1em; padding-right: 1em;}
+  #footer footer > nav {
+    grid-template-columns: 1fr;
+    //display: grid;
+    //grid-template-areas:
+    display: flex;
+    flex-direction: column;
   }
 }
