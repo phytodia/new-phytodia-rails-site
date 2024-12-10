@@ -22,12 +22,13 @@
   padding: 2em 1em;
   li {
     border: solid 1px;
-    padding: 1em;
-    div {
+    a {
+      padding: 1em;
       display: flex;
       justify-content: space-between;
       //align-items: center;
     }
   }
+  .btn_contact {justify-content: center;}
   hr {margin-top: 2em;}
 }
