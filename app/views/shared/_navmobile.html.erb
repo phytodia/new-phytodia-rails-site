@@ -1,13 +1,20 @@
 <nav id="navmobile">
-    <div id="logo_nav">
-        <%= image_tag "logo-feuille.svg"%>
-        <%= image_tag "logo-text.svg"%>
-    </div>
-    <div id="burger_icon">
-      <span>ff</span>
+    <div id="header_mobile">
+      <div id="logo_nav">
+          <%= image_tag "logo-feuille.svg"%>
+          <%= image_tag "logo-text.svg"%>
+      </div>
+      <div id="burger_icon">
+        <span>x</span>
+      </div>
     </div>
     <ul id="mobile_menu_links">
-      <li>Laboratoire des plantes</li>
+      <li>
+        <div>
+          <span>Laboratoire des plantes</span>
+          <%= image_tag "chevron-right"%>
+        </div>
+      </li>
       <li>Analyse, Recherche & Développement</li>
       <li>Laboratoire Cosmétologie</li>
       <li>Nos actifs et produits</li>

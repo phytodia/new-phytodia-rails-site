@@ -6,9 +6,28 @@
   background-color: white;
   width: 100%;
 }
+#header_mobile {
+  border: solid 2px red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
 #mobile_menu_links{
-  background-color: red;
+  background-color: grey;
   height: 100vh;
   margin: 0;
   padding: 0;
+  list-style: none;
+  padding: 2em 1em;
+  li {
+    border: solid 1px;
+    padding: 1em;
+    div {
+      display: flex;
+      justify-content: space-between;
+      //align-items: center;
+    }
+  }
+  hr {margin-top: 2em;}
 }
