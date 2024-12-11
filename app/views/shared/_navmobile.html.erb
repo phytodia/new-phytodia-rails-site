@@ -1,8 +1,50 @@
 <nav id="navmobile">
-  <ul>
-    <li id="logo_nav">
-        <%= image_tag "logo-feuille.svg"%>
-        <%= image_tag "logo-text.svg"%>
-    </li>
-  </ul>
+    <div id="header_mobile">
+      <div id="logo_nav">
+          <%= image_tag "logo-feuille.svg"%>
+          <%= image_tag "logo-text.svg"%>
+      </div>
+      <div id="burger_icon">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+      </div>
+    </div>
+    <ul id="mobile_menu_links">
+      <li>
+        <%= link_to "" do %>
+          <span>Laboratoire des plantes</span>
+          <%= image_tag "chevron-right"%>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "" do %>
+          <span>Analyse, Recherche & Développement</span>
+          <%= image_tag "chevron-right"%>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "" do %>
+          <span>Laboratoire Cosmétologie</span>
+          <%= image_tag "chevron-right"%>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "" do %>
+          <span>Nos actifs et produits</span>
+          <%= image_tag "chevron-right"%>
+        <% end %>
+      </li>
+      <hr>
+      <li>A propos</li>
+      <li>Blog</li>
+      <li>
+        <%= link_to "Nous contacter", "#", class:"btn_contact"%>
+      </li>
+    </ul>
+    <div>
+      FR|EN
+    </div>
 </nav>
