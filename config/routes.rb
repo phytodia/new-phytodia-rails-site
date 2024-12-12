@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -12,10 +14,19 @@ Rails.application.routes.draw do
   get "/", to: redirect('/fr', status:301)
   # Defines the root path route ("/")
   # root "posts#index"
+
   scope "/:locale" do
     root "pages#home"
     get "about", to: "pages#about"
-    resources :actifs
+    resources :actifs,only:[:index,:show]
+
+    scope "/backoff" do
+      #get "/", to: "admin#home"
+      resources :admins,only:[:index], path:"/"
+      resources :actifs,only:[:new,:create,:edit,:update,:delete],layout: "backoff"
+    end
   end
+
+
 
 end
