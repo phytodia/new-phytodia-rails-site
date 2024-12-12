@@ -1,4 +1,5 @@
 class ActifsController < ApplicationController
+  layout "backoffice",only:[:new,:create,:edit,:update,:destroy]
   def index
   end
 
