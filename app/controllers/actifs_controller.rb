@@ -4,9 +4,13 @@ class ActifsController < ApplicationController
   end
 
   def new
+    @actif = Actif.new
   end
 
   def create
+    fail
+    @actif = Actif.new(actif_params)
+    @actif.save
   end
 
   def show
@@ -20,4 +24,10 @@ class ActifsController < ApplicationController
 
   def destroy
   end
+
+  private
+  def actif_params
+    params.require(:actif).permit(:lang,:name,:description,:composition,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration)
+  end
+
 end
