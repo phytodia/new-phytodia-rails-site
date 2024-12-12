@@ -83,3 +83,14 @@
   -o-transform: translateY(-5px) rotate(-45deg);
   transform: translateY(-5px) rotate(-45deg);
 }
+
+#mobile_menu_links {
+  visibility: hidden;
+  position: absolute;
+  z-index: -10;
+  &.is-active {
+    visibility: visible;
+    position: initial;
+    z-index: 10;
+  }
+}
