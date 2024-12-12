@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     scope "/backoff" do
       #get "/", to: "admin#home"
       resources :admins,only:[:index], path:"/"
-      resources :actifs,only:[:new,:create,:edit,:update,:delete],layout: "backoff"
+      resources :actifs,only:[:new,:create,:edit,:update,:delete]
     end
   end
 
