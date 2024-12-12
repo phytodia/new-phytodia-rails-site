@@ -1,18 +1,16 @@
-<nav id="navmobile">
+<nav id="navmobile" data-controller="nav">
     <div id="header_mobile">
       <div id="logo_nav">
           <%= image_tag "logo-feuille.svg"%>
           <%= image_tag "logo-text.svg"%>
       </div>
-      <div id="burger_icon">
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-      </div>
+      <div class="hamburger" id="hamburger-1" data-action="click->nav#toggle" data-nav-target="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
     </div>
-    <ul id="mobile_menu_links">
+    <ul id="mobile_menu_links" class="" data-nav-target="menu_mobile">
       <li>
         <%= link_to "" do %>
           <span>Laboratoire des plantes</span>
@@ -44,7 +42,5 @@
         <%= link_to "Nous contacter", "#", class:"btn_contact"%>
       </li>
     </ul>
-    <div>
-      FR|EN
-    </div>
+
 </nav>
