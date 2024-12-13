@@ -27,7 +27,11 @@ Rails.application.routes.draw do
     resources :actifs, only:[:index,:show]
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
-
+    localized do
+      get "laboratoire-plantes", to: "pages#laboratoire_plantes"
+      get "analyse-recherche-developpement",to: "pages#analyses"
+      get "laboratoire-cosmetologie",to: "pages#cosmetologie"
+    end
   end
 
 
