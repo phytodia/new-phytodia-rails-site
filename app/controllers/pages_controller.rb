@@ -4,4 +4,14 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def laboratoire_plantes
+
+  end
+  def analyses
+
+  end
+  def cosmetologie
+
+  end
 end
