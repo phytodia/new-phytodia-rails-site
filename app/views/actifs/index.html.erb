@@ -1,2 +1,7 @@
 <h1>Actifs#index</h1>
 <p>Find me in app/views/actifs/index.html.erb</p>
+<ul>
+  <% @actifs.each do |actif| %>
+    <li><%= actif.name %> | <%= actif.lang %> <%= link_to actif.name,actif_path(actif)%></li>
+  <% end %>
+</ul>

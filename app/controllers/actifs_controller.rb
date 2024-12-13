@@ -1,6 +1,8 @@
 class ActifsController < ApplicationController
   layout "backoffice",only:[:new,:create,:edit,:update,:destroy]
   def index
+    lang = locale.to_s
+    @actifs = Actif.where(lang: lang)
   end
 
   def new
@@ -8,12 +10,12 @@ class ActifsController < ApplicationController
   end
 
   def create
-    fail
     @actif = Actif.new(actif_params)
     @actif.save
   end
 
   def show
+    @actif = Actif.find(params[:id])
   end
 
   def edit

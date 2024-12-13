@@ -1,7 +1,7 @@
 <h1>Actifs#new</h1>
 <p>Find me in app/views/actifs/new.html.erb</p>
 
-<%= simple_form_for @actif do |f| %>
+<%= simple_form_for @actif,:url => actif_backoff_index_path, :method => :post do |f| %>
   <%= f.input :lang, collection:["fr","en","de","es"] %>
   <%= f.input :name %>
   <%= f.input :description %>
