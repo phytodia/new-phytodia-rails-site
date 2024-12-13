@@ -18,3 +18,14 @@ border-radius: 0px 0px 64px 64px;
   grid-template-columns: 1fr 1fr;
   gap:32px;
 }
+.prestations_list {
+  border: solid 1px;
+  padding: 0;
+  list-style: none;
+  .prestation_item {
+    height: 4em;
+    border: solid 1px;
+    align-items: center;
+    display: flex;
+  }
+}

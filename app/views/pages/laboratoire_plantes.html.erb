@@ -8,20 +8,11 @@
   </div>
 </div>
 <div id="landing_main_content">
-  <ol class="prestations_list">
-    <li class="prestation_item">
-      Analyse molécules végétales
-    </li>
-    <li class="prestation_item">
-      Mise en conformité règlementaire
-    </li>
-    <li class="prestation_item">
-    </li>
-    <li class="prestation_item">
-    </li>
-    <li class="prestation_item">
-    </li>
-    <li class="prestation_item">
-    </li>
-  </ol>
+  <ul class="prestations_list">
+    <% @prestations.each_with_index do |prestation, index| %>
+      <li class="prestation_item">
+        <span class="circle"><%= index + 1 %></span> <%= prestation %>
+      </li>
+    <% end %>
+  </ul>
 </div>
