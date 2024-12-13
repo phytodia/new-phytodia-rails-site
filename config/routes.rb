@@ -15,17 +15,21 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  scope "/backoff" do
+    #get "/", to: "admin#home"
+    resources :admins, only: [:index], path:"/"
+    resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
+  end
+
   scope "/:locale" do
     root "pages#home"
     get "about", to: "pages#about"
-    resources :actifs,only:[:index,:show]
+    resources :actifs, only:[:index,:show]
+    #get "/actifs", controller: "actifs", action: "index"
+    #get "/actifs/:id", controller: "actifs", action: "show"
 
-    scope "/backoff" do
-      #get "/", to: "admin#home"
-      resources :admins,only:[:index], path:"/"
-      resources :actifs,only:[:new,:create,:edit,:update,:delete]
-    end
   end
+
 
 
 
