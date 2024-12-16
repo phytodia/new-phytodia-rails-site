@@ -29,7 +29,12 @@
 
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (max-width: 40em) {}
+@media only screen and (max-width: 40em) {
+  #landing_main_content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 
 
 /* Medium screens - TABLET */

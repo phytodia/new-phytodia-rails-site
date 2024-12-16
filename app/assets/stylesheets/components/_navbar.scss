@@ -2,6 +2,7 @@ a {text-decoration: none;}
 li, p, h2, h3 {margin: 0;}
 #navbar {
   //border: solid 1px;
+  //background: #F6F4EE;
   .header_nav_link a {
     //border-bottom: 4px solid;
     display: flex; align-items: end;
@@ -84,6 +85,7 @@ li, p, h2, h3 {margin: 0;}
 .dropdown_nav:hover .mega_menu {
   visibility: visible;
   opacity: 1;
+  z-index: 10;
 }
 .header_nav_link > a {
   border-bottom: 4px solid;
