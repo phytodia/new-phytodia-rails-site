@@ -15,7 +15,16 @@
         </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
       </li>
       <div class="card_prestation_displayed expand_accordeon" data-accordeon-target="expand">
-        <p>TEST <%= index + 1 %></p>
+        <div class="card_prestation_displayed">
+      <div class="card_prestation_text">
+        <h3><%= index + 1 %> | Vous recherchez à doser certaines substances ou molécules dans diverses matrices de plante ?</h3>
+        <p>Nos experts sont capables d'identifier une large diversité de familles de molécules via de nombreuses méthodes de dosages complexes pour identifier et quantifier les composés actifs des plantes, pour les valoriser ou réduire les risques associés</p>
+        <%= link_to "En savoir plus", "",class:"btn_contact"%>
+      </div>
+      <div class="card_prestation_cover">
+        <%= image_tag "" %>
+      </div>
+    </div>
       </div>
     <% end %>
   </ul>
