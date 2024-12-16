@@ -65,11 +65,25 @@ border-radius: 0px 0px 64px 64px;
       }
     }
   }
-  .prestation_item:hover {
-    color: $green;
-    .circle {background-color: $green;}
-    img > path {fill:#51994b;}
+.prestation_item:hover {
+  color: $green;
+  .circle {background-color: $green;}
+  img > path {fill:#51994b;}
+}
+.expand_accordeon {
+  visibility: hidden;
+  height: 0;
+  &.open {
+    position: absolute;
+    height: auto;
+    visibility: visible;
+    right: 0;
+    border: solid;
+    width: 50%;
+    height: 100%;
+    top: 0;
   }
+}
 @media only screen and (max-width: 40em) {
   #landing_main_content {
     grid-template-columns: 1fr;
@@ -86,6 +100,14 @@ border-radius: 0px 0px 64px 64px;
         height: auto !important;
       }
       .arrow_desktop {visibility: hidden!important;width: 0 !important; height: 0 !important;}
+    }
+  }
+  .expand_accordeon {
+    visibility: hidden;
+    height: 0;
+    &.open {
+      visibility: visible;
+      height: auto;
     }
   }
 }

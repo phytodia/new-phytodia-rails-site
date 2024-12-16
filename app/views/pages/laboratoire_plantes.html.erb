@@ -7,15 +7,15 @@
     </div>
   </div>
 </div>
-<div id="landing_main_content">
+<div id="landing_main_content" data-controller="accordeon">
   <ul class="prestations_list">
     <% @prestations.each_with_index do |prestation, index| %>
-      <li class="prestation_item">
+      <li class="prestation_item" data-action="click->accordeon#toggle">
         <span class="circle"><p><%= index + 1 %></p></span><span class="text_prestation"><%= prestation %>
         </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
       </li>
-      <div class="card_prestation_displayed">
-        <p>TEST</p>
+      <div class="card_prestation_displayed expand_accordeon" data-accordeon-target="expand">
+        <p>TEST <%= index + 1 %></p>
       </div>
     <% end %>
   </ul>
