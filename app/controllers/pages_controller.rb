@@ -14,4 +14,7 @@ class PagesController < ApplicationController
   def cosmetologie
 
   end
+  def prestation_displayed
+    fail
+  end
 end
