@@ -13,7 +13,7 @@
       <% @prestations.each_with_index do |prestation, index| %>
         <li class="prestation_item" data-action="click->accordeon#toggle">
           <span class="circle"><p><%= index + 1 %></p></span><span class="text_prestation"><%= prestation %>
-          </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
+          </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop", width:"24px" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
         </li>
         <div class="card_prestation_displayed expand_accordeon" data-accordeon-target="expand">
           <div class="card_prestation_displayed">

@@ -66,7 +66,7 @@ border-radius: 0px 0px 64px 64px;
       //  width: 0;
       align-items: center;
       display: flex;
-      .arrow_desktop {visibility: visible;width: auto; height: auto;}
+      .arrow_desktop {visibility: visible;width: 24px; height: auto;}
       .arrow_mobile {visibility: hidden;width: 0; height: 0;}
       }
     }
@@ -75,6 +75,9 @@ border-radius: 0px 0px 64px 64px;
   color: $green;
   .circle {background-color: $green;}
   img > path {fill:#51994b;}
+  .arrow_desktop {
+    transform: scale(2);
+  }
 }
 .expand_accordeon {
   visibility: hidden;
