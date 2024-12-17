@@ -112,6 +112,9 @@ border-radius: 0px 0px 64px 64px;
       .arrow_desktop {visibility: hidden!important;width: 0 !important; height: 0 !important;}
     }
   }
+  #prestations_component {
+    grid-template-columns: 1fr;
+  }
   .expand_accordeon {
     visibility: hidden;
     height: 0;
