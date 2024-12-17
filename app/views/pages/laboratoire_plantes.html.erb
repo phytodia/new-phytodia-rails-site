@@ -8,26 +8,28 @@
   </div>
 </div>
 <div id="landing_main_content" data-controller="accordeon">
-  <ul class="prestations_list">
-    <% @prestations.each_with_index do |prestation, index| %>
-      <li class="prestation_item" data-action="click->accordeon#toggle">
-        <span class="circle"><p><%= index + 1 %></p></span><span class="text_prestation"><%= prestation %>
-        </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
-      </li>
-      <div class="card_prestation_displayed expand_accordeon" data-accordeon-target="expand">
-        <div class="card_prestation_displayed">
-      <div class="card_prestation_text">
-        <h3><%= index + 1 %> | Vous recherchez à doser certaines substances ou molécules dans diverses matrices de plante ?</h3>
-        <p>Nos experts sont capables d'identifier une large diversité de familles de molécules via de nombreuses méthodes de dosages complexes pour identifier et quantifier les composés actifs des plantes, pour les valoriser ou réduire les risques associés</p>
-        <%= link_to "En savoir plus", "",class:"btn_contact"%>
+  <div id="prestations_component">
+    <ul class="prestations_list">
+      <% @prestations.each_with_index do |prestation, index| %>
+        <li class="prestation_item" data-action="click->accordeon#toggle">
+          <span class="circle"><p><%= index + 1 %></p></span><span class="text_prestation"><%= prestation %>
+          </span><div class="arrow"><%= image_tag "arrow-right.svg",class:"arrow_desktop" %><%= image_tag "chevron-bas.svg",class:"arrow_mobile" %></div>
+        </li>
+        <div class="card_prestation_displayed expand_accordeon" data-accordeon-target="expand">
+          <div class="card_prestation_displayed">
+        <div class="card_prestation_text">
+          <h3><%= index + 1 %> | Vous recherchez à doser certaines substances ou molécules dans diverses matrices de plante ?</h3>
+          <p>Nos experts sont capables d'identifier une large diversité de familles de molécules via de nombreuses méthodes de dosages complexes pour identifier et quantifier les composés actifs des plantes, pour les valoriser ou réduire les risques associés</p>
+          <%= link_to "En savoir plus", "",class:"btn_contact"%>
+        </div>
+        <div class="card_prestation_cover">
+          <%= image_tag "" %>
+        </div>
       </div>
-      <div class="card_prestation_cover">
-        <%= image_tag "" %>
-      </div>
-    </div>
-      </div>
-    <% end %>
-  </ul>
+        </div>
+      <% end %>
+    </ul>
+  </div>
   <div id="prestation_displayed">
     <!--
     <div class="card_prestation_displayed">

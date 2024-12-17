@@ -14,6 +14,12 @@ border-radius: 0px 0px 64px 64px;
 #landing_main_content {
   max-width: 1044px;
   margin: auto;
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
+  //gap:32px;
+  //position: relative;
+}
+#prestations_component {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap:32px;
