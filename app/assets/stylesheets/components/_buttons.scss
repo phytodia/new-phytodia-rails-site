@@ -16,7 +16,7 @@
   max-width: 1044px;
   height: 244px;
   background-image: url("champ.jpeg");
-  background-position: bottom;
+  background-position: -17px 990px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -24,14 +24,27 @@
   border-radius: 3px;
   .blur {
     display: flex;
-    width: 100%;
-    border: solid 1px;
+    border-radius: 3px;
     justify-content: center;
     align-items: center;
     color: white;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(8px);
+    width: fit-content;
+    padding: 32px;
+    column-gap: 4em;
+    flex-wrap: wrap;
+    max-width: 75%;
     div{
       filter: blur(0px);
+    }
+    .blur_text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      h2 {
+        font-weight: 500;
+      }
+
     }
   }
 }
