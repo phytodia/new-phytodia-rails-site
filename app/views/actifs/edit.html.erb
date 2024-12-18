@@ -1,2 +1,16 @@
 <h1>Actifs#edit</h1>
 <p>Find me in app/views/actifs/edit.html.erb</p>
+<%= simple_form_for @actif,:url => actif_backoff_path, :method => :patch do |f| %>
+  <%= f.input :lang, collection:["fr","en","de","es"] %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :composition %>
+  <%= f.input :proprietes %>
+  <%= f.input :types_produits %>
+  <%= f.input :cible %>
+  <%= f.input :efficacite %>
+  <%= f.input :donnees %>
+  <%= f.input :concentration %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.button :submit %>
+<% end %>

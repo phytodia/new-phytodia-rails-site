@@ -19,9 +19,13 @@ class ActifsController < ApplicationController
   end
 
   def edit
+    @actif = Actif.find(params[:id])
   end
 
   def update
+    @actif = Actif.find(params[:id])
+    @actif.update(actif_params)
+    redirect_to actifs_path
   end
 
   def destroy

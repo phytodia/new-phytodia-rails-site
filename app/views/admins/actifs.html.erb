@@ -1,6 +1,6 @@
 <h1>Actifs</h1>
 <ul>
 <% @actifs.each do |actif|%>
-<li><%= actif.name %></li>
+<li><%= actif.name %> | <%= link_to "Edit",edit_actif_backoff_path(actif)%></li>
 <% end %>
 </ul>
