@@ -19,9 +19,13 @@ class ActifsController < ApplicationController
   end
 
   def edit
+    @actif = Actif.find(params[:id])
   end
 
   def update
+    @actif = Actif.find(params[:id])
+    @actif.update(actif_params)
+    redirect_to actifs_path
   end
 
   def destroy
@@ -29,7 +33,7 @@ class ActifsController < ApplicationController
 
   private
   def actif_params
-    params.require(:actif).permit(:lang,:name,:description,:composition,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration)
+    params.require(:actif).permit(:lang,:name,:description,:composition,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration,photos: [])
   end
 
 end

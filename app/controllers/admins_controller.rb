@@ -5,4 +5,8 @@ class AdminsController < ApplicationController
   end
   def index
   end
+
+  def actifs
+    @actifs = Actif.all
+  end
 end
