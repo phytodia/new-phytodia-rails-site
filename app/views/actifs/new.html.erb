@@ -11,6 +11,7 @@
   <%= f.input :cible %>
   <%= f.input :efficacite %>
   <%= f.input :donnees %>
-   <%= f.input :concentration %>
+  <%= f.input :concentration %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.button :submit %>
 <% end %>
