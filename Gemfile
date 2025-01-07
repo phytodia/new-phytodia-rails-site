@@ -42,7 +42,9 @@ gem 'simple_form'
 
 gem 'route_translator'
 
- gem "dotenv-rails"
+gem "dotenv-rails"
+
+gem "aws-sdk-s3", require: false
 
 
 
