@@ -1,5 +1,5 @@
 .accordion {
-  border: solid 1px blue;
+  border-bottom: solid 1px black;
   .accordion_head {
     display: flex;
     min-height: 3.5em;
@@ -7,9 +7,23 @@
     padding: 0 2em;
     justify-content: space-between;
     span {border: solid 2px red;}
+    &.open {
+      color: $green;
+    }
   }
   .accordion_content {
     border: solid 2px green;
-    min-height: 4em;
+    height: 0;
+    visibility: hidden;
+    &.open {
+      min-height: 4em;
+    }
   }
+}
+.accordion:first-of-type {
+  border-top: solid 1px black;
+}
+.accordions_list {
+  width: 100%;
+  box-sizing: border-box;
 }

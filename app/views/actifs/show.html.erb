@@ -1,10 +1,74 @@
-<h1>Actifs#show | <%= @actif.name %></h1>
-<p>Find me in app/views/actifs/show.html.erb</p>
-<% @actif.photos.each do |photo| %>
-  <%= image_tag photo, height: 300, width: 400, crop: :fill %>
-<% end %>
-<div class="accordion">
-  <div class="accordion_head"><h2>Composition</h2><span>+</span></div>
-  <div class="accordion_content">
+
+<article class="">
+<section class="inside actif_show">
+  <div class="actifs_photos">
+    <div class="first_actif_photo">
+      <%= image_tag @actif.photos[0], height: 500, width: 500, crop: :fill %>
+    </div>
+    <div class="">
+    </div>
   </div>
-</div>
+  <div>
+    <h1>Actifs#show | <%= @actif.name %></h1>
+    <div class="accordions_list" data-controller="accordeon">
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Composition (INCI)</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Revendications et propriétés</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Dans quels types de produits l'utiliser ?</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Cible biologique innovante</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Efficacité in vitro</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Données clinique/in vitro</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
+          <h2 class="accordion_titre">Concentration dans la formule/ Dosage</h2><span>+</span>
+        </div>
+        <div class="accordion_content">
+        </div>
+      </div>
+
+
+    </div><!-- Fin accordions_list -->
+  </div>
+
+</section>

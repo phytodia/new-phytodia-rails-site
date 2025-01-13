@@ -1,0 +1,10 @@
+.actif_show {
+  display: grid;
+  grid-template-columns: 32% 66%;
+  justify-content: space-between;
+  .actifs_photos,.accordions_list {border: solid 1px;}
+  .accordions_list {padding: 0 3em;}
+  .actifs_photos {
+    .first_actif_photo {width: 100%; display: flex;}
+  }
+}
