@@ -14,5 +14,8 @@ export default class extends Controller {
   toggleHorizontal(event){
     event.currentTarget.classList.toggle("open")
     event.currentTarget.nextElementSibling.classList.toggle("open")
+    Array.from(event.currentTarget.getElementsByTagName('span')[0].getElementsByTagName('img')).forEach((img)=>{
+      img.classList.toggle('visible')
+    })
   }
 }

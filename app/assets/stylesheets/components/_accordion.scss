@@ -10,7 +10,14 @@
     font-style: normal;
     font-weight: 500;
     .accordion_titre {font-size: 1.2rem;font-weight: 00;}
-    span {border: solid 2px red;}
+    span {
+      .croix,.moins {
+        visibility: hidden;width: 0;
+        &.visible {
+          visibility: visible;width: auto;
+        }
+      }
+    }
     cursor: pointer;
     &.open {
       color: $green;
