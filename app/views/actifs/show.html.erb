@@ -14,12 +14,16 @@
       </div>
     </div>
     <div class="actif_labels">
+      <% if @actif.ecocert? %>
       <div>
-        <%= image_tag @actif.photos[0], crop: :fill %>
+        <%= image_tag "ecocert.svg" %>
       </div>
+      <% end %>
+      <% if @actif.made_in_france? %>
       <div>
-        <%= image_tag @actif.photos[0], crop: :fill %>
+        <%= image_tag "made-in-france.svg" %>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="actif_description">
