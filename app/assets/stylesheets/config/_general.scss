@@ -1,7 +1,5 @@
 
-.inside {
-  max-width: 1088px;
-}
+
 h1,h2,h3, p, a, li, address {
   font-family: "Rubik", sans-serif;
 }
@@ -16,4 +14,14 @@ body {
   border: solid 1px;
   //padding: 2em;
   //background-color: red;
+}
+.inside {
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }

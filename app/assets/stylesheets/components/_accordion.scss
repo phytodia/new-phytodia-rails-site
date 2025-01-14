@@ -1,0 +1,34 @@
+.accordion {
+  border-bottom: solid 1px black;
+  .accordion_head {
+    display: flex;
+    min-height: 3.5em;
+    align-items: center;
+    padding: 0 1em;
+    justify-content: space-between;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    .accordion_titre {font-size: 1.2rem;font-weight: 00;}
+    span {border: solid 2px red;}
+    cursor: pointer;
+    &.open {
+      color: $green;
+    }
+  }
+  .accordion_content {
+    border: solid 2px green;
+    height: 0;
+    visibility: hidden;
+    &.open {
+      min-height: 4em;
+    }
+  }
+}
+.accordion:first-of-type {
+  border-top: solid 1px black;
+}
+.accordions_list {
+  width: 100%;
+  box-sizing: border-box;
+}

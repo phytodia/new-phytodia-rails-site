@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="accordeon"
 export default class extends Controller {
-  static targets = ["expand"]
+  static targets = ["expand","horizontal"]
   connect() {
   }
   toggle(event){
@@ -10,5 +10,9 @@ export default class extends Controller {
       element.classList.remove("open")
     })
     event.currentTarget.nextElementSibling.classList.add("open")
+  }
+  toggleHorizontal(event){
+    event.currentTarget.classList.toggle("open")
+    event.currentTarget.nextElementSibling.classList.toggle("open")
   }
 }
