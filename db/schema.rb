@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_12_18_065711) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_14_123525) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_18_065711) do
     t.string "lang"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "ecocert", default: true
+    t.boolean "made_in_france", default: true
   end
 
   create_table "active_storage_attachments", force: :cascade do |t|
