@@ -3,12 +3,18 @@
 <section class="inside actif_show">
   <div class="actifs_photos">
     <div class="first_actif_photo">
-      <%= image_tag @actif.photos[0], height: 500, width: 500, crop: :fill %>
+      <%= image_tag @actif.photos[0], crop: :fill %>
     </div>
-    <div class="">
+    <div class="second_actifs_photo">
+      <div>
+        <%= image_tag @actif.photos[0], crop: :fill %>
+      </div>
+      <div>
+        <%= image_tag @actif.photos[0], crop: :fill %>
+      </div>
     </div>
   </div>
-  <div>
+  <div class="actif_description">
     <h1>Actifs#show | <%= @actif.name %></h1>
     <div class="accordions_list" data-controller="accordeon">
       <div class="accordion">
