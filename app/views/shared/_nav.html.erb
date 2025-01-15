@@ -3,8 +3,17 @@
   <ul class="list_primary_buttons_nav">
     <div class="primary_buttons_nav">
       <li id="logo_nav">
-      <%= image_tag "logo-feuille.svg"%>
-      <%= image_tag "logo-text.svg"%>
+      <%= link_to root_path do %>
+        <% if params[:action] == "home" %>
+          <%= image_tag "logo-feuille.svg"%>
+          <h1>
+            <%= image_tag "logo-text.svg", alt:t('navbar.logo')%>
+          </h1>
+        <% else %>
+          <%= image_tag "logo-feuille.svg",alt:"logo Phytodia"%>
+          <%= image_tag "logo-text.svg",alt:'Phytodia'%>
+        <% end %>
+      <% end %>
       </li>
       <li class="dropdown_nav header_nav_link">
         <%= link_to "#" do %>
