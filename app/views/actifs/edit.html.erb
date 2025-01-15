@@ -15,6 +15,10 @@
   <%= f.input :concentration, label:"Concentration dans la formule/ Dosage"%>
   <%= f.input :ecocert %>
   <%= f.input :made_in_france %>
+  <hr>
+  <p>PDF</p>
+  <%= f.file_field :document %>
+  <hr>
   <% @actif.photos.each do |image| %>
     <%= f.hidden_field :photos, multiple: true, value: image.signed_id %>
   <% end %>
