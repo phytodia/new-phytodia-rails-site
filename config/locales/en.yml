@@ -30,6 +30,7 @@
 en:
   hello: "Hello world"
   navbar:
+    logo: "Phytodia | Plant laboratory, r&d and cosmetologye"
     laboratoire_plantes_html: "Plant<br> laboratory"
     laboratoire_analyses_html: "Analysis, Research <br> & Development"
     laboratoire_cosmetologie_html: "Cosmetology <br> Laboratory"

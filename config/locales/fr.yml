@@ -1,6 +1,7 @@
 fr:
   hello: "Bonjour monde"
   navbar:
+    logo: "Phytodia | Laboratoire des plantes, r&d et cosmétologie"
     laboratoire_plantes_html: "Laboratoire<br> des plantes"
     laboratoire_analyses_html: "Analyse, Recherche<br> & Développement"
     laboratoire_cosmetologie_html: "Laboratoire<br> Cosmétologie"
