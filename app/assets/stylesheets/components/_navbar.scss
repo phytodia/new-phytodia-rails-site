@@ -22,7 +22,7 @@ li, p, h2, h3 {margin: 0;}
       margin: 0;
       //list-style: none;
       justify-content: space-between;
-      position: relative;
+      //position: relative; retirer pour le moment
       & > .primary_buttons_nav {display: flex; align-items: flex-end; gap:24px;}
     }
     li {height: fit-content;}
@@ -60,6 +60,9 @@ li, p, h2, h3 {margin: 0;}
       "links links links"
       ;
       row-gap: 32px;
+
+      max-width: 1440px;
+      margin: auto;
     }
     .intro_menu {
       grid-area: intro;
