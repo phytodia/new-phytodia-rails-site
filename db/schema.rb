@@ -17,7 +17,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_15_071549) do
   create_table "actifs", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.text "composition"
     t.text "proprietes"
     t.text "types_produits"
     t.text "cible"
@@ -31,6 +30,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_15_071549) do
     t.boolean "made_in_france", default: true
     t.text "cat_produits", default: [], array: true
     t.text "props_tags", default: [], array: true
+    t.text "composition", default: [], array: true
   end
 
   create_table "active_storage_attachments", force: :cascade do |t|

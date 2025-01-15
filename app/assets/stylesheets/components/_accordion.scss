@@ -24,11 +24,12 @@
     }
   }
   .accordion_content {
-    border: solid 2px green;
+    //border: solid 2px green;
     height: 0;
     visibility: hidden;
     &.open {
       min-height: 4em;
+      visibility: visible;
     }
   }
 }

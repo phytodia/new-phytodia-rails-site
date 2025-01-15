@@ -6,7 +6,7 @@
   <%= f.input :cat_produits, label:"Catégories de l'actif", collection:Actif::TYPE_PRODUITS, as: :check_boxes %>
   <%= f.input :props_tags, label:"Propriétés de l'actif",collection:Actif::PROPRIETES, as: :check_boxes%>
   <%= f.input :description,label:"Description courte de l'actif" %>
-  <%= f.input :composition,label:"Composition INCI" %>
+  <%= f.input :composition,label:"Composition INCI",collection:@ingredients,as: :check_boxes %>
   <%= f.input :proprietes,label:"Revendications et propriétés" %>
   <%= f.input :types_produits %>
   <%= f.input :cible, label:"Cible biologique innovante" %>
