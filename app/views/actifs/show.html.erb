@@ -98,9 +98,10 @@
         <%= link_to "",class:"btn_devis" do %>
           <span>Demander un devis</span><%= image_tag "pictos/arrow-circle.svg"%>
         <% end %>
-        <%= link_to "",class:"btn_download" do%>
+        <%= link_to "" ,class:"btn_download" do%>
           <span>Télécharger la fiche</span><%= image_tag "pictos/download.svg"%>
         <% end %>
+        <%= link_to "Télécharger le fichier", rails_blob_path(@actif.document, disposition: 'attachment') %>
       </div>
     </div>
 

@@ -37,7 +37,7 @@ class ActifsController < ApplicationController
 
   private
   def actif_params
-    params.require(:actif).permit(:lang,:name,:description,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration,photos: [],cat_produits:[],props_tags:[],composition:[])
+    params.require(:actif).permit(:lang,:name,:description,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration,:document,photos: [],cat_produits:[],props_tags:[],composition:[])
   end
 
 end
