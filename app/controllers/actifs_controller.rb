@@ -7,6 +7,7 @@ class ActifsController < ApplicationController
 
   def new
     @actif = Actif.new
+    @ingredients =  YAML.load_file("#{Rails.root.to_s}/db/ingredients.yml")["ingredients"]
   end
 
   def create
@@ -16,10 +17,13 @@ class ActifsController < ApplicationController
 
   def show
     @actif = Actif.find(params[:id])
+    @cats_produits = @actif.cat_produits.reject { |c| c.empty? }
+    @props_actif = @actif.props_tags.reject { |c| c.empty? }
   end
 
   def edit
     @actif = Actif.find(params[:id])
+    @ingredients =  YAML.load_file("#{Rails.root.to_s}/db/ingredients.yml")["ingredients"]
   end
 
   def update
@@ -33,7 +37,7 @@ class ActifsController < ApplicationController
 
   private
   def actif_params
-    params.require(:actif).permit(:lang,:name,:description,:composition,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration,photos: [])
+    params.require(:actif).permit(:lang,:name,:description,:proprietes,:types_produits,:cible,:efficacite,:donnees,:concentration,photos: [],cat_produits:[],props_tags:[],composition:[])
   end
 
 end

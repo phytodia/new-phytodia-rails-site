@@ -2,17 +2,25 @@
 <p>Find me in app/views/actifs/edit.html.erb</p>
 <%= simple_form_for @actif,:url => actif_backoff_path, :method => :patch do |f| %>
   <%= f.input :lang, collection:["fr","en","de","es"] %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :composition %>
-  <%= f.input :proprietes %>
+  <%= f.input :name,label:"Nom de l'actif" %>
+  <%= f.input :cat_produits, label:"Catégories de l'actif", collection:Actif::TYPE_PRODUITS, as: :check_boxes %>
+  <%= f.input :props_tags, label:"Propriétés de l'actif",collection:Actif::PROPRIETES, as: :check_boxes%>
+  <%= f.input :description,label:"Description courte de l'actif" %>
+  <%= f.input :composition,label:"Composition INCI",collection:@ingredients,as: :check_boxes %>
+  <%= f.input :proprietes,label:"Revendications et propriétés" %>
   <%= f.input :types_produits %>
-  <%= f.input :cible %>
-  <%= f.input :efficacite %>
-  <%= f.input :donnees %>
-  <%= f.input :concentration %>
+  <%= f.input :cible, label:"Cible biologique innovante" %>
+  <%= f.input :efficacite, label:"Efficacité in vitro" %>
+  <%= f.input :donnees,label: "Données clinique/in vivo" %>
+  <%= f.input :concentration, label:"Concentration dans la formule/ Dosage"%>
   <%= f.input :ecocert %>
   <%= f.input :made_in_france %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <% @actif.photos.each do |image| %>
+    <%= f.hidden_field :photos, multiple: true, value: image.signed_id %>
+  <% end %>
+  <%= f.file_field :photos, multiple: true %>
   <%= f.button :submit %>
 <% end %>
+<!--
+,collection: Actif::TYPE_PRODUITS,as: :check_boxes
+-->
