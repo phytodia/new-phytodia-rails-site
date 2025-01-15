@@ -3,14 +3,14 @@
 <section class="inside actif_show">
   <div class="actifs_photos">
     <div class="first_actif_photo">
-      <%= image_tag @actif.photos[0], crop: :fill %>
+      <%= image_tag @actif.photos[0], crop: :fill if @actif.photos[0].present? %>
     </div>
     <div class="second_actif_photo">
       <div>
-        <%= image_tag @actif.photos[0], crop: :fill %>
+        <%= image_tag @actif.photos[0], crop: :fill if @actif.photos[0].present? %>
       </div>
       <div>
-        <%= image_tag @actif.photos[0], crop: :fill %>
+        <%= image_tag @actif.photos[0], crop: :fill if @actif.photos[0].present? %>
       </div>
     </div>
     <div class="actif_labels">
@@ -98,8 +98,10 @@
         <%= link_to "",class:"btn_devis" do %>
           <span>Demander un devis</span><%= image_tag "pictos/arrow-circle.svg"%>
         <% end %>
-        <%= link_to rails_blob_path(@actif.document, disposition: 'attachment'),class:"btn_download" do %>
-          <span>Télécharger la fiche</span><%= image_tag "pictos/download.svg"%>
+        <% if @actif.document.present? %>
+          <%= link_to rails_blob_path(@actif.document, disposition: 'attachment'),class:"btn_download" do %>
+            <span>Télécharger la fiche</span><%= image_tag "pictos/download.svg"%>
+          <% end %>
         <% end %>
       </div>
     </div>
