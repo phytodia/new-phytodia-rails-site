@@ -27,7 +27,10 @@
     </div>
   </div>
   <div class="actif_description">
-    <h1>Actifs#show | <%= @actif.name %></h1>
+    <h1><%= @actif.name %></h1>
+    <%= @props_actif %>
+    <%= @cats_produits %>
+    <p><%= @actif.description %></p>
     <div class="accordions_list" data-controller="accordeon">
       <div class="accordion">
         <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
