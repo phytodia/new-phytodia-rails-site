@@ -19,6 +19,7 @@ class ActifsController < ApplicationController
     @actif = Actif.find(params[:id])
     @cats_produits = @actif.cat_produits.reject { |c| c.empty? }
     @props_actif = @actif.props_tags.reject { |c| c.empty? }
+    @actifs = Actif.all
   end
 
   def edit

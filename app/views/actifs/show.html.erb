@@ -110,3 +110,30 @@
   </div>
 
 </section>
+<section>
+  <div class="inside carousel-actifs-control" data-controller="carousel">
+    <%= image_tag "pictos/fiole-plante.svg"%>
+    <div class="control-carousel">
+      <span data-carousel-target="left" data-action="click->carousel#clickLeft"><%= image_tag "pictos/carousel-left.svg"%></span>
+      <span data-carousel-target="right" data-action="click->carousel#clickRight"><%= image_tag "pictos/carousel-right.svg"%></span>
+    </div>
+  </div>
+  <div class="carousel_actifs">
+    <ul class="flex list_cards_actif carousel" data-carousel-target="carousel">
+      <% @actifs.each do |actif| %>
+        <li class="card_carousel" data-carousel-target="card">
+          <%= link_to "" do %>
+            <div class="card_carousel_img">
+              <%= image_tag actif.photos[0] if actif.photos[0].present? %>
+            </div>
+            <div class="card_carousel_description">
+              <span class="actif_property">Propriété</span>
+              <h2 class="card_actif_titre"><%= actif.name %></h2>
+              <p class="card_actif_text">Ingrédient cosmétique minceur & raffermissant</p>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
