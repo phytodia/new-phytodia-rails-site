@@ -7,6 +7,26 @@
   justify-content: space-between;
   .actif_description {
     padding: 0 3em;
+    .actif_titre {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      color: #292929;
+      margin: 0;
+      line-height: 40px;
+    }
+  }
+
+  .actif_text_head {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+    color: rgba(0, 0, 0, 0.64);
+    margin-bottom: 40px;
+
   }
   .actifs_photos,.accordions_list {}
   .accordions_list {}
@@ -124,6 +144,11 @@
     gap: 16px;
   }
 }
+
+.properties_actif {
+  display: flex;
+  gap: 8px;
+}
 .actif_property {
   background: $background-property;
   padding: 4px 8px;
@@ -134,6 +159,8 @@
   width: fit-content;
   font-size: 0.8em;
   border-radius: 2px;
+  font-family: $base-font;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 40em) {
   .actif_show {
