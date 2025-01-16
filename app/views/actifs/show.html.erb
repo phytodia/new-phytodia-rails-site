@@ -28,10 +28,14 @@
     </div>
   </div>
   <div class="actif_description">
-    <h1><%= @actif.name %></h1>
-    <%= @props_actif %>
-    <%= @cats_produits %>
-    <p><%= @actif.description %></p>
+    <h1 class="actif_titre"><%= @actif.name %></h1>
+    <div class="properties_actif">
+      <span class="actif_property"><%= @props_actif.join(', ')%></span>
+    <% @cats_produits.each do |cat| %>
+      <span class="actif_property"><%= cat %></span>
+    <% end %>
+    </div>
+    <p class="actif_text_head"><%= @actif.description %></p>
     <div class="accordions_list" data-controller="accordeon">
       <div class="accordion">
         <div class="accordion_head" data-action="click->accordeon#toggleHorizontal" data-accorderon-target="horizontal">
