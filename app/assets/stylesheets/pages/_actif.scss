@@ -84,3 +84,16 @@
     gap: 16px;
   }
 }
+@media only screen and (max-width: 40em) {
+  .actif_show {
+    grid-template-columns: 1fr;
+    .actifs_photos,.actif_description {
+      padding: $padding-mobile;
+      box-sizing: border-box;
+    }
+  }
+  .carousel-actifs-control {
+    padding: $padding-mobile;
+      box-sizing: border-box;
+  }
+}
