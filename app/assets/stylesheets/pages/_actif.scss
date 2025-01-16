@@ -143,8 +143,12 @@
       box-sizing: border-box;
     }
   }
+  .carousel_actifs {margin: 0;}
   .carousel-actifs-control {
     padding: $padding-mobile;
       box-sizing: border-box;
+  }
+  .list_cards_actif {
+    padding: $padding-mobile;
   }
 }
