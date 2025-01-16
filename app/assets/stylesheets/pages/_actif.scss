@@ -75,3 +75,12 @@
   border: solid 1px;
   height: 300px;
 }
+.carousel-actifs-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .control-carousel {
+    display: flex;
+    gap: 16px;
+  }
+}

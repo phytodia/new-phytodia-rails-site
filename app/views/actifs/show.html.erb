@@ -111,11 +111,11 @@
 
 </section>
 <section>
-  <div class="inside" data-controller="carousel">
-    <p>Logo</p>
-    <div>
-      <span data-carousel-target="left" data-action="click->carousel#clickLeft">Arrow Left</span>
-      <span data-carousel-target="right" data-action="click->carousel#clickRight">Arrow Right</span>
+  <div class="inside carousel-actifs-control" data-controller="carousel">
+    <%= image_tag "pictos/fiole-plante.svg"%>
+    <div class="control-carousel">
+      <span data-carousel-target="left" data-action="click->carousel#clickLeft"><%= image_tag "pictos/carousel-left.svg"%></span>
+      <span data-carousel-target="right" data-action="click->carousel#clickRight"><%= image_tag "pictos/carousel-right.svg"%></span>
     </div>
   </div>
   <div class="carousel_actifs">
