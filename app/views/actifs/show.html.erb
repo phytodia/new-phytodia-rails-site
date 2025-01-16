@@ -120,36 +120,20 @@
   </div>
   <div class="carousel_actifs">
     <ul class="flex list_cards_actif carousel" data-carousel-target="carousel">
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
-      <li class="card_carousel" data-carousel-target="card">
-        <div></div>
-      </li>
+      <% @actifs.each do |actif| %>
+        <li class="card_carousel" data-carousel-target="card">
+          <%= link_to "" do %>
+            <div class="card_carousel_img">
+              <%= image_tag actif.photos[0] if actif.photos[0].present? %>
+            </div>
+            <div class="card_carousel_description">
+              <span>Propriété</span>
+              <h2><%= actif.name %></h2>
+              <p>Ingrédient cosmétique minceur & raffermissant</p>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </section>
