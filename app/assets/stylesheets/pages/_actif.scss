@@ -103,6 +103,11 @@
     gap: 8px;
     background-color: $card-grey;
     height: 100%;
+    .card_actif_titre {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+    }
   }
 }
 .carousel-actifs-control {
@@ -113,6 +118,17 @@
     display: flex;
     gap: 16px;
   }
+}
+.actif_property {
+  background: $background-property;
+  padding: 4px 8px;
+  font-weight: 400;
+  font-style: normal;
+  color: #292929;
+  display: flex;
+  width: fit-content;
+  font-size: 0.8em;
+  border-radius: 2px;
 }
 @media only screen and (max-width: 40em) {
   .actif_show {
