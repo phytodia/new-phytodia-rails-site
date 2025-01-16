@@ -65,7 +65,7 @@
 .list_cards_actif {
   list-style: none;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding: 0;
   gap: 32px;
 
