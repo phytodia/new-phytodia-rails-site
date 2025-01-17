@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   around_action :switch_locale
   before_action :langues_available
 
+  #add_breadcrumb "Bonjour".html_safe, :root_path
+
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
     I18n.with_locale(locale, &action)

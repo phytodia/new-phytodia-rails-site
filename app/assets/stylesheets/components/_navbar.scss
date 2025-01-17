@@ -190,8 +190,29 @@ li, p, h2, h3 {margin: 0;}
 #breadcrumb {
   display: flex;
   align-items: center;
-  height: 2em;
+  height: 4em;
+  font-family: $base-font;
+  gap:11px;
+  font-style: normal;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.64);
+  a {
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.64);
+    display: flex;
+    align-items: center;
+  }
+  .home_breadcrumb::before {
+    width: 5px; height: 3px; border: solid 1px;
+    content: url('../assets/images/pictos/house.svg');
+  }
+  .breadcrumb_separator {
+    font-weight: 400;
+  }
 }
+
+
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (max-width: 40em) {

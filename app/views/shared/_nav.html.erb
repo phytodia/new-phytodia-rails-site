@@ -64,8 +64,11 @@
   </ul>
   </nav>
   <div id="breadcrumb" class="inside">
-    <%= link_to root_path do %>
-      <%= image_tag "pictos/house.svg"%>
+    <% if params[:action] != "home" %>
+      <%= link_to root_path do %>
+        <%= image_tag "pictos/house.svg"%>
+      <% end %>
     <% end %>
+    <%= render_breadcrumbs :separator => '<span class="breadcrumb_separator">|</span>'.html_safe %>
   </div>
 </div>
