@@ -187,6 +187,11 @@ li, p, h2, h3 {margin: 0;}
   top: 0;
   width: 100%;
 }
+#breadcrumb {
+  display: flex;
+  align-items: center;
+  height: 2em;
+}
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (max-width: 40em) {
