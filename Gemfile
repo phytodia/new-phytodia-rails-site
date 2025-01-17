@@ -46,6 +46,8 @@ gem "dotenv-rails"
 
 gem "aws-sdk-s3", require: false
 
+gem "breadcrumbs_on_rails"
+
 
 
 group :development, :test do

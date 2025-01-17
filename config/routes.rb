@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     #get "/", to: "admin#home"
     resources :admins, only: [:index], path:"/"
     resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
-    get "actifs", to: "admins#actifs"
+    get "actifs", to: "admins#actifs", as: :actifs_backoff
   end
 
   scope "/:locale" do
