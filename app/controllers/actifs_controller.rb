@@ -1,7 +1,8 @@
 class ActifsController < ApplicationController
   layout "backoffice",only:[:new,:create,:edit,:update,:destroy]
 
-  add_breadcrumb "Nos actifs", :actifs_path
+  add_breadcrumb I18n.t("breadcrumbs.actifs"), :actifs_path
+
   def index
     lang = locale.to_s
     @actifs = Actif.where(lang: lang)

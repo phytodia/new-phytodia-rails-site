@@ -40,6 +40,10 @@ en:
 
   contact:
     btn_contact: "Contact Us"
+
+  breadcrumbs:
+    actifs: "Our actifs"
+
   routes:
     laboratoire-plantes: plants-laboratory
     analyse-recherche-developpement: research-laboratory
