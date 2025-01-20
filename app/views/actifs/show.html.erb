@@ -112,8 +112,8 @@
   </div>
 
 </section>
-<section>
-  <div class="inside carousel-actifs-control" data-controller="carousel">
+<section data-controller="carousel">
+  <div class="inside carousel-actifs-control">
     <%= image_tag "pictos/fiole-plante.svg"%>
     <div class="control-carousel">
       <span data-carousel-target="left" data-action="click->carousel#clickLeft"><%= image_tag "pictos/carousel-left.svg"%></span>
@@ -137,5 +137,14 @@
         </li>
       <% end %>
     </ul>
+    <div class="carousel_points">
+      <% @actifs.each do |actif| %>
+        <% if @actifs.to_a.index(actif) == 0 %>
+          <span class="carousel_point active" data-carousel-target="point"></span>
+        <% else %>
+          <span class="carousel_point" data-carousel-target="point"></span>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </section>
