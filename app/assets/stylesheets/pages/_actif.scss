@@ -78,9 +78,33 @@
   .flex {gap: 2em;}
 }
 .carousel_actifs {
-  display: flex;
+  //display: flex;
   --largeurA: calc(100% - 1440px);
   margin-left: calc(var(--largeurA) / 2);
+}
+.carousel_points {
+  display: flex;
+  gap: 16px;
+  margin: auto;
+  justify-content: center;
+  border: solid 1px;
+  height: 4em;
+  align-items: center;
+  .carousel_point {
+    width:8px;
+    height: 1px;
+    color: grey;
+    background-color: grey;
+    display: flex;
+    border: solid 1px;
+    border-radius: 10px;
+    &.active {
+      width: 160px;
+      color: $green;
+      background-color: $green;
+      //animation: 3s linear 1s infinite running slidein;
+    }
+  }
 }
 .list_cards_actif {
   list-style: none;
@@ -162,6 +186,7 @@
   font-family: $base-font;
   text-transform: capitalize;
 }
+
 @media only screen and (max-width: 40em) {
   .actif_show {
     grid-template-columns: 1fr;
