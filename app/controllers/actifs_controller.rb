@@ -1,8 +1,8 @@
 class ActifsController < ApplicationController
   layout "backoffice",only:[:new,:create,:edit,:update,:destroy]
 
-  add_breadcrumb "Nos actifs", :actifs_path
   def index
+    add_breadcrumb t("breadcrumbs.actifs") , :actifs_path
     lang = locale.to_s
     @actifs = Actif.where(lang: lang)
   end
@@ -22,7 +22,7 @@ class ActifsController < ApplicationController
     @cats_produits = @actif.cat_produits.reject { |c| c.empty? }
     @props_actif = @actif.props_tags.reject { |c| c.empty? }
     @actifs = Actif.all
-
+    add_breadcrumb t("breadcrumbs.actifs") , :actifs_path
     add_breadcrumb "<span>#{@actif.name}</span>".html_safe, :actif_path
   end
 

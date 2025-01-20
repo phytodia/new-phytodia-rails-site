@@ -32,7 +32,7 @@
   .accordions_list {}
   .actifs_photos {
     gap: 8px;
-    .first_actif_photo,.second_actifs_photo {width: 100%; display: flex;}
+    .first_actif_photo,.second_actifs_photo {width: 100%; display: flex;background-color: #EBEBEB;}
     .first_actif_photo {
       aspect-ratio: 1 / 1;
       width: auto;

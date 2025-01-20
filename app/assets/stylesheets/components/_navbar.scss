@@ -192,7 +192,7 @@ li, p, h2, h3 {margin: 0;}
   align-items: center;
   height: 4em;
   font-family: $base-font;
-  gap:11px;
+  //gap:11px;
   font-style: normal;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.64);
@@ -203,12 +203,19 @@ li, p, h2, h3 {margin: 0;}
     display: flex;
     align-items: center;
   }
+  .point_breadcrumb {
+    padding: 0 4px;
+    font-size: 20px;
+    width: 1em;
+    height: 1em;
+  }
   .home_breadcrumb::before {
     width: 5px; height: 3px; border: solid 1px;
     content: url('../assets/images/pictos/house.svg');
   }
   .breadcrumb_separator {
     font-weight: 400;
+    padding: 0 8px;
   }
 }
 
