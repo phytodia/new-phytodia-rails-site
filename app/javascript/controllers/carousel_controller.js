@@ -10,17 +10,22 @@ export default class extends Controller {
     carousel.scrollLeft += document.querySelector(".card_carousel").clientWidth
 
     let indexPoint = this.pointTargets.indexOf(document.querySelector(".carousel_point.active"))
-    this.pointTargets[indexPoint].classList.remove("active")
-    this.pointTargets[indexPoint+1].classList.add("active")
-    //ajouter condition if 0 et max de l'array
+    if(indexPoint+1 < Array.from(this.pointTargets).length){
+      this.pointTargets[indexPoint].classList.remove("active")
+      this.pointTargets[indexPoint+1].classList.add("active")
+    }
+    else {}
   }
   clickLeft(){
     let carousel = document.querySelector(".carousel");
     carousel.scrollLeft -= document.querySelector(".card_carousel").clientWidth
 
     let indexPoint = this.pointTargets.indexOf(document.querySelector(".carousel_point.active"))
-    this.pointTargets[indexPoint].classList.remove("active")
-    this.pointTargets[indexPoint-1].classList.add("active")
-    //ajouter condition if 0 et max de l'array
+    if (indexPoint !== 0) {
+      this.pointTargets[indexPoint].classList.remove("active")
+      this.pointTargets[indexPoint-1].classList.add("active")
+    }
+    else {
+    }
   }
 }
