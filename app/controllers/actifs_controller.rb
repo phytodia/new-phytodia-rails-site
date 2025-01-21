@@ -21,7 +21,7 @@ class ActifsController < ApplicationController
     @actif = Actif.find(params[:id])
     @cats_produits = @actif.cat_produits.reject { |c| c.empty? }
     @props_actif = @actif.props_tags.reject { |c| c.empty? }
-    @actifs = Actif.all
+    @actifs = Actif.where(lang:params[:locale])
     add_breadcrumb t("breadcrumbs.actifs") , :actifs_path
     add_breadcrumb "<span>#{@actif.name}</span>".html_safe, :actif_path
   end

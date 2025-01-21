@@ -32,6 +32,8 @@ Rails.application.routes.draw do
       get "laboratoire-plantes", to: "pages#laboratoire_plantes"
       get "analyse-recherche-developpement",to: "pages#analyses"
       get "laboratoire-cosmetologie",to: "pages#cosmetologie"
+      get "actifs",to: "actifs#index",as: :actifs
+      #resources :actifs, only:[:index,:show]
     end
   end
 
