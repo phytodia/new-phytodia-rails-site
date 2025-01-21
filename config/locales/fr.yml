@@ -11,5 +11,7 @@ fr:
 
   contact:
     btn_contact: "Nous contacter"
+  actifs:
+    actifs_titre: "Nos actifs"
   breadcrumbs:
     actifs: "Nos actifs"
