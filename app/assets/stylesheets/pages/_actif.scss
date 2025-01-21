@@ -13,8 +13,12 @@
 
 }
 #actifs_list {
+  padding: 0;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  //grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 32px;
+  .card_carousel {width: 100%;}
 }
 //actif sjow
 #actif_header {
