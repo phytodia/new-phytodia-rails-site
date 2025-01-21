@@ -1,3 +1,22 @@
+//Listing actifs
+#actifs_header {
+  //height: 288px;
+  height: 18em;
+  display: flex;
+  align-items: center;
+  //background-image: url("../assets/images/banners/actifs-banner.jpeg");
+  //background-image: url("/assets/images/banners/actifs-banner.jpeg");
+  background-image: image-url('banners/actifs-banner.jpeg');
+  background-position: center;
+  background-size: cover;
+  h1 {font-size: 3em; color: white; font-weight: 500;}
+
+}
+#actifs_list {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+//actif sjow
 #actif_header {
   padding-top: 6em;
 }

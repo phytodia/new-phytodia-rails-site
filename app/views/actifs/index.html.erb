@@ -1,7 +1,22 @@
-<h1>Actifs#index</h1>
+<article>
+  <div id="actifs_header">
+    <h1 class="inside">Nos actifs</h1>
+  </div>
+
+  <div id="actifs_list" class="inside">
+    <div class="actifs_list_index">
+      <p>En 15 ans, nos chercheurs ont analysé plus de 2500 extraits de plantes. Nous avons sélectionné les meilleurs pour en tirer de puissantes molécules actives à intégrer dans vos produits</p>
+      <%= link_to "En savoir plus" %>
+    </div>
+    <ul>
+      <% @actifs.each do |actif| %>
+      <% end %>
+    </ul>
+  </div>
 <p>Find me in app/views/actifs/index.html.erb</p>
 <ul>
   <% @actifs.each do |actif| %>
     <li><%= actif.name %> | <%= actif.lang %> <%= link_to actif.name,actif_path(actif)%></li>
   <% end %>
 </ul>
+</article>
