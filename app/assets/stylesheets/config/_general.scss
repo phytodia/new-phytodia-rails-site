@@ -11,7 +11,7 @@ body {
   background-color: #F6F4EE;
 }
 article {
-  padding-top: 11em;
+  padding-top: 7em;
 }
 section:nth-of-type(even) {
   background-color: white;
@@ -32,4 +32,12 @@ section:nth-of-type(even) {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+section {
+  padding: 80px 0;
+}
+@media only screen and (max-width: 40em) {
+  section:first-of-type {
+    padding-top: 0;
+  }
 }

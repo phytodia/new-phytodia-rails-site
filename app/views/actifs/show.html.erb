@@ -114,10 +114,10 @@
 </section>
 <section data-controller="carousel">
   <div class="inside carousel-actifs-control">
-    <%= image_tag "pictos/fiole-plante.svg"%>
+    <%= image_tag "pictos/fiole-plante.svg",class:""%>
     <div class="control-carousel">
-      <span data-carousel-target="left" data-action="click->carousel#clickLeft"><%= image_tag "pictos/carousel-left.svg"%></span>
-      <span data-carousel-target="right" data-action="click->carousel#clickRight"><%= image_tag "pictos/carousel-right.svg"%></span>
+      <span data-carousel-target="left" data-action="click->carousel#clickLeft" class="carousel_arrow"><%= image_tag "pictos/carousel-left.svg", alt:"" %></span>
+      <span data-carousel-target="right" data-action="click->carousel#clickRight" class="carousel_arrow"><%= image_tag "pictos/carousel-right.svg",alt:"" %></span>
     </div>
   </div>
   <div class="carousel_actifs">
@@ -133,7 +133,7 @@
               <h2 class="card_actif_titre"><%= actif.name %></h2>
               <p class="card_actif_text">Ingrédient cosmétique minceur & raffermissant</p>
               <%= link_to actif_path(actif),class:"card_actif_btn" do %>
-                <span>Découvrir</span><%= image_tag 'chevron-right.svg'%>
+                <span>Découvrir</span><%= image_tag 'arrow-right.svg'%>
               <% end %>
             </div>
         </li>
