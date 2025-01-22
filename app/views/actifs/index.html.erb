@@ -1,13 +1,17 @@
 <article id="actifs_index">
   <div id="actifs_header">
-    <h1 class="inside"><%= t("actifs.actifs_titre")%></h1>
+    <div class="inside actifs_header_text">
+      <h1 class=""><%= t("actifs.actifs_titre")%></h1>
+      <p class="actifs_text_presentation">En 15 ans, nos chercheurs ont analysé plus de 2500 extraits de plantes. Nous avons sélectionné les meilleurs pour en tirer de puissantes molécules actives à intégrer dans vos produits
+        <%= link_to "En savoir plus" %>
+      </p>
+    </div>
   </div>
 
   <div class="actifs_main">
     <ul id="actifs_list" class="inside">
     <div class="actifs_list_index">
-      <p>En 15 ans, nos chercheurs ont analysé plus de 2500 extraits de plantes. Nous avons sélectionné les meilleurs pour en tirer de puissantes molécules actives à intégrer dans vos produits</p>
-      <%= link_to "En savoir plus" %>
+      <p class="actifs_text_presentation">En 15 ans, nos chercheurs ont analysé plus de 2500 extraits de plantes. Nous avons sélectionné les meilleurs pour en tirer de puissantes molécules actives à intégrer dans vos produits.<%= link_to "En savoir plus" %></p>
     </div>
     <% @actifs.each do |actif| %>
       <li class="card_carousel">
@@ -34,7 +38,7 @@
           <p>Vous souhaitez développer votre propre actif à partir d'une matière végétale ?<br>Notre équipe vous accompagne de A à Z dans la création de votre actif.</p>
         </div>
         <%= link_to "" do %>
-          <span>Lien service</span><%= image_tag "arrow-right.svg"%>
+          <span>En savoir plus</span><%= image_tag "arrow-right.svg"%>
         <% end %>
       </div>
     </li>

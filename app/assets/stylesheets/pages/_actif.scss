@@ -20,7 +20,14 @@
   background-position: center;
   background-size: cover;
   padding-top: 6em;
-  h1 {font-size: 3em; color: white; font-weight: 500;}
+  .actifs_header_text {
+    h1 {font-size: 3em; color: white; font-weight: 500;}
+  }
+}
+.actifs_text_presentation {font-weight: 300; font-size: 1.3em; line-height: 1.3em;}
+
+.actifs_header_text{
+  .actifs_text_presentation{display: none;}
 }
 #actifs_list {
   grid-area:actifs;
@@ -36,6 +43,8 @@
 }
 .actifs_description_page {
   grid-area:description;
+  width: 66%;
+  margin: auto;
 }
 //actif sjow
 
@@ -358,5 +367,24 @@
   }
   #actifs_index {
     padding-top: 4em;
+  }
+  .actifs_description_page {
+    width: 100%;
+  }
+  .actifs_list_index {
+    display: none;
+  }
+  #actifs_header {
+    padding: 15px;
+  }
+  .actifs_header_text {
+    background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 52.55%, rgba(81, 153, 75, 0.08) 100%), #FFFFFF;
+    padding: 1.5em 1em;
+    h1 {margin: 0; color: black !important;}
+    p {
+    }
+  }
+  .actifs_text_presentation {
+    display: flex !important;flex-direction: column;
   }
 }
