@@ -28,11 +28,11 @@
   display: grid;
   //grid-template-columns: repeat(4,1fr);
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-template-rows: 444px;
+  //grid-template-rows: minmax(500px, auto) minmax(0, 100%);
   gap: 32px;
   margin-top: 2em;
   margin-bottom: 4em;
-  .card_carousel {width: 100%;min-width: none;}
+  .card_carousel {width: 100%;min-width: none; height: 100%; min-height: 444px;}
 }
 .actifs_description_page {
   grid-area:description;
@@ -168,8 +168,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  //box-sizing: content-box;
   //max-height: 436px;
   //height: 100%;
+  box-sizing: border-box;
   a {height: 100%;
     display: flex;
     flex-direction: column;
@@ -267,19 +269,20 @@
   text-transform: capitalize;
 }
 
-.card_extraction {
+.card_carousel.extraction {
   background-color: $blue;
   color: white;
+  justify-content: center;
   //width: 25%;
-  min-width: 296px;
+  //min-width: 296px;
   //border: solid 1px;
   //height: 300px;
-  border-radius: 4px;
+  //border-radius: 4px;
   //height: 436px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //height: 100%;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
   .card_extraction_content {
     display: flex;
     flex-direction: column;
@@ -307,6 +310,15 @@
     background-color: $green;
     padding: 3px 10px;
     color:white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding:0.75em 1em;
+    border-radius: 50px;
+    flex-direction: row;
+    img {
+      filter: invert(1);
+    }
   }
 }
 
@@ -326,5 +338,25 @@
   }
   .list_cards_actif {
     padding: $padding-mobile;
+  }
+  #actifs_list {
+    grid-template-columns: 1fr;
+    //grid-template-rows: minmax(468px, auto) minmax(0, 100%) !important;
+    //border: solid 1px;
+    //padding: $padding-mobile;
+    //padding: $padding-mobile;
+    .card_carousel, .card_carousel.extraction {
+      height: 100% !important;
+      min-height: 468px;
+      //border: solid 1px;
+      justify-content: center;
+    }
+  }
+
+  .actifs_main,.carousel_points{
+    padding: $padding-mobile;
+  }
+  #actifs_index {
+    padding-top: 4em;
   }
 }

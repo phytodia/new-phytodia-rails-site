@@ -3,7 +3,8 @@
     <h1 class="inside"><%= t("actifs.actifs_titre")%></h1>
   </div>
 
-  <ul id="actifs_list" class="inside">
+  <div class="actifs_main">
+    <ul id="actifs_list" class="inside">
     <div class="actifs_list_index">
       <p>En 15 ans, nos chercheurs ont analysé plus de 2500 extraits de plantes. Nous avons sélectionné les meilleurs pour en tirer de puissantes molécules actives à intégrer dans vos produits</p>
       <%= link_to "En savoir plus" %>
@@ -25,19 +26,22 @@
           <% end %>
         </li>
     <% end %>
-    <li class="card_extraction">
+    <li class="card_carousel extraction">
       <div class="card_extraction_content">
         <%= image_tag "Logo-Phytodia-white.svg",width:"100px"%>
         <div class="card_extraction_text">
           <h2>Extraction<br> sur mesure</h2>
           <p>Vous souhaitez développer votre propre actif à partir d'une matière végétale ?<br>Notre équipe vous accompagne de A à Z dans la création de votre actif.</p>
         </div>
-        <%= link_to "Lien service","",class:"" %>
+        <%= link_to "" do %>
+          <span>Lien service</span><%= image_tag "arrow-right.svg"%>
+        <% end %>
       </div>
     </li>
-  </ul>
-  <div class="inside actifs_description_page">
+    </ul>
+    <div class="inside actifs_description_page">
     <h2>Votre fournisseur d'ingrédients actifs pour vos cosmétiques et autres produits à base de plante</h2>
     <p>Ayant développé au cours des années un important réseau de fournisseurs de plantes et d'ingrédients, en privilégiant à chaque fois le meilleur des plantes, nous pouvons aujourd'hui vous proposer un ensemble d'extraits de plantes et d'ingrédients actifs pouvant entrer dans le développement et la composition de vos cosmétiques et de vos autres produits à base de plante.</p>
+    </div>
   </div>
 </article>
