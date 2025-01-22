@@ -10,6 +10,8 @@
 <p><%= t :hello %></p>
 
 <%= link_to "A propos", about_path() %>
-<h2>GGG TT</h2>
-
-<%= link_to "laboratoire des plantes", send("laboratoire_plantes_#{locale.to_s}_path") %>
+<h2>Accès pages</h2>
+<ul>
+  <li><%= link_to "laboratoire des plantes", send("laboratoire_plantes_#{locale.to_s}_path") %></li>
+  <li><%= link_to "actifs", send("actifs_#{locale.to_s}_path" )%></li>
+</ul>
