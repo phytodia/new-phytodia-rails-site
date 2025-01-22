@@ -1,6 +1,53 @@
-#actif_header {
-  padding-top: 6em;
+//Listing actifs
+#actifs_index {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "filtre"
+  "actifs"
+  "description"
+  ;
 }
+#actifs_header {
+  //height: 288px;
+  grid-area:header;
+  height: 18em;
+  display: flex;
+  align-items: center;
+  //background-image: url("../assets/images/banners/actifs-banner.jpeg");
+  //background-image: url("/assets/images/banners/actifs-banner.jpeg");
+  background-image: image-url('banners/actifs-banner.jpeg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 6em;
+  .actifs_header_text {
+    h1 {font-size: 3em; color: white; font-weight: 500;}
+  }
+}
+.actifs_text_presentation {font-weight: 300; font-size: 1.3em; line-height: 1.3em;}
+
+.actifs_header_text{
+  .actifs_text_presentation{display: none;}
+}
+#actifs_list {
+  grid-area:actifs;
+  padding: 0;
+  display: grid;
+  //grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  //grid-template-rows: minmax(500px, auto) minmax(0, 100%);
+  gap: 32px;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  .card_carousel {width: 100%;min-width: none; height: 100%; min-height: 444px;}
+}
+.actifs_description_page {
+  grid-area:description;
+  width: 66%;
+  margin: auto;
+}
+//actif sjow
+
 .actif_show {
   display: grid;
   grid-template-columns: 32% 66%;
@@ -126,14 +173,22 @@
   //border: solid 1px;
   height: 300px;
   border-radius: 4px;
-  height: 436px;
+  //height: 436px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  //box-sizing: content-box;
   //max-height: 436px;
   //height: 100%;
-  a {}
+  box-sizing: border-box;
+  a {height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .card_carousel_img {
     min-height: 296px;
+    max-height: 296px;
+    //aspect-ratio: 1 / 1;
     width: 100%;
     display: flex;
     background-color: #EBEBEB;
@@ -149,36 +204,46 @@
     padding: 16px 24px;
     gap: 8px;
     background-color: $card-grey;
-    height: 100%;
+    height:100%;
+    justify-content: center;
     .card_actif_titre {
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
     }
     .card_actif_text {
+      p {
       font-style: normal;
       font-weight: 400;
       font-size: 0.9em;
+      }
     }
-    a {display: flex;justify-content: space-between; align-items: center; font-size: 0.9em;}
+    //a {display: flex;justify-content: space-between; align-items: center; font-size: 0.9em;}
     .card_actif_btn {
       visibility: hidden;
       height: 0;
       border: solid 1px;
       border-radius: 25px;
-      padding: 2px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       text-transform: uppercase;
-      &:hover {border:solid 2px;}
+      &:hover {
+        border:solid 2px;
+      }
     }
   }
   &:hover {
     .card_actif_text {
+      p {
       visibility: hidden;
       height: 0;
+      }
     }
     .card_actif_btn {
       visibility: visible;
       height: auto;
+      padding: 0.3em 0.9em;
     }
   }
 }
@@ -213,6 +278,61 @@
   text-transform: capitalize;
 }
 
+.card_carousel.extraction {
+  background-color: $blue;
+  color: white;
+  justify-content: center;
+  //width: 25%;
+  //min-width: 296px;
+  //border: solid 1px;
+  //height: 300px;
+  //border-radius: 4px;
+  //height: 436px;
+  //height: 100%;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  .card_extraction_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    .card_extraction_text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 24px;
+      opacity: 0.8; text-align: center;
+      gap:8px;
+      h2 {
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 40px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+  a {
+    background-color: $green;
+    padding: 3px 10px;
+    color:white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding:0.75em 1em;
+    border-radius: 50px;
+    flex-direction: row;
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
+
 @media only screen and (max-width: 40em) {
   .actif_show {
     grid-template-columns: 1fr;
@@ -228,5 +348,44 @@
   }
   .list_cards_actif {
     padding: $padding-mobile;
+  }
+  #actifs_list {
+    grid-template-columns: 1fr;
+    //grid-template-rows: minmax(468px, auto) minmax(0, 100%) !important;
+    //border: solid 1px;
+    //padding: $padding-mobile;
+    //padding: $padding-mobile;
+    .card_carousel, .card_carousel.extraction {
+      height: 100% !important;
+      min-height: 468px;
+      //border: solid 1px;
+      justify-content: center;
+    }
+  }
+
+  .actifs_main,.carousel_points{
+    padding: $padding-mobile;
+  }
+  #actifs_index {
+    padding-top: 4em;
+  }
+  .actifs_description_page {
+    width: 100%;
+  }
+  .actifs_list_index {
+    display: none;
+  }
+  #actifs_header {
+    padding: 15px;
+  }
+  .actifs_header_text {
+    background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 52.55%, rgba(81, 153, 75, 0.08) 100%), #FFFFFF;
+    padding: 1.5em 1em;
+    h1 {margin: 0; color: black !important;}
+    p {
+    }
+  }
+  .actifs_text_presentation {
+    display: flex !important;flex-direction: column;
   }
 }

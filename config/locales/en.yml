@@ -41,10 +41,14 @@ en:
   contact:
     btn_contact: "Contact Us"
 
+  actifs:
+    actifs_titre: "Ingredients"
+
   breadcrumbs:
-    actifs: "Our actifs"
+    actifs: "Ingredients"
 
   routes:
     laboratoire-plantes: plants-laboratory
     analyse-recherche-developpement: research-laboratory
     laboratoire-cosmetologie: cosmetics-laboratory
+    actifs: ingredients
