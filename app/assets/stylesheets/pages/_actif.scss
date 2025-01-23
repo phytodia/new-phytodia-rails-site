@@ -158,20 +158,12 @@
     }
   }
 }
-.list_cards_actif {
-  list-style: none;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  gap: 32px;
-}
+
 .card_carousel {
   width: 25%;
   min-width: 296px;
   //border: solid 1px;
-  height: 300px;
+  //height: 300px;
   border-radius: 4px;
   //height: 436px;
   height: 100%;
@@ -246,6 +238,21 @@
       height: auto;
       padding: 0.3em 0.9em;
     }
+  }
+}
+.list_cards_actif {
+  list-style: none;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 32px;
+  &.carousel {
+    //display: grid;
+    grid-template-columns: repeat(auto-fill, 296px);
+    gap:32px;
+    .card_carousel {width: 100%;}
   }
 }
 .carousel-actifs-control {
