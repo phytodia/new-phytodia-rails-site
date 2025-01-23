@@ -250,9 +250,9 @@
   gap: 32px;
   &.carousel {
     //display: grid;
-    grid-template-columns: repeat(auto-fill, 296px);
+    //grid-template-columns: repeat(auto-fill, 296px);
     gap:32px;
-    .card_carousel {width: 100%;}
+    .card_carousel {width: 100%;max-width: 25%;}
   }
 }
 .carousel-actifs-control {
