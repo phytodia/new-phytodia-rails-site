@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_29_144421) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_29_144950) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -88,6 +88,35 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_29_144421) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "richer_text_json_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_richer_texts_rich_json_uniqueness", unique: true
+    t.index ["record_type", "record_id"], name: "index_richer_text_json_texts_on_record"
+  end
+
+  create_table "richer_text_o_embeds", force: :cascade do |t|
+    t.json "fields"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "richer_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_richer_texts_rich_texts_uniqueness", unique: true
+    t.index ["record_type", "record_id"], name: "index_richer_text_rich_texts_on_record"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

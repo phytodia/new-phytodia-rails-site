@@ -3,8 +3,10 @@
 <div class="inside" style="padding-top:10em;">
 <%= simple_form_for @article do |f| %>
 <%= f.input :titre %>
+<div>
 <%= f.label :content %>
-<%= f.rich_text_area :content %>
-<%= f.button :submit %>
+<%= f.richer_text_area :content,tables:true %>
+</div>
+<%= f.button :submit,class:"button" %>
 <% end %>
 </div>

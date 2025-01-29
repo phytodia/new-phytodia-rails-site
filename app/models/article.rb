@@ -1,3 +1,3 @@
 class Article < ApplicationRecord
-  has_rich_text :content
+  has_richer_text :content, store_as: :json
 end
