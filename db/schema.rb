@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_15_071549) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_29_144950) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,16 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_15_071549) do
     t.text "cat_produits", default: [], array: true
     t.text "props_tags", default: [], array: true
     t.text "composition", default: [], array: true
+  end
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
   end
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -71,6 +81,42 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_15_071549) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.text "titre"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "richer_text_json_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_richer_texts_rich_json_uniqueness", unique: true
+    t.index ["record_type", "record_id"], name: "index_richer_text_json_texts_on_record"
+  end
+
+  create_table "richer_text_o_embeds", force: :cascade do |t|
+    t.json "fields"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "richer_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_richer_texts_rich_texts_uniqueness", unique: true
+    t.index ["record_type", "record_id"], name: "index_richer_text_rich_texts_on_record"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

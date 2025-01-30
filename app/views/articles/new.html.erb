@@ -1,0 +1,12 @@
+<h1>Articles#new</h1>
+<p>Find me in app/views/articles/new.html.erb</p>
+<div class="inside" style="padding-top:10em;">
+<%= simple_form_for @article do |f| %>
+<%= f.input :titre %>
+<div>
+<%= f.label :content %>
+<%= f.richer_text_area :content,tables:true %>
+</div>
+<%= f.button :submit,class:"button" %>
+<% end %>
+</div>

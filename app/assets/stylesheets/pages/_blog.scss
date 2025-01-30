@@ -1,0 +1,12 @@
+#blog_article {
+  .blog_article_content {
+    table {
+      border-collapse: collapse !important;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      tr, td {border: solid 1px;}
+    }
+    img {max-width: 900px;display: block; margin: auto;}
+  }
+}

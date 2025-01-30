@@ -1,0 +1,7 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+<ul>
+<% @articles.each do |article| %>
+<li><%= link_to article.titre, article_path(article)%></li>
+<% end %>
+</ul>
