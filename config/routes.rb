@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     root "pages#home"
     get "about", to: "pages#about"
     resources :actifs, only:[:index,:show]
+    resources :authors
     resources :articles
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
