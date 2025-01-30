@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "authors/index"
+  get "authors/show"
+  get "authors/new"
+  get "authors/create"
+  get "authors/edit"
+  get "authors/update"
+  get "authors/destroy"
 
   devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
