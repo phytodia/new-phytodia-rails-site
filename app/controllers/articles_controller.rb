@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    require 'json'
     @article = Article.new(article_params)
     @article.save
   end
