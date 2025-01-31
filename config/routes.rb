@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     resources :actifs, only:[:index,:show]
     resources :authors
     get "/blog", to: "articles#index"
-    get "/blog/:author/:id", to: "articles#show", as: :post
+    get "/blog/:slug_authors/:id", to: "articles#show", as: :post
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do

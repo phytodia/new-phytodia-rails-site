@@ -17,8 +17,8 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @authors = params[:article][:author][:author_ids].reject { |c| c.empty? }
     @authors = Author.where(id:@authors)
+    @article.authors = @authors
     @article.save
-    fail
   end
 
   def edit
@@ -32,6 +32,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:titre,:content)
+    params.require(:article).permit(:titre,:content,:slug_authors)
   end
 end
