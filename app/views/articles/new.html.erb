@@ -2,6 +2,9 @@
 <p>Find me in app/views/articles/new.html.erb</p>
 <div class="inside" style="padding-top:10em;">
 <%= simple_form_for @article do |f| %>
+  <%= f.simple_fields_for :author do |p| %>
+    <%= p.input :author_ids, as: :check_boxes, collection: @authors.all.map {|f| ["#{f.lastname} #{f.firstname}",f.id]} %>
+  <% end %>
 <%= f.input :titre %>
 <div>
 <%= f.label :content %>

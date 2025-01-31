@@ -46,7 +46,7 @@
     </div>
     <div class="second_buttons_nav">
       <li><%= link_to t('navbar.about'),"",class:"header_nav_link_secondary" %></li>
-      <li><%= link_to t('navbar.blog'),"",class:"header_nav_link_secondary" %></li>
+      <li><%= link_to t('navbar.blog'),blog_path,class:"header_nav_link_secondary" %></li>
       <div id="contact_and_langues">
         <li><%= link_to t('contact.btn_contact').upcase,"", class:"btn_contact" %></li>
         <div id="selector_langues">

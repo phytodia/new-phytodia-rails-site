@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get "authors/index"
-  get "authors/show"
-  get "authors/new"
-  get "authors/create"
-  get "authors/edit"
-  get "authors/update"
-  get "authors/destroy"
 
   devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -27,6 +20,7 @@ Rails.application.routes.draw do
     resources :admins, only: [:index], path:"/"
     resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
     get "actifs", to: "admins#actifs", as: :actifs_backoff
+    resources :articles, only: [:new,:create,:edit,:update,:destroy]
   end
 
   scope "/:locale" do
@@ -34,7 +28,8 @@ Rails.application.routes.draw do
     get "about", to: "pages#about"
     resources :actifs, only:[:index,:show]
     resources :authors
-    resources :articles
+    get "/blog", to: "articles#index"
+    get "/blog/:author/:id", to: "articles#show", as: :post
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do

@@ -9,12 +9,16 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @authors = Author.all
   end
 
   def create
-    require 'json'
+    #require 'json'
     @article = Article.new(article_params)
+    @authors = params[:article][:author][:author_ids].reject { |c| c.empty? }
+    @authors = Author.where(id:@authors)
     @article.save
+    fail
   end
 
   def edit
