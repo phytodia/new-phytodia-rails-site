@@ -20,13 +20,16 @@ Rails.application.routes.draw do
     resources :admins, only: [:index], path:"/"
     resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
     get "actifs", to: "admins#actifs", as: :actifs_backoff
+    resources :articles, only: [:new,:create,:edit,:update,:destroy]
   end
 
   scope "/:locale" do
     root "pages#home"
     get "about", to: "pages#about"
     resources :actifs, only:[:index,:show]
-    resources :articles
+    resources :authors
+    get "/blog", to: "articles#index"
+    get "/blog/:slug_authors/:id", to: "articles#show", as: :post
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do
