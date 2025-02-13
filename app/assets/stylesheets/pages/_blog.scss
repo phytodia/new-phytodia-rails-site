@@ -28,4 +28,18 @@
 .blog_article_content {
   max-width: 1088px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 80% 18%;
+  gap: 2%
+}
+.article_cover {
+  max-width: 1088px;
+  margin: auto;
+  border: solid 1px;
+}
+.article_table_matieres {
+  border: solid 1px;
+}
+.blog_article_main_content {
+  border: solid 1px;
 }
