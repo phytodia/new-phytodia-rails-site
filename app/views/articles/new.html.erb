@@ -6,7 +6,14 @@
       value_method: :id, label_method: :lastname,
       as: :check_boxes, include_blank: false %>
   <%= f.input :lang, collection:["fr","en","de","es"], selected:0 %>
+<div class="form_seo">
+<%= f.input :title %>
+<%= f.input :meta_description %>
+<%= f.input :indexed %>
+<%= f.input :public %>
+</div>
 <%= f.input :titre %>
+<%= f.input :intro %>
 <div>
 <%= f.label :content %>
 <%= f.richer_text_area :content,tables:true,callouts:true %>
