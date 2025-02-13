@@ -382,3 +382,7 @@ richer-text-editor a {
   width: 100% !important;
   min-height: 500px !important;
 }
+
+.text-editor-wrapper {
+  min-height: 500px;
+}

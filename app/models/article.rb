@@ -2,6 +2,7 @@ class Article < ApplicationRecord
   has_many :author_publications
   has_many :authors, through: :author_publications
   has_richer_text :content, store_as: :json
+  has_richer_text :intro
 
   #validates :authors, presence: true
   validates :lang, presence: true

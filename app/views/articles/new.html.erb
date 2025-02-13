@@ -13,10 +13,10 @@
 <%= f.input :public %>
 </div>
 <%= f.input :titre %>
-<%= f.input :intro %>
+<%= f.input :intro,:input_html => { 'rows' => 5} %>
 <div>
 <%= f.label :content %>
-<%= f.richer_text_area :content,tables:true,callouts:true %>
+<%= f.richer_text_area :content,tables:true,callouts:true, :input_html => { 'rows' => 10} %>
 </div>
 <%= f.button :submit,class:"button" %>
 <% end %>
