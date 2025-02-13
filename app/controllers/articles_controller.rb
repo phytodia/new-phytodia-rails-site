@@ -32,6 +32,7 @@ class ArticlesController < ApplicationController
     @authors = Author.where(id:authors)
     @article.authors = @authors
     @article.save
+    redirect_to blog_path
   end
 
   def destroy
@@ -39,6 +40,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:titre,:content,:slug_authors)
+    params.require(:article).permit(:titre,:content,:slug_authors,:slug)
   end
 end
