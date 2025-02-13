@@ -2,6 +2,10 @@
 <p>Find me in app/views/articles/index.html.erb</p>
 <ul>
 <% @articles.each do |article| %>
-  <li><%= link_to article.titre, post_path(slug_authors:article.slug_authors,id:article)%></li>
+  <% if article.authors.present? %>
+    <li><%= link_to article.titre, post_author_path(slug_authors:article.slug_authors,id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
+  <% else %>
+    <li><%= link_to article.titre, post_path(id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
+  <% end %>
 <% end %>
 </ul>

@@ -3,7 +3,11 @@ class Article < ApplicationRecord
   has_many :authors, through: :author_publications
   has_richer_text :content, store_as: :json
 
-  validates :authors, presence: true
+  #validates :authors, presence: true
+  validates :lang, presence: true
+
+  extend FriendlyId
+  friendly_id :titre, use: :slugged
 
   after_validation :slug_authors, on: [ :create, :update ]
 
