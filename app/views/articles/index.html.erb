@@ -3,9 +3,9 @@
 <ul>
 <% @articles.each do |article| %>
   <% if article.authors.present? %>
-    <li><%= link_to article.titre, post_author_path(slug_authors:article.slug_authors,id:article)%></li>
+    <li><%= link_to article.titre, post_author_path(slug_authors:article.slug_authors,id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
   <% else %>
-    <li><%= link_to article.titre, post_path(id:article)%></li>
+    <li><%= link_to article.titre, post_path(id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
   <% end %>
 <% end %>
 </ul>

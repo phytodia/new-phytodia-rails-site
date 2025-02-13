@@ -1,2 +1,20 @@
 <h1>Articles#edit</h1>
 <p>Find me in app/views/articles/edit.html.erb</p>
+<div class="inside" style="padding-top:10em;">
+<%= simple_form_for @article do |f| %>
+  <%= f.association :authors, collection: Author.all,
+      value_method: :id, label_method: :lastname,
+      as: :check_boxes, include_blank: false %>
+  <!--
+  <%= f.simple_fields_for :author do |p| %>
+    <%= p.input :author_ids, as: :check_boxes, collection: Author.all.map {|f| ["#{f.lastname} #{f.firstname}",f.id]} %>
+  <% end %>
+  -->
+<%= f.input :titre %>
+<div>
+<%= f.label :content %>
+<%= f.richer_text_area :content,tables:true %>
+</div>
+<%= f.button :submit,class:"button" %>
+<% end %>
+</div>
