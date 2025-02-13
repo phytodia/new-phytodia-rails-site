@@ -19,3 +19,6 @@ Actif.create!(name:"Corolea+",lang:"fr")
 Actif.create!(name:"Melyoferm",lang:"fr")
 Actif.create!(name:"Sambulite",lang:"fr")
 Actif.create!(name:"Lonhydra",lang:"fr")
+
+Author.create!(lastname:"Belin",firstname:"Nicolas")
+Author.create!(lastname:"Junk",firstname:"Celia")
