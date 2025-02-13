@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.where(lang:params[:locale])
   end
 
   def show
@@ -15,10 +15,12 @@ class ArticlesController < ApplicationController
   def create
     #require 'json'
     @article = Article.new(article_params)
-    @authors = params[:article][:author][:author_ids].reject { |c| c.empty? }
+    @authors = params[:article][:author_ids].reject { |c| c.empty? }
     @authors = Author.where(id:@authors)
     @article.authors = @authors
     @article.save
+
+    redirect_to blog_path
   end
 
   def edit
@@ -32,6 +34,7 @@ class ArticlesController < ApplicationController
     @authors = Author.where(id:authors)
     @article.authors = @authors
     @article.save
+
     redirect_to blog_path
   end
 
@@ -40,6 +43,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:titre,:content,:slug_authors,:slug)
+    params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang)
   end
 end
