@@ -10,3 +10,22 @@
     img {max-width: 900px;display: block; margin: auto;}
   }
 }
+
+#post_header {
+  background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 42.32%, rgba(81, 153, 75, 0.096) 100%), #F6F4EE;
+  border-radius: 0px 0px 64px 64px;
+  //padding-top: 6em;
+}
+#post_header_intro {
+  max-width: 1088px;
+  margin: auto;
+  display: flex;
+  //padding-top: 3em;
+  padding-bottom: 3em;
+}
+#blog_article {
+}
+.blog_article_content {
+  max-width: 1088px;
+  margin: auto;
+}

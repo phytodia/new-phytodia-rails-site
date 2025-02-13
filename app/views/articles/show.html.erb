@@ -1,8 +1,15 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
-<div id="blog_article" class="inside">
-  <div class="blog_article_content">
-    <p><%= @article.intro %></p>
-    <%= @article.content %>
+<article id="blog_article">
+  <div id="post_header">
+    <div id="post_header_intro">
+      <div>
+        <h1><%= @article.titre %></h1>
+        <p><%= @article.intro %></p>
+      </div>
+    </div>
   </div>
-</div>
+  <div id="blog_article" class="inside">
+    <div class="blog_article_content">
+      <%= @article.content %>
+    </div>
+  </div>
+</article>

@@ -1,10 +1,15 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.where(lang:params[:locale])
+
+    add_breadcrumb "Blog", :blog_path
   end
 
   def show
     @article = Article.friendly.find(params[:id])
+
+    add_breadcrumb "Blog", :blog_path
+    add_breadcrumb "<span>#{@article.titre} canonical à mettre</span>".html_safe, :post_path
   end
 
   def new
