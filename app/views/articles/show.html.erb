@@ -10,6 +10,12 @@
         <div class="post_header_author">
         </div>
         <div class="post_header_date_time">
+          <div>
+            <p>Publié le <%= @article.created_at %></p>
+            <span>-</span>
+            <p>Mis à jour le: <%= @article.updated_at %></p>
+          </div>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %> xx min</p>
         </div>
       </div>
     </div>

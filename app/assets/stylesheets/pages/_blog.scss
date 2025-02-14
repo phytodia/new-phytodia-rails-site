@@ -31,14 +31,19 @@
 
   & >div {padding-top: 48px;}
 
-  h1 {margin: 0;}
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
   .post_header_author {
     border: solid 1px;
     min-height: 50px;
   }
   .post_header_date_time {
     border: solid 1px;
-    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    & > div {display: flex;}
   }
 }
 #blog_article {
