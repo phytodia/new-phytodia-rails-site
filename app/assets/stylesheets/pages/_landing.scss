@@ -97,6 +97,12 @@ padding-top: 6em; //nouveau
     box-sizing: border-box;
   }
 }
+
+
+.line_green {border-left: 3px solid $green-dark;border-radius: 50px;}
+
+
+
 @media only screen and (max-width: 40em) {
   #landing_main_content {
     grid-template-columns: 1fr;

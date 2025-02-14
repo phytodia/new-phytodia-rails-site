@@ -1,15 +1,25 @@
 <article id="blog_article">
   <div id="post_header">
     <div id="post_header_intro">
+      <span class="line_green"></span>
       <div>
         <h1><%= @article.titre %></h1>
+        <div class="post_tags">
+        </div>
         <p><%= @article.intro %></p>
+        <div class="post_header_author">
+        </div>
+        <div class="post_header_date_time">
+        </div>
       </div>
     </div>
   </div>
   <div id="blog_article" class="inside">
     <section class="article_cover">
-      <p>img</p>
+      <div>
+      <%= image_tag @article.cover %>
+      </div>
+      <p>Legende cover</p>
     </section>
     <div class="blog_article_content">
       <section class="blog_article_main_content">

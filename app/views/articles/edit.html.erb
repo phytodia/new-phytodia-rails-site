@@ -12,11 +12,13 @@
   -->
 <%= f.input :lang, collection:["fr","en","de","es"] %>
 <%= f.input :titre %>
+<%= f.rich_text_area :intro %>
 <%= f.input :slug %>
 <div>
 <%= f.label :content %>
 <%= f.richer_text_area :content,tables:true,callouts:true %>
 </div>
+<%= f.file_field :cover %>
 <%= f.button :submit,class:"button" %>
 <% end %>
 </div>
