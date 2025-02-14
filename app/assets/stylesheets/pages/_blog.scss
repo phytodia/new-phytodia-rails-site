@@ -86,4 +86,8 @@
   padding: 0 !important;
 }
 
-.post_tags {border: solid 1px;min-height: 20px;}
+.post_tags {
+  display: flex;
+  gap: 8px;
+  border: solid 1px;min-height: 20px;
+}

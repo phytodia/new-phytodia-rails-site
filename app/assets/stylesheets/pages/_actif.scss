@@ -272,19 +272,7 @@
   display: flex;
   gap: 8px;
 }
-.actif_property {
-  background: $background-property;
-  padding: 4px 8px;
-  font-weight: 400;
-  font-style: normal;
-  color: #292929;
-  display: flex;
-  width: fit-content;
-  font-size: 0.8em;
-  border-radius: 2px;
-  font-family: $base-font;
-  text-transform: capitalize;
-}
+
 
 .card_carousel.extraction {
   background-color: $blue;
