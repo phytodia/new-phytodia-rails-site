@@ -99,6 +99,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_13_160207) do
     t.boolean "public", default: true
     t.boolean "follow", default: true
     t.string "canonical"
+    t.text "legend_cover"
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 

@@ -28,12 +28,12 @@
       <div>
       <%= image_tag @article.cover %>
       </div>
-      <p>Legende cover</p>
+      <p class="article_cover_legend"><%= @article.legend_cover %></p>
     </section>
-    <div class="blog_article_content">
-      <section class="blog_article_main_content">
+    <section class="blog_article_content">
+      <div class="blog_article_main_content">
         <%= @article.content %>
-      </section>
+      </div>
       <nav class="article_table_matieres">
         <ul>
           <li>1</li>
@@ -43,6 +43,6 @@
           <li>5</li>
         </ul>
       </nav>
-    </div>
+    </section>
   </div>
 </article>

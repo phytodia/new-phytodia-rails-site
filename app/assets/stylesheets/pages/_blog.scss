@@ -54,14 +54,17 @@
   display: grid;
   grid-template-columns: 80% 18%;
   gap: 2%;
-
+  padding: 0;
   min-height: 100vh;
+  background-color: transparent !important;
 }
 .article_cover {
   max-width: 1088px;
   margin: auto;
   padding: 0px !important;
   padding-top: 40px !important;
+  display: grid;
+  gap: 24px;
   div {
     display: flex;
     img {
@@ -72,6 +75,15 @@
     }
   }
 }
+.article_cover_legend {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.65em;
+  line-height: 16px;
+  opacity: 0.64;
+  color: black;
+  height: 6em;
+}
 .blog_article_content {
   position: relative;
   .article_table_matieres {
@@ -79,6 +91,15 @@
     position: sticky;
     top: 0;
     height: fit-content;
+  }
+  h2 {
+    color: $green-dark;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    border-left: 3px solid black;
+    padding-left: 8px;
+    margin-top: 40px;
   }
 }
 .blog_article_main_content {

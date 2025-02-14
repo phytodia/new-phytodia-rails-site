@@ -8,5 +8,6 @@ class AddAttributesToArticles < ActiveRecord::Migration[7.2]
     add_column :articles, :public, :boolean, default: true
     add_column :articles, :follow, :boolean, default: true
     add_column :articles, :canonical, :string
+    add_column :articles, :legend_cover, :text
   end
 end
