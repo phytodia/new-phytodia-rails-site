@@ -48,7 +48,7 @@ gem "aws-sdk-s3", require: false
 
 gem "breadcrumbs_on_rails"
 
-gem "richer_text", "~> 0.18.0"
+gem "richer_text", "~> 0.20.0"
 
 gem 'friendly_id', '~> 5.5.0'
 
