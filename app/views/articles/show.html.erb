@@ -26,7 +26,7 @@
   <div id="blog_article" class="inside">
     <section class="article_cover">
       <div>
-      <%= image_tag @article.cover %>
+      <%= image_tag @article.cover if @article.cover.present? %>
       </div>
       <p class="article_cover_legend"><%= @article.legend_cover %></p>
     </section>
