@@ -116,10 +116,21 @@
     font-size: 1.2em;
     line-height: 1.5em;
   }
+  h3::marker {
+    display: list-item;
+    content: "@" counter(h2) " ";
+    color: lightgreen;
+  }
 }
 .blog_article_main_content {
   border: solid 1px;
   padding: 0 !important;
+  ul {
+    padding: 0;
+    list-style: inside;
+    li::marker {color: $green; width: 6px;}
+    p {display: inline;}
+  }
 }
 
 .post_tags {

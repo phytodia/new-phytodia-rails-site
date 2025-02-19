@@ -38,6 +38,7 @@ class ArticlesController < ApplicationController
     authors = params[:article][:author_ids].reject { |c| c.empty? }
     @authors = Author.where(id:authors)
     @article.authors = @authors
+
     @article.save
 
     redirect_to blog_path
