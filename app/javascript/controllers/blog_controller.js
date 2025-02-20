@@ -9,6 +9,7 @@ export default class extends Controller {
   }
   mainContentTargetConnected(){
     this.insertAnchorTitres()
+    this.linkSummaryTarget.parentElement.classList.add("anchor_selected")
   }
 
   insertAnchorTitres(){
