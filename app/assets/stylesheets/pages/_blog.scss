@@ -60,8 +60,9 @@
 .blog_article_content {
   max-width: 1088px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 80% 18%;
+  display: flex;
+  grid-template-columns: 18% 80%;
+  flex-direction: row-reverse;
   gap: 2%;
   padding: 0;
   min-height: 100vh;

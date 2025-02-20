@@ -31,9 +31,6 @@
       <p class="article_cover_legend"><%= @article.legend_cover %></p>
     </section>
     <section class="blog_article_content">
-      <div class="blog_article_main_content" data-blog-target="mainContent">
-        <%= @article.content %>
-      </div>
       <div class="article_table_matieres" data-blog-target="summary">
         <% if !@summary.empty? %>
           <p class="article_table_matieres_titre"><%= t('blog.sur_cette_page') %> <%= image_tag "pictos/arrow-summary.svg"%></p>
@@ -54,6 +51,9 @@
             <a href=""><%= image_tag "pictos/share-contact/mail.svg", width:"16", height:"16", alt:"" %></a>
           </div>
         </div>
+      </div>
+      <div class="blog_article_main_content" data-blog-target="mainContent">
+        <%= @article.content %>
       </div>
     </section>
   </div>
