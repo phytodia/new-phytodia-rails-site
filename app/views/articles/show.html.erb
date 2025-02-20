@@ -40,11 +40,7 @@
           <nav>
             <ul>
               <% @summary.each do |hash| %>
-                <% if hash[:index] == 0 %>
-                  <li class="anchor_selected" data-action="click->blog#clickLinkSummary"><a href="#<%=hash[:index]%>" data-blog-target="linkSummary"><%= hash[:head] %></a></li>
-                <% else %>
-                  <li><a href="#<%=hash[:index]%>" data-action="click->blog#clickLinkSummary" data-blog-target="linkSummary"><%= hash[:head] %></a></li>
-                <% end %>
+                <li><a href="#<%=hash[:index]%>" data-action="click->blog#clickLinkSummary" data-blog-target="linkSummary" data-turbolinks="false"><%= hash[:head] %></a></li>
               <% end %>
             </ul>
           </nav>
