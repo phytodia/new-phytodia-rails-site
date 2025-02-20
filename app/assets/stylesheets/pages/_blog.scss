@@ -148,3 +148,21 @@
   gap: 8px;
   border: solid 1px;min-height: 20px;
 }
+.callout[data-color="green"] {
+  background-color: transparent !important;
+  color: black !important;
+  display: flex;
+  a {
+    background-color: $green;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  &.white {
+    background-color: white;
+    color: black;
+    font-size: 0.8em;
+  }
+  }
+}
