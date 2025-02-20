@@ -100,6 +100,16 @@
     position: sticky;
     top: 0;
     height: fit-content;
+    nav {
+      ul {
+        padding: 0;
+        list-style: none;
+        li {padding: 8px;}
+        li.anchor_selected {
+          border-left: solid 3px $green;
+        }
+      }
+    }
   }
   h2 {
     color: $green-dark;

@@ -34,15 +34,31 @@
       <div class="blog_article_main_content">
         <%= @article.content %>
       </div>
-      <nav class="article_table_matieres">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-      </nav>
+      <div class="article_table_matieres">
+        <% if !@summary.empty? %>
+          <p>Sur cette page <%= image_tag "" %></p>
+          <nav>
+            <ul>
+              <% @summary.each do |hash| %>
+                <% if hash[:index] == 0 %>
+                  <li class="anchor_selected"><a href="#<%=hash[:index]%>"><%= hash[:head] %></a></li>
+                <% else %>
+                  <li><a href="#<%=hash[:index]%>"><%= hash[:head] %></a></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </nav>
+        <% end %>
+        <div>
+          <p>Partager cet article :</p>
+          <div class="sharing_socials_icones blog">
+            <a href="">facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Linkedin</a>
+            <a href="">Mail</a>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </article>
