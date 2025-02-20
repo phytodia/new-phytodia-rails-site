@@ -1,0 +1,32 @@
+import { Controller } from "@hotwired/stimulus"
+
+// Connects to data-controller="blog"
+export default class extends Controller {
+  static targets = [ "summary","mainContent"]
+  connect() {
+    console.log("blog connected")
+   //this.insertAnchorTitres()
+  }
+  mainContentTargetConnected(){
+    this.insertAnchorTitres()
+  }
+
+  insertAnchorTitres(){
+    console.log("coucou 2")
+    let anchorsSummary = Array.from(this.summaryTarget.querySelectorAll("li"))
+    let h2Content = Array.from(this.mainContentTarget.querySelectorAll("h2"))
+    console.log(anchorsSummary)
+    console.log(h2Content)
+    anchorsSummary.forEach((anchor)=>{
+      console.log(anchor)
+      let indexAnchor = anchorsSummary.indexOf(anchor)
+      if(anchorsSummary[indexAnchor].innerText === h2Content[indexAnchor].innerText) {
+        h2Content[indexAnchor].id = indexAnchor
+      }
+    })
+  }
+  clickLinkSummary(event){
+    this.summaryTarget.querySelector("li.anchor_selected").classList.remove("anchor_selected")
+    event.currentTarget.parentElement.classList.add("anchor_selected")
+  }
+}

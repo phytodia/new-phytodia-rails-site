@@ -1,4 +1,4 @@
-<article id="blog_article">
+<article id="blog_article" data-controller="blog">
   <div id="post_header">
     <div id="post_header_intro">
       <span class="line_green"></span>
@@ -31,19 +31,19 @@
       <p class="article_cover_legend"><%= @article.legend_cover %></p>
     </section>
     <section class="blog_article_content">
-      <div class="blog_article_main_content">
+      <div class="blog_article_main_content" data-blog-target="mainContent">
         <%= @article.content %>
       </div>
-      <div class="article_table_matieres">
+      <div class="article_table_matieres" data-blog-target="summary">
         <% if !@summary.empty? %>
           <p>Sur cette page <%= image_tag "" %></p>
           <nav>
             <ul>
               <% @summary.each do |hash| %>
                 <% if hash[:index] == 0 %>
-                  <li class="anchor_selected"><a href="#<%=hash[:index]%>"><%= hash[:head] %></a></li>
+                  <li class="anchor_selected" data-action="click->blog#clickLinkSummary"><a href="#<%=hash[:index]%>"><%= hash[:head] %></a></li>
                 <% else %>
-                  <li><a href="#<%=hash[:index]%>"><%= hash[:head] %></a></li>
+                  <li><a href="#<%=hash[:index]%>" data-action="click->blog#clickLinkSummary"><%= hash[:head] %></a></li>
                 <% end %>
               <% end %>
             </ul>
