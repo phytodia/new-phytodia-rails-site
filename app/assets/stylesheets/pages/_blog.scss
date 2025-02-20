@@ -104,7 +104,7 @@
       ul {
         padding: 0;
         list-style: none;
-        li {padding: 8px;}
+        li {padding: 8px; border-left: solid 3px transparent;}
         li.anchor_selected {
           border-left: solid 3px $green;
         }

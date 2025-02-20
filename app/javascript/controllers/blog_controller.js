@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="blog"
 export default class extends Controller {
-  static targets = [ "summary","mainContent"]
+  static targets = [ "summary","mainContent","linkSummary"]
   connect() {
     console.log("blog connected")
    //this.insertAnchorTitres()
@@ -26,7 +26,8 @@ export default class extends Controller {
     })
   }
   clickLinkSummary(event){
-    this.summaryTarget.querySelector("li.anchor_selected").classList.remove("anchor_selected")
-    event.currentTarget.parentElement.classList.add("anchor_selected")
+    this.linkSummaryTargets.forEach((elt)=>{elt.parentElement.classList.remove("anchor_selected")})
+    let indexLink = this.linkSummaryTargets.indexOf(event.currentTarget)
+    this.linkSummaryTargets[indexLink].parentElement.classList.add("anchor_selected")
   }
 }
