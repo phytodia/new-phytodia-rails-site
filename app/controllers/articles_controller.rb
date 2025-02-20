@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:id])
 
     add_breadcrumb "Blog", :blog_path
-    add_breadcrumb "<span>#{@article.titre} canonical à mettre</span>".html_safe, :post_path
+    add_breadcrumb "<span>#{@article.titre}</span>".html_safe
 
     headings = JSON.parse(@article.content.body)["content"].select{|arr| arr["type"] === "heading"}
     headings_2 = headings.select{|arr| arr["attrs"]["level"] === 2}
