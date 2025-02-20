@@ -134,6 +134,7 @@
     margin-top: 40px;
     margin-bottom: 16px;
   }
+
   h3 {
     font-weight: 500;
     font-size: 1.2em;
@@ -196,4 +197,21 @@
     align-items: center;
     justify-content: center;
   }
+}
+blockquote {
+  margin: 0;
+  display: flex;
+  gap:24px;
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+  p {
+    color: $green;
+    font-weight: 500 !important;
+    font-size: 1.1em !important;
+    line-height: 1.5em;
+  }
+}
+blockquote::before {
+  content: url('pictos/quotes.svg');
+  display: inline-block;
 }
