@@ -182,6 +182,9 @@
       font-size: 0.8em;
     }
   }
+  p:nth-child(even) > a {
+    background-color: $blue;
+  }
 }
 .share_article {
   border: solid 1px;
