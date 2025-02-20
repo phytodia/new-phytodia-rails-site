@@ -123,7 +123,6 @@
   /* ↳Tab-line-vertical */
 
   /* Tab */
-
   h2 {
     color: $green-dark;
     font-weight: 500;
@@ -131,9 +130,13 @@
     line-height: 32px;
     border-left: 3px solid black;
     padding-left: 8px;
-    margin-top: 40px;
     margin-bottom: 16px;
+    margin-top: 40px;
   }
+  h2#0 {
+    margin-top: 0 !important;
+  }
+
 
   h3 {
     font-weight: 500;
@@ -148,6 +151,7 @@
 }
 .blog_article_main_content {
   padding: 0 !important;
+  margin-right: 112px;
   ul {
     padding: 0;
     list-style: inside;
