@@ -32,7 +32,7 @@
     </section>
     <section class="blog_article_content">
       <div class="article_table_matieres" data-blog-target="summary">
-        <% if !@summary.empty? %>
+        <% if @article.summary == true && !@summary.empty? %>
           <p class="article_table_matieres_titre"><%= t('blog.sur_cette_page') %> <%= image_tag "pictos/arrow-summary.svg"%></p>
           <nav>
             <ul>

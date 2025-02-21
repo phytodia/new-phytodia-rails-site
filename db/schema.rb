@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_13_160207) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_21_133128) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -100,6 +100,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_13_160207) do
     t.boolean "follow", default: true
     t.string "canonical"
     t.text "legend_cover"
+    t.boolean "summary", default: false
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
