@@ -2,7 +2,7 @@
 
 <article id="authors">
     <section id="author_header">
-      <div id="about_author">
+      <div id="about_author" class="inside">
         <div class="author_img">
           <%= image_tag "" %>
         </div>
@@ -16,17 +16,24 @@
         </div>
       </div>
     </section>
-    <section>
-    <p><%= @biography %></p>
-    </section>
-    <section class="inside">
-    DErnières publi
+    <section class="">
+      <h2>A propos de <%= @author.firstname %> <%= @author.lastname %></h2>
+      <p><%= @biography %></p>
     </section>
     <section>
-    Conférences et interventions
+      <div class="inside">
+        <h2>Dernières publications</h2>
+      </div>
     </section>
     <section>
-    Tous les articles
+      <div class="inside">
+        <h2>Conférences, interventions, interviews</h2>
+      </div>
+    </section>
+    <section class="green-background">
+      <div class="inside">
+        <h2>A lire aussi</h2>
+      </div>
     </section>
     <aside>
     CTA

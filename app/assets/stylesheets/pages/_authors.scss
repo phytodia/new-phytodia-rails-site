@@ -3,8 +3,6 @@
   #author_header {
     background-color: $blue;
    & > div {
-    max-width: 1440px;
-    margin: auto;
     border: solid 1px;
   }
   }
@@ -17,6 +15,7 @@
   'img function'
   'img contact';
   grid-template-columns: 190px;
+  column-gap: 32px;
   //grid-template-columns: 13%;
   height: auto;
 }
