@@ -1,7 +1,60 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
-<div id="blog_article" class="inside">
-  <div class="blog_article_content">
-    <%= @article.content %>
+<article id="blog_article" data-controller="blog">
+  <div id="post_header">
+    <div id="post_header_intro">
+      <span class="line_green"></span>
+      <div>
+        <h1><%= @article.titre %></h1>
+        <div class="post_tags">
+          <span class="tag_grey">mol...</span>
+          <span class="tag_grey">reg...</span>
+          <span class="tag_grey">fffff...</span>
+        </div>
+        <p><%= @article.intro %></p>
+        <div class="post_header_author">
+        </div>
+        <div class="post_header_date_time">
+          <div>
+            <p>Publié le <%= @article.created_at %></p>
+            <span>-</span>
+            <p>Mis à jour le: <%= @article.updated_at %></p>
+          </div>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %> xx min</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  <div id="blog_article" class="inside">
+    <section class="article_cover">
+      <div>
+      <%= image_tag @article.cover if @article.cover.present? %>
+      </div>
+      <p class="article_cover_legend"><%= @article.legend_cover %></p>
+    </section>
+    <section class="blog_article_content">
+      <div class="article_table_matieres" data-blog-target="summary">
+        <% if @article.summary == true && !@summary.empty? %>
+          <p class="article_table_matieres_titre"><%= t('blog.sur_cette_page') %> <%= image_tag "pictos/arrow-summary.svg"%></p>
+          <nav>
+            <ul>
+              <% @summary.each do |hash| %>
+                <li><a href="#<%=hash[:index]%>" data-action="click->blog#clickLinkSummary" data-blog-target="linkSummary" data-turbolinks="false"><%= hash[:head] %></a></li>
+              <% end %>
+            </ul>
+          </nav>
+        <% end %>
+        <div class="share_article">
+          <p><%= t('blog.partager_article')%> :</p>
+          <div class="sharing_socials_icones blog">
+            <a href=""><%= image_tag "pictos/share-contact/facebook.svg", width:"16", height:"16", alt:"" %></a>
+            <a href=""><%= image_tag "pictos/share-contact/twitter.svg", width:"16", height:"16", alt:"" %></a>
+            <a href=""><%= image_tag "pictos/share-contact/linkedin.svg", width:"16", height:"16", alt:"" %></a>
+            <a href=""><%= image_tag "pictos/share-contact/mail.svg", width:"16", height:"16", alt:"" %></a>
+          </div>
+        </div>
+      </div>
+      <div class="blog_article_main_content" data-blog-target="mainContent">
+        <%= @article.content %>
+      </div>
+    </section>
+  </div>
+</article>

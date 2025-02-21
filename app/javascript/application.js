@@ -5,3 +5,6 @@ import "controllers"
 import "trix"
 import "@rails/actiontext"
 import "@afomera/richer-text"
+
+Trix.config.blockAttributes.default.tagName = "p"
+Trix.config.blockAttributes.default.breakOnReturn = true

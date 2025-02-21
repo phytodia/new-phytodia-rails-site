@@ -1,4 +1,4 @@
-.btn_contact {
+.btn_contact{
   background-color: $green;
   color: white;
   padding: 12px 16px;
@@ -109,4 +109,19 @@ letter-spacing: 1px;
 &:hover {
   border: solid 2px;
 }
+}
+
+
+.actif_property,.tag_grey {
+  background: $background-property;
+  padding: 4px 8px;
+  font-weight: 400;
+  font-style: normal;
+  color: #292929;
+  display: flex;
+  width: fit-content;
+  font-size: 0.8em;
+  border-radius: 2px;
+  font-family: $base-font;
+  text-transform: capitalize;
 }
