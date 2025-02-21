@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 42.32%, rgba(81, 153, 75, 0.096) 100%), #F6F4EE;
 border-radius: 0px 0px 64px 64px;
 
-padding-top: 6em; //nouveau
+padding-top: $default-padding-top-page; //nouveau
 
 #landing_header_content {
     max-width: 1440px;

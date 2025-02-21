@@ -1,0 +1,52 @@
+#authors {
+  padding-top: $default-padding-top-page;
+  #author_header {
+    background-color: $blue;
+   & > div {
+    max-width: 1440px;
+    margin: auto;
+    border: solid 1px;
+  }
+  }
+}
+#about_author {
+  display: grid;
+  grid-template-areas:
+  'img name'
+  'img cats'
+  'img function'
+  'img contact';
+  grid-template-columns: 190px;
+  //grid-template-columns: 13%;
+  height: auto;
+}
+.author_img {
+  grid-area: img;
+  border: solid 1px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    border: solid 1px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+.author_name {
+  grid-area: name;
+  color: white;
+  margin: 0;
+  margin-top: 16px;
+}
+.author_cats{
+  grid-area: cats;
+}
+.author_function {
+  grid-area: function;
+}
+.author_contact {
+  grid-area: contact;
+  margin-bottom: 16px;
+}

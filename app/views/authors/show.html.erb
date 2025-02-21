@@ -1,2 +1,34 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+
+
+<article id="authors">
+    <section id="author_header">
+      <div id="about_author">
+        <div class="author_img">
+          <%= image_tag "" %>
+        </div>
+        <h1 class="author_name"><%= @author.firstname%>  <%= @author.lastname %></h1>
+        <div class="author_cats">
+          cats
+        </div>
+        <p class="author_function"><%= @author.function %>f</p>
+        <div class="author_contact">
+          Contact
+        </div>
+      </div>
+    </section>
+    <section>
+    <p><%= @biography %></p>
+    </section>
+    <section class="inside">
+    DErnières publi
+    </section>
+    <section>
+    Conférences et interventions
+    </section>
+    <section>
+    Tous les articles
+    </section>
+    <aside>
+    CTA
+    </aside>
+</article>

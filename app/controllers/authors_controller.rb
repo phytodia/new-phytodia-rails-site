@@ -5,6 +5,8 @@ class AuthorsController < ApplicationController
 
   def show
     @author = Author.friendly.find(params[:id])
+    @biography = @author["biography_#{params[:locale]}".to_sym]
+    add_breadcrumb "<span>#{@author.firstname} #{@author.lastname}</span>".html_safe
   end
 
   def new
