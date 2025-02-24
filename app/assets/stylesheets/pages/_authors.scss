@@ -49,3 +49,14 @@
   grid-area: contact;
   margin-bottom: 16px;
 }
+section {
+  background-color: white;
+}
+.about_author_desc {
+ display: grid;
+ grid-template-areas:
+ "blank content";
+ grid-template-columns: 190px;
+ column-gap: 32px;
+ div {grid-area: content;}
+}
