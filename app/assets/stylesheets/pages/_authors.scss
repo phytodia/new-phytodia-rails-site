@@ -1,5 +1,5 @@
 #authors {
-  padding-top: $default-padding-top-page;
+  //padding-top: $default-padding-top-page;
   #author_header {
     background-color: $blue;
    & > div {
@@ -18,6 +18,7 @@
   column-gap: 32px;
   //grid-template-columns: 13%;
   height: auto;
+  padding: 0 52px;
 }
 .author_img {
   grid-area: img;
@@ -108,4 +109,41 @@ section {
   border-radius: 25px;
   //font-size: 12px;
   font-size: 0.8em;
+}
+
+@media only screen and (max-width: 40em) {
+  #authors {
+    padding: 0;
+    .inside {
+      //padding: $padding-mobile;
+    }
+    .about_author_desc {
+      display: block;
+    }
+    h2,ul {display: none;}
+  }
+  #author_header {
+    padding: $padding-mobile;
+    //padding: 0 52px;
+    padding-top: 6em;
+  }
+  #about_author {
+    padding: 0;
+    padding: 2em 0 !important;
+    width: 68%;
+    grid-template-areas:
+    'img'
+    'name'
+    'cats'
+    'function'
+    'contact'
+    ;
+    grid-template-columns: 1fr;
+    display: block;
+  }
+  .author_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
