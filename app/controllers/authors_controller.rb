@@ -13,14 +13,21 @@ class AuthorsController < ApplicationController
   end
 
   def create
+
   end
 
   def edit
+    @author = Author.friendly.find(params[:id])
   end
 
   def update
   end
 
   def destroy
+  end
+
+  private
+  def author_params
+    params.require(:article).permit(:lastname, :firstname,:function,:biography_fr,:biography_en,:biography_es,:biography_de,:slug,:email,:linkedin,:x,:facebook,:mastodon,:bluesky)
   end
 end

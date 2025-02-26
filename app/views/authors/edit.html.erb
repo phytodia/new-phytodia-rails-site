@@ -1,2 +1,19 @@
 <h1>Authors#edit</h1>
 <p>Find me in app/views/authors/edit.html.erb</p>
+<%= simple_form_for @author do |f|%>
+<%= f.input :lastname, label:"Nom" %>
+<%= f.input :firstname, label:"Prénom" %>
+<%= f.input :email,label:"Email" %>
+<%= f.input :function,label:"Fonction" %>
+<%= f.file_field :avatar, label:"Photo" %>
+<%= f.input :biography_fr,label:"Biographie FR" %>
+<%= f.input :biography_en,label:"Biographie EN" %>
+<%= f.input :biography_de,label:"Biographie DE" %>
+<%= f.input :biography_es,label:"Biographie ES" %>
+<%= f.input :linkedin,label:"Linkedin" %>
+<%= f.input :x,label:"X (ex Twitter)" %>
+<%= f.input :facebook,label:"Facebook" %>
+<%= f.input :mastodon,label:"Mastodon" %>
+<%= f.input :bluesky,label:"Bluesky" %>
+<%= f.button :submit,"Enregistrer" %>
+<% end %>
