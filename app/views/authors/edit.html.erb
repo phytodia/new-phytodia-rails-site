@@ -5,7 +5,7 @@
 <%= f.input :firstname, label:"Prénom" %>
 <%= f.input :email,label:"Email" %>
 <%= f.input :function,label:"Fonction" %>
-<%= f.file_field :avatar, label:"Photo" %>
+<%= f.input :avatar, as: :file %>
 <%= f.input :biography_fr,label:"Biographie FR" %>
 <%= f.input :biography_en,label:"Biographie EN" %>
 <%= f.input :biography_de,label:"Biographie DE" %>
