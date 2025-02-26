@@ -73,3 +73,22 @@ section {
     li {border: solid 1px;}
   }
 }
+.author_contact {
+  color: white;
+  width: fit-content;
+  gap: 1em;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  a {
+    color: white; font-weight: 500; height: fit-content;
+    display: flex;
+    gap: 8px;
+  }
+}
+.mail_author {
+  letter-spacing: 1px;
+  border: solid 1px;
+  padding: 4px 8px;
+  border-radius: 25px;
+}

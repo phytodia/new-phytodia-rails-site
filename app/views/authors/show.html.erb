@@ -12,7 +12,19 @@
         </div>
         <p class="author_function"><%= @author.function %>f</p>
         <div class="author_contact">
-          Contact
+          <%= mail_to @author.email, class:"mail_author" do %>
+            <%= image_tag "pictos/share-contact/mail-white.svg",alt:""%>
+            <span>PRENDRE CONTACT</span>
+          <% end %>
+          <%= link_to "X" %>
+          <%= link_to @author.linkedin do %>
+            <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+            <span>Linkedin</span>
+          <% end %>
+          <%= link_to @author.facebook do %>
+            <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+            <span>Facebook</span>
+          <% end %>
         </div>
       </div>
     </section>

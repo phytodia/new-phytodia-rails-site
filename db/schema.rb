@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_21_151829) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_26_093113) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -124,6 +124,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_21_151829) do
     t.text "biography_en"
     t.text "biography_es"
     t.text "biography_de"
+    t.string "email"
+    t.string "linkedin"
+    t.string "x"
+    t.string "facebook"
+    t.string "mastodon"
+    t.string "bluesky"
     t.index ["slug"], name: "index_authors_on_slug", unique: true
   end
 
