@@ -10,7 +10,7 @@
         <div class="author_cats">
           cats
         </div>
-        <p class="author_function"><%= @author.function %>f</p>
+        <p class="author_function"><%= @author.function %></p>
         <div class="author_contact">
           <% if !@author.email.blank? %>
             <%= mail_to @author.email, class:"mail_author" do %>
@@ -19,7 +19,10 @@
             <% end %>
           <% end %>
           <% if !@author.x.blank? %>
-            <%= link_to "X" %>
+            <%= link_to @author.x do %>
+              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+              <span>X</span>
+            <% end %>
           <% end %>
           <% if !@author.linkedin.blank? %>
             <%= link_to @author.linkedin do %>
