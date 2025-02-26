@@ -12,18 +12,26 @@
         </div>
         <p class="author_function"><%= @author.function %>f</p>
         <div class="author_contact">
-          <%= mail_to @author.email, class:"mail_author" do %>
-            <%= image_tag "pictos/share-contact/mail-white.svg",alt:""%>
-            <span>PRENDRE CONTACT</span>
+          <% if !@author.email.blank? %>
+            <%= mail_to @author.email, class:"mail_author" do %>
+              <%= image_tag "pictos/share-contact/mail-white.svg",alt:""%>
+              <span>PRENDRE CONTACT</span>
+            <% end %>
           <% end %>
-          <%= link_to "X" %>
-          <%= link_to @author.linkedin do %>
-            <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
-            <span>Linkedin</span>
+          <% if !@author.x.blank? %>
+            <%= link_to "X" %>
           <% end %>
-          <%= link_to @author.facebook do %>
-            <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
-            <span>Facebook</span>
+          <% if !@author.linkedin.blank? %>
+            <%= link_to @author.linkedin do %>
+              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+              <span>Linkedin</span>
+            <% end %>
+          <% end %>
+          <% if !@author.facebook.blank? %>
+            <%= link_to @author.facebook do %>
+              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+              <span>Facebook</span>
+            <% end %>
           <% end %>
         </div>
       </div>
