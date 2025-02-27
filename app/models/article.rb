@@ -1,6 +1,8 @@
 class Article < ApplicationRecord
   has_many :author_publications
   has_many :authors, through: :author_publications
+  has_many :category_articles
+  has_many :categories, through: :category_articles
   has_rich_text :intro
   has_richer_text :content, store_as: :json
 

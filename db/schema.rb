@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_26_093113) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_27_122211) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -133,6 +133,22 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_26_093113) do
     t.index ["slug"], name: "index_authors_on_slug", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "titre"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_articles", force: :cascade do |t|
+    t.bigint "article_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_category_articles_on_article_id"
+    t.index ["category_id"], name: "index_category_articles_on_category_id"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -177,4 +193,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_26_093113) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "author_publications", "articles"
   add_foreign_key "author_publications", "authors"
+  add_foreign_key "category_articles", "articles"
+  add_foreign_key "category_articles", "categories"
 end

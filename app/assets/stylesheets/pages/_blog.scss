@@ -43,11 +43,52 @@
   h1 {
     margin: 0;
     font-size: 2em;
+    font-weight: 500;
   }
   .post_header_author {
     border: solid 1px;
     min-height: 50px;
+    display: flex;
+    //grid-template-columns: 4em min-content;
+    //grid-template-rows: 4em;
+    gap: 12px;
+    .author_detail_article {
+      display: grid;
+      grid-template-areas:
+      'photo name'
+      'photo name'
+      ;
+      column-gap: 16px;
+      align-items: center;
+      //grid-template-columns: 60px 100%;
+      grid-template-columns: minmax(64px, 1fr);
+      & > div {
+        grid-area: name;
+        p:first-child {color:$green; text-transform: capitalize;}
+        p:last-child {color: black; opacity: 0.64; text-transform: capitalize;}
+      }
+      .img_author_detail_article {
+        grid-area: photo;
+        border-radius: 50%;
+        border: solid 4px white;
+        box-sizing: border-box;
+        position: relative;
+        width: 64px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+      img {
+        border-radius: 50%; aspect-ratio: 1 / 1;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
+
   .post_header_date_time {
     border: solid 1px;
     display: flex;
@@ -74,6 +115,7 @@
   padding: 0px !important;
   padding-top: 40px !important;
   display: grid;
+  background-color: transparent !important;
   gap: 24px;
   div {
     display: flex;

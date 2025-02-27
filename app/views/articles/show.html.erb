@@ -5,12 +5,27 @@
       <div>
         <h1><%= @article.titre %></h1>
         <div class="post_tags">
-          <span class="tag_grey">mol...</span>
-          <span class="tag_grey">reg...</span>
-          <span class="tag_grey">fffff...</span>
+          <% @article.categories.each do |cat| %>
+            <span class="tag_grey"><%= cat.titre.capitalize %></span>
+          <% end %>
         </div>
         <p><%= @article.intro %></p>
         <div class="post_header_author">
+          <% @article.authors.each do |author| %>
+            <div class="author_detail_article">
+            <div class="img_author_detail_article">
+              <% if author.avatar.attached? %>
+                <%= image_tag author.avatar, width:"64" if author.avatar.attached? %>
+              <% else %>
+                <img src="" alt="">
+              <% end %>
+            </div>
+            <div>
+              <p><%= author.firstname%> <%= author.lastname %></p>
+              <p><%= author.function %></p>
+            </div>
+            </div>
+          <% end %>
         </div>
         <div class="post_header_date_time">
           <div>
