@@ -1,2 +1,90 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+
+
+<article id="authors">
+    <section id="author_header">
+      <div id="about_author" class="inside">
+        <div class="author_img">
+          <span class="border_circle"></span>
+          <%= image_tag @author.avatar %>
+        </div>
+        <h1 class="author_name"><%= @author.firstname%>  <%= @author.lastname %></h1>
+        <div class="author_cats">
+          cats
+        </div>
+        <p class="author_function"><%= @author.function %></p>
+        <div class="author_contact">
+          <% if !@author.email.blank? %>
+            <%= mail_to @author.email, class:"mail_author" do %>
+              <%= image_tag "pictos/share-contact/mail-white.svg",alt:""%>
+              <span>PRENDRE CONTACT</span>
+            <% end %>
+          <% end %>
+          <div class="author_socials">
+            <% if !@author.x.blank? %>
+              <%= link_to @author.x do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>X</span>
+              <% end %>
+            <% end %>
+            <% if !@author.linkedin.blank? %>
+              <%= link_to @author.linkedin do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>Linkedin</span>
+              <% end %>
+            <% end %>
+            <% if !@author.facebook.blank? %>
+              <%= link_to @author.facebook do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>Facebook</span>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="about_author_desc inside">
+        <div>
+          <h2>A propos de <%= @author.firstname %> <%= @author.lastname %></h2>
+          <p><%= @biography %></p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="about_author_desc inside">
+        <div>
+          <h2>Dernières publications</h2>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="inside author_articles">
+        <div>
+          <h2>Conférences, interventions, interviews</h2>
+          <%= link_to "Tous les articles"%>
+        </div>
+        <ul class="list_articles">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <section class="green-background">
+      <div class="inside author_articles">
+        <div>
+          <h2>À lire aussi</h2>
+          <%= link_to "Tous les articles"%>
+        </div>
+        <ul class="list_articles">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="aside_cta">
+      <%= render "shared/your_project"%>
+    </aside>
+</article>

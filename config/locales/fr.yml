@@ -18,3 +18,6 @@ fr:
   blog:
     partager_article: "Partager cet article"
     sur_cette_page: "Sur cette page"
+
+  routes:
+    authors: "nos-experts"

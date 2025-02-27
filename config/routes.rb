@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     root "pages#home"
     get "about", to: "pages#about"
     resources :actifs, only:[:index,:show]
-    resources :authors
+    resources :authors,path:"/experts"
     get "/blog", to: "articles#index"
     get "/blog/:id", to: "articles#show", as: :post
     get "/blog/:slug_authors/:id", to: "articles#show", as: :post_author
@@ -38,6 +38,7 @@ Rails.application.routes.draw do
       get "analyse-recherche-developpement",to: "pages#analyses"
       get "laboratoire-cosmetologie",to: "pages#cosmetologie"
       get "actifs",to: "actifs#index",as: :actifs
+      get "authors",to: "authors#index",as: :authors
       #resources :actifs, only:[:index,:show]
     end
   end

@@ -1,5 +1,6 @@
 
 $padding-mobile: 0px 16px;
+$default-padding-top-page: 9em;
 html { scroll-behavior: smooth; }
 h1,h2,h3, p, a, li, address {
   font-family: "Rubik", sans-serif;
@@ -12,7 +13,7 @@ body {
   background-color: #F6F4EE;
 }
 article {
-  padding-top: 8em;
+  padding-top: 9em;
 }
 section:nth-of-type(even) {
   background-color: white;
@@ -27,7 +28,7 @@ section:nth-of-type(even) {
 .inside {
   width: 100%;
   margin: auto;
-  max-width: 1440px;;
+  max-width: 1440px;
 }
 .flex {
   display: flex;
@@ -37,7 +38,12 @@ section:nth-of-type(even) {
 section {
   padding: 80px 0;
 }
+.green-background {
+  background-color: $green;
+  a,h1,h2,h3,h4 {color:white;}
+}
 section:first-of-type {padding: 60px 0;}
+
 @media only screen and (max-width: 40em) {
   section:first-of-type {
     padding-top: 0;
