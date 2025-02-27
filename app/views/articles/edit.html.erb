@@ -11,6 +11,9 @@
   <% end %>
   -->
 <%= f.input :lang, collection:["fr","en","de","es"] %>
+ <%= f.association :categories, collection: Category.all,
+      value_method: :id, label_method: :titre,
+      as: :check_boxes, include_blank: false %>
 <%= f.input :titre %>
 <%= f.rich_text_area :intro %>
 <%= f.input :slug %>

@@ -47,6 +47,28 @@
   .post_header_author {
     border: solid 1px;
     min-height: 50px;
+    display: flex;
+    //grid-template-columns: 4em min-content;
+    //grid-template-rows: 4em;
+    gap: 12px;
+    .author_detail_article {
+      display: grid;
+      grid-template-areas:
+      'photo name'
+      'photo name'
+      ;
+      column-gap: 16px;
+      align-items: center;
+      //grid-template-columns: 60px 100%;
+      grid-template-columns: minmax(60px, 1fr);
+      & > div {
+        grid-area: name;
+      }
+      img {border-radius: 50%; aspect-ratio: 1 / 1;
+        object-fit: cover;
+        grid-area: photo;
+      }
+    }
   }
   .post_header_date_time {
     border: solid 1px;
@@ -74,6 +96,7 @@
   padding: 0px !important;
   padding-top: 40px !important;
   display: grid;
+  background-color: transparent !important;
   gap: 24px;
   div {
     display: flex;
