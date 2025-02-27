@@ -274,7 +274,14 @@ blockquote::before {
   border: solid 1px;
 }
 #liste_blog {
+  padding: 0;
   border: solid 1px;
+  list-style: none;
+  min-height: 100vh;
+  li {min-height: 20vh;}
+  li:first-child {
+    border: solid 2px red;
+  }
 }
 
 @media only screen and (max-width: 40em) {
