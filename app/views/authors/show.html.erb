@@ -19,24 +19,26 @@
               <span>PRENDRE CONTACT</span>
             <% end %>
           <% end %>
-          <% if !@author.x.blank? %>
-            <%= link_to @author.x do %>
-              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
-              <span>X</span>
+          <div class="author_socials">
+            <% if !@author.x.blank? %>
+              <%= link_to @author.x do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>X</span>
+              <% end %>
             <% end %>
-          <% end %>
-          <% if !@author.linkedin.blank? %>
-            <%= link_to @author.linkedin do %>
-              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
-              <span>Linkedin</span>
+            <% if !@author.linkedin.blank? %>
+              <%= link_to @author.linkedin do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>Linkedin</span>
+              <% end %>
             <% end %>
-          <% end %>
-          <% if !@author.facebook.blank? %>
-            <%= link_to @author.facebook do %>
-              <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
-              <span>Facebook</span>
+            <% if !@author.facebook.blank? %>
+              <%= link_to @author.facebook do %>
+                <%= image_tag "pictos/share-contact/share.svg", alt:"" %>
+                <span>Facebook</span>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
       </div>
     </section>
@@ -71,7 +73,7 @@
     <section class="green-background">
       <div class="inside author_articles">
         <div>
-          <h2>Conférences, interventions, interviews</h2>
+          <h2>À lire aussi</h2>
           <%= link_to "Tous les articles"%>
         </div>
         <ul class="list_articles">
