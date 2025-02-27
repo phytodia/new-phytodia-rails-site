@@ -1,11 +1,22 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-<ul>
-<% @articles.each do |article| %>
-  <% if article.authors.present? %>
-    <li><%= link_to article.titre, post_author_path(slug_authors:article.slug_authors,id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
-  <% else %>
-    <li><%= link_to article.titre, post_path(id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
-  <% end %>
-<% end %>
-</ul>
+<div id="landing_header">
+  <div id="landing_header_content">
+      <h1>Blog</h1>
+  </div>
+</div>
+<div id="landing_main_content" data-controller="blog">
+
+  <div class="">
+    <!--
+    <div class="card_prestation_displayed">
+      <div class="card_prestation_text">
+        <h3>Vous recherchez à doser certaines substances ou molécules dans diverses matrices de plante ?</h3>
+        <p>Nos experts sont capables d'identifier une large diversité de familles de molécules via de nombreuses méthodes de dosages complexes pour identifier et quantifier les composés actifs des plantes, pour les valoriser ou réduire les risques associés</p>
+        <%= link_to "En savoir plus", "",class:"btn_contact"%>
+      </div>
+      <div class="card_prestation_cover">
+        <%= image_tag "" %>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
