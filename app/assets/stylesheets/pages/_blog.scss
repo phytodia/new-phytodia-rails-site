@@ -273,6 +273,9 @@ blockquote::before {
   //
   border: solid 1px;
 }
+#liste_blog {
+  border: solid 1px;
+}
 
 @media only screen and (max-width: 40em) {
   #post_header,#post_header_intro > div {
