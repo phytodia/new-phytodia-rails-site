@@ -83,6 +83,15 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  def category
+
+  end
+  def category_filter
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to blog_filter_path}
+    end
+  end
   private
   def article_params
     params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:summary,categories:[])
