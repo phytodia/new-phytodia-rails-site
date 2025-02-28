@@ -268,6 +268,104 @@ blockquote::before {
   display: inline-block;
 }
 
+
+#blog {
+  //
+  border: solid 1px;
+}
+#liste_blog {
+  padding: 0;
+  border: solid 1px;
+  list-style: none;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+  "a a a a" 360px // hauteur row 40px
+  "b c d e" auto; //hauteur row 40px
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  //"e f g" auto / 1fr 1fr 1fr;
+  //li {min-height: 20vh;}
+  //grid-template-columns: repeat(auto-fill, 450px);
+  gap: 2em;
+  .cover_blog {
+    grid-area: a;
+    height: 100%;
+    border: solid 2px red;
+  }
+}
+.cover_blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  box-sizing: border-box;
+  padding: 24px;
+  .cover_blog_article_headline {
+    border: solid 1px;
+    padding: 32px 24px;
+  }
+}
+.blog_cover_strike {
+  border: solid 2px $green;
+}
+
+.card_blog > a {
+  //border: solid 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  //a {height: 100%;}
+  .card_blog_img {
+    //height: 37%;
+    aspect-ratio: 16/9;
+    //border: solid 1px;
+    display: flex;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+  .card_blog_content {
+    padding: 0 24px;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    //height: 43%;
+    gap: 8px;
+    min-height: 196px;
+    .card_blog_cat {}
+    .card_blog_titre {
+      font-weight: 500;
+      font-size: 1.1em;
+      line-height: 24px;
+    }
+    .card_blog_summary {
+      font-size: 0.9em;
+      font-weight: 400;
+
+      //white-space: pre-line;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card_blog_summary::after {content:'..';display: inline-block;}
+  }
+  .card_blog_metadonnes {
+    height: 12%;
+    border: solid 1px;
+    padding: 0 24px;
+  }
+}
+#filters_list_blog {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap:4px;
+}
+
+
+
 @media only screen and (max-width: 40em) {
   #post_header,#post_header_intro > div {
     padding-top: 0;
@@ -294,5 +392,15 @@ blockquote::before {
       overflow-x: auto;
     }
     blockquote{display: block;}
+  }
+  #liste_blog {
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    ;
+    grid-template-columns: 1fr;
   }
 }

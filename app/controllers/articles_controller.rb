@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
+  before_action :set_categories
   def index
     @articles = Article.where(lang:params[:locale])
+    @article = Article.last
 
     add_breadcrumb "Blog", :blog_path
   end
@@ -78,8 +80,38 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  def category
+    fail
+  end
+  def category_filter
+    category = params[:cat].downcase
+    if !category.blank?
+      @articles = Category.find_by(titre:params[:cat].downcase).articles.where(lang:params[:locale])
+
+      articles_filtered = []
+      @articles.each do |article|
+        articles_filtered << article if article.categories.first.titre == params[:cat].downcase
+      end
+
+      @articles = Article.where(id: articles_filtered.map(&:id))
+    else
+        @articles = Article.where(lang: params[:locale])
+    end
+
+    respond_to do |format|
+      format.turbo_stream { render 'category_filter', locals: { articles: @articles,category: category }}
+      format.html { redirect_to blog_category_path(category)}
+    end
+  end
   private
   def article_params
     params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:summary,categories:[])
+  end
+
+  def set_categories
+    @categories = []
+    Category.all.each do |cat|
+      @categories.push(cat) if cat.articles_size(params[:locale]) > 0
+    end
   end
 end

@@ -1,11 +1,74 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div id="landing_header">
+  <div id="landing_header_content">
+      <h1>Blog</h1>
+      <nav>
+      <ul id="filters_list_blog">
+      <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter active" %>
+        <% @categories.each do |cat_filter| %>
+          <%= button_to cat_filter.titre,blog_filter_path(cat:cat_filter.titre.downcase),class:"tag_filter" %>
+        <% end %>
+      </ul>
+      </nav>
+  </div>
+</div>
+<div data-controller="blog">
+
+  <ul id="liste_blog" class="inside">
+    <li class="cover_blog">
+      <div>
+        <h3><%= t('blog.breaking_news')%></h3>
+        <span class="blog_cover_strike"></span>
+      </div>
+      <div class="cover_blog_article_headline">
+        <span class="tag_cat">cat</span>
+        <h2>Titre</h2>
+        <div class="card_blog_metadonnes">
+          Lecture
+        </div>
+      </div>
+    </li>
+    <% @articles.each do |article| %>
+    <li class="card_blog">
+      <%= link_to post_path(article) do %>
+        <% if article.cover.attached? %>
+          <div class="card_blog_img">
+            <%= image_tag article.cover %>
+          </div>
+        <% end %>
+        <div class="card_blog_content">
+          <div class="card_blog_cat">
+            <span class="tag_cat"><%= article.categories.first.titre if !article.categories.empty? %></span>
+          </div>
+          <h2 class="card_blog_titre">
+            <%= article.titre %>
+          </h2>
+          <p class="card_blog_summary">
+            <%= article.intro.to_plain_text.truncate(200, omission: '') %>
+          </p>
+        </div>
+        <div class="card_blog_metadonnes">
+          <p>lecture</p>
+        </div>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+    <!--
+    <div class="card_prestation_displayed">
+      <div class="card_prestation_text">
+        <h3>Vous recherchez à doser certaines substances ou molécules dans diverses matrices de plante ?</h3>
+        <p>Nos experts sont capables d'identifier une large diversité de familles de molécules via de nombreuses méthodes de dosages complexes pour identifier et quantifier les composés actifs des plantes, pour les valoriser ou réduire les risques associés</p>
+        <%= link_to "En savoir plus", "",class:"btn_contact"%>
+      </div>
+      <div class="card_prestation_cover">
+        <%= image_tag "" %>
+      </div>
+    </div>
+    -->
+</div>
 <ul>
 <% @articles.each do |article| %>
-  <% if article.authors.present? %>
-    <li><%= link_to article.titre, post_author_path(slug_authors:article.slug_authors,id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
-  <% else %>
-    <li><%= link_to article.titre, post_path(id:article)%> | <%= link_to "edit",edit_article_path(article)%></li>
-  <% end %>
+<li><%= link_to article.titre, post_path(article) %> | <%= link_to "edit", edit_article_path(article) %>
+</li>
 <% end %>
 </ul>

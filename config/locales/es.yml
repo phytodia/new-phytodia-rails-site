@@ -1,3 +1,5 @@
 es:
+  blog:
+  breaking_news: "Titulares"
   routes:
     authors: "expertos"

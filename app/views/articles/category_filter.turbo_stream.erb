@@ -1,0 +1,8 @@
+<%= turbo_stream.replace "liste_blog" do %>
+	<%= render partial: "articles_list", locals: { articles: articles } %>
+<% end %>
+
+
+<%= turbo_stream.replace "filters_list_blog" do %>
+	<%= render partial: "filters_list_blog", locals: { category: category } %>
+<% end %>
