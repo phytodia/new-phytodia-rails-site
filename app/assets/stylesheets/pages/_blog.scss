@@ -304,6 +304,9 @@ blockquote::before {
     padding: 32px 24px;
   }
 }
+.blog_cover_strike {
+  border: solid 2px $green;
+}
 
 .card_blog > a {
   //border: solid 1px;
