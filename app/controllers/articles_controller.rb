@@ -84,12 +84,26 @@ class ArticlesController < ApplicationController
   end
 
   def category
-
+    fail
   end
   def category_filter
+    category = params[:cat].downcase
+    if !category.blank?
+      @articles = Category.find_by(titre:params[:cat].downcase).articles.where(lang:params[:locale])
+
+      articles_filtered = []
+      @articles.each do |article|
+        articles_filtered << article if article.categories.first.titre == params[:cat].downcase
+      end
+
+      @articles = Article.where(id: articles_filtered.map(&:id))
+    else
+        @articles = Article.where(lang: params[:locale])
+    end
+
     respond_to do |format|
-      format.turbo_stream
-      format.html { redirect_to blog_filter_path}
+      format.turbo_stream { render 'category_filter', locals: { articles: @articles }}
+      format.html { redirect_to blog_category_path(category)}
     end
   end
   private

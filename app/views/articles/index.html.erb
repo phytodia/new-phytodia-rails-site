@@ -3,9 +3,9 @@
       <h1>Blog</h1>
       <nav>
       <ul class="filters_list_blog">
-        <%= link_to "Tous","", class:"tag_filter active"%>
+      <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter active" %>
         <% @categories.each do |cat_filter| %>
-        <%= link_to cat_filter.titre,"", class:"tag_filter" %>
+          <%= button_to cat_filter.titre,blog_filter_path(cat:cat_filter.titre.downcase),class:"tag_filter" %>
         <% end %>
       </ul>
       </nav>
