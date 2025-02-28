@@ -6,7 +6,7 @@
         <h1><%= @article.titre %></h1>
         <div class="post_tags">
           <% @article.categories.each do |cat| %>
-            <span class="tag_grey"><%= cat.titre.capitalize %></span>
+            <span class="tag_cat"><%= cat.titre.capitalize %></span>
           <% end %>
         </div>
         <p><%= @article.intro %></p>

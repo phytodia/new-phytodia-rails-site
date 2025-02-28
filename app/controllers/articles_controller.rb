@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.where(lang:params[:locale])
+    @article = Article.last
 
     add_breadcrumb "Blog", :blog_path
   end
