@@ -49,6 +49,7 @@ en:
   blog:
     partager_article: "Share this article"
     sur_cette_page: "On this page"
+    breaking_news: "Headlines"
 
   routes:
     laboratoire-plantes: plants-laboratory

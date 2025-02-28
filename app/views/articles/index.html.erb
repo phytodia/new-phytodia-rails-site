@@ -12,7 +12,19 @@
 <div data-controller="blog">
 
   <ul id="liste_blog" class="inside">
-    <li class="cover_blog">A la une</li>
+    <li class="cover_blog">
+      <div>
+        <h2><%= t('blog.breaking_news')%></h2>
+        <span class="blog_cover_strike"></span>
+      </div>
+      <div class="cover_blog_article_headline">
+        <span class="tag_cat">cat</span>
+        <h3>Titre</h3>
+        <div class="card_blog_metadonnes">
+          Lecture
+        </div>
+      </div>
+    </li>
     <% @articles.each do |article| %>
     <li class="card_blog">
       <%= link_to post_path(article) do %>

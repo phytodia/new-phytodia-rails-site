@@ -1,3 +1,5 @@
 de:
+  blog:
+    breaking_news: "Schlagzeilen"
   routes:
     authors: "experten"

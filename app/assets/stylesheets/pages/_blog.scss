@@ -293,6 +293,17 @@ blockquote::before {
     border: solid 2px red;
   }
 }
+.cover_blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  box-sizing: border-box;
+  padding: 24px;
+  .cover_blog_article_headline {
+    border: solid 1px;
+    padding: 32px 24px;
+  }
+}
 
 .card_blog > a {
   //border: solid 1px;

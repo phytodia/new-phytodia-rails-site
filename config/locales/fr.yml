@@ -18,6 +18,7 @@ fr:
   blog:
     partager_article: "Partager cet article"
     sur_cette_page: "Sur cette page"
+    breaking_news: "À la une"
 
   routes:
     authors: "nos-experts"
