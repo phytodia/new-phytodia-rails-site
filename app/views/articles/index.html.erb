@@ -2,9 +2,11 @@
   <div id="landing_header_content">
       <h1>Blog</h1>
       <nav>
-      <ul>
-        <li>Tous</li>
-        <li>Cosmétique</li>
+      <ul class="filters_list_blog">
+        <%= link_to "Tous","", class:"tag_filter active"%>
+        <% @categories.each do |cat_filter| %>
+        <%= link_to cat_filter.titre,"", class:"tag_filter" %>
+        <% end %>
       </ul>
       </nav>
   </div>
@@ -64,3 +66,9 @@
     </div>
     -->
 </div>
+<ul>
+<% @articles.each do |article| %>
+<li><%= link_to article.titre, post_path(article) %> | <%= link_to "edit", edit_article_path(article) %>
+</li>
+<% end %>
+</ul>

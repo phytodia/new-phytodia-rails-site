@@ -129,3 +129,20 @@ letter-spacing: 1px;
 .aside_cta {
   padding: 80px 0;
 }
+
+.tag_filter {
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border: solid 1px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  //line-height: 20px;
+  &.active {
+    background-color: $green;
+    border: $green;
+    color: white;
+  }
+  &:hover {}
+}

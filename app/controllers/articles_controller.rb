@@ -2,6 +2,10 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.where(lang:params[:locale])
     @article = Article.last
+    @categories = []
+    Category.all.each do |cat|
+      @categories.push(cat) if cat.articles_size(params[:locale]) > 0
+    end
 
     add_breadcrumb "Blog", :blog_path
   end
