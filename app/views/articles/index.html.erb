@@ -2,7 +2,7 @@
   <div id="landing_header_content">
       <h1>Blog</h1>
       <nav>
-      <ul class="filters_list_blog">
+      <ul id="filters_list_blog">
       <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter active" %>
         <% @categories.each do |cat_filter| %>
           <%= button_to cat_filter.titre,blog_filter_path(cat:cat_filter.titre.downcase),class:"tag_filter" %>
