@@ -14,7 +14,7 @@
               </div>
               <div class="cover_blog_article_headline">
                 <div>
-                  <span class="tag_cat"><%= @headline.categories.first.titre if @headline.categories.first.present? %></span>
+                  <span class="tag_cat"><%= @headline.categories.first.titre if @headline.categories.present? %></span>
                   <h2><%= @headline.titre %></h2>
                 </div>
                 <div class="card_blog_metadonnes">
@@ -30,7 +30,7 @@
               </div>
               <div class="cover_blog_article_headline">
                 <div>
-                  <span class="tag_cat"><%= @headline.categories.first.titre %></span>
+                  <span class="tag_cat"><%= @headline.categories.present? %></span>
                   <h2><%= @headline.titre %></h2>
                 </div>
                 <div class="card_blog_metadonnes">
