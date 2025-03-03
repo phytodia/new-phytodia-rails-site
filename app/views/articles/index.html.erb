@@ -15,19 +15,37 @@
 
   <ul id="liste_blog" class="inside">
     <% if @headline.present? %>
-    <li class="cover_blog" style="background-image: url(<%= rails_blob_url(@headline.cover) %>)" %>
-      <div id="headline_cover">
-        <h3 id="headline_titre_cover"><%= t('blog.breaking_news')%></h3>
-        <span class="blog_cover_strike"></span>
-      </div>
-      <div class="cover_blog_article_headline">
-        <span class="tag_cat"><%= @headline.categories.first.titre %></span>
-        <h2><%= @headline.titre %></h2>
-        <div class="card_blog_metadonnes">
-          Lecture
-        </div>
-      </div>
-    </li>
+      <li class="cover_blog" style="background-image: url(<%= rails_blob_url(@headline.cover) %>)" %>
+        <% if @headline.slug_authors.present? && !@headline.slug_authors.empty?%>
+           <%= link_to post_author_path(@headline.slug_authors,@headline) do %>
+            <div id="headline_cover">
+              <h3 id="headline_titre_cover"><%= t('blog.breaking_news')%></h3>
+              <span class="blog_cover_strike"></span>
+            </div>
+            <div class="cover_blog_article_headline">
+              <span class="tag_cat"><%= @headline.categories.first.titre %></span>
+              <h2><%= @headline.titre %></h2>
+              <div class="card_blog_metadonnes">
+                Lecture
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to post_path(@headline) do %>
+            <div id="headline_cover">
+              <h3 id="headline_titre_cover"><%= t('blog.breaking_news')%></h3>
+              <span class="blog_cover_strike"></span>
+            </div>
+            <div class="cover_blog_article_headline">
+              <span class="tag_cat"><%= @headline.categories.first.titre %></span>
+              <h2><%= @headline.titre %></h2>
+              <div class="card_blog_metadonnes">
+                Lecture
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </li>
     <% end %>
     <% @articles.each do |article| %>
     <li class="card_blog">
