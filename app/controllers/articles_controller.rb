@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.where(lang:params[:locale])
     @article = Article.last
+    @headline = Article.where(headline:true).first
 
     add_breadcrumb "Blog", :blog_path
   end
@@ -105,7 +106,7 @@ class ArticlesController < ApplicationController
   end
   private
   def article_params
-    params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:summary,categories:[])
+    params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:headline,:summary,categories:[])
   end
 
   def set_categories
