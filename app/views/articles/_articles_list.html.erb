@@ -1,17 +1,19 @@
 <ul id="liste_blog" class="inside">
-    <li class="cover_blog">
-      <div>
-        <h3><%= t('blog.breaking_news')%></h3>
-        <span class="blog_cover_strike"></span>
-      </div>
-      <div class="cover_blog_article_headline">
-        <span class="tag_cat">cat</span>
-        <h2>Titre</h2>
-        <div class="card_blog_metadonnes">
-          Lecture
+    <% if category == "" %>
+      <li class="cover_blog">
+        <div>
+          <h3><%= t('blog.breaking_news')%></h3>
+          <span class="blog_cover_strike"></span>
         </div>
-      </div>
-    </li>
+        <div class="cover_blog_article_headline">
+          <span class="tag_cat">cat</span>
+          <h2>Titre</h2>
+          <div class="card_blog_metadonnes">
+            Lecture
+          </div>
+        </div>
+      </li>
+    <% end %>
     <% @articles.each do |article| %>
     <li class="card_blog">
       <%= link_to post_path(article) do %>
