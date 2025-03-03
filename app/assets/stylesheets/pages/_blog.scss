@@ -290,12 +290,12 @@ blockquote::before {
   .cover_blog {
     grid-area: a;
     height: 100%;
-    border: solid 2px red;
   }
 }
 .cover_blog {
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 4px;
 }
 .cover_blog > a {
   height: 100%;
@@ -305,11 +305,16 @@ blockquote::before {
   box-sizing: border-box;
   padding: 24px;
   .cover_blog_article_headline {
-    border: solid 1px;
     padding: 32px 24px;
     background-color: #F6F4EE;
     border-radius: 4px 4px 0px 0px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > div {
+      display: grid;
+      row-gap: 8px;
+    }
   }
 }
 
