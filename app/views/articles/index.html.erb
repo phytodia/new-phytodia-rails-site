@@ -14,21 +14,72 @@
 <div data-controller="blog">
 
   <ul id="liste_blog" class="inside">
-    <li class="cover_blog">
-      <div>
-        <h3><%= t('blog.breaking_news')%></h3>
-        <span class="blog_cover_strike"></span>
-      </div>
-      <div class="cover_blog_article_headline">
-        <span class="tag_cat">cat</span>
-        <h2>Titre</h2>
-        <div class="card_blog_metadonnes">
-          Lecture
-        </div>
-      </div>
-    </li>
+    <% if @headline.present? %>
+      <% if @headline.cover.attached? %>
+        <li class="cover_blog" style="background-image: url(<%= rails_blob_url(@headline.cover) %>)" %>
+      <% else %>
+        <li class="cover_blog" %>
+      <% end %>
+        <% if @headline.slug_authors.present? && !@headline.slug_authors.empty?%>
+           <%= link_to post_author_path(@headline.slug_authors,@headline) do %>
+            <div id="headline_cover">
+              <h3 id="headline_titre_cover"><%= t('blog.breaking_news')%></h3>
+              <span class="blog_cover_strike"></span>
+            </div>
+            <div class="cover_blog_article_headline">
+              <div>
+                <span class="tag_cat"><%= @headline.categories.first.titre if @headline.categories.present? %></span>
+                <h2><%= @headline.titre %></h2>
+              </div>
+              <div class="card_blog_metadonnes">
+                Lecture
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to post_path(@headline) do %>
+            <div id="headline_cover">
+              <h3 id="headline_titre_cover"><%= t('blog.breaking_news')%></h3>
+              <span class="blog_cover_strike"></span>
+            </div>
+            <div class="cover_blog_article_headline">
+              <div>
+                <span class="tag_cat"><%= @headline.categories.first.titre if @headline.categories.present? %></span>
+                <h2><%= @headline.titre %></h2>
+              </div>
+              <div class="card_blog_metadonnes">
+                Lecture
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </li>
+    <% end %>
     <% @articles.each do |article| %>
     <li class="card_blog">
+    <% if article.slug_authors.present? && !article.slug_authors.empty? %>
+      <%= link_to post_author_path(article.slug_authors,article) do %>
+        <% if article.cover.attached? %>
+          <div class="card_blog_img">
+            <%= image_tag article.cover %>
+          </div>
+        <% end %>
+        <div class="card_blog_content">
+          <div class="card_blog_cat">
+            <span class="tag_cat"><%= article.categories.first.titre if !article.categories.empty? %></span>
+          </div>
+          <h2 class="card_blog_titre">
+            <%= article.titre %>
+          </h2>
+          <p class="card_blog_summary">
+            <%= article.intro.to_plain_text.truncate(200, omission: '') %>
+          </p>
+        </div>
+        <div class="card_blog_metadonnes">
+          <p>lecture</p>
+        </div>
+      <% end %>
+    <% else %>
       <%= link_to post_path(article) do %>
         <% if article.cover.attached? %>
           <div class="card_blog_img">
@@ -50,6 +101,7 @@
           <p>lecture</p>
         </div>
       <% end %>
+    <% end %>
     </li>
     <% end %>
   </ul>

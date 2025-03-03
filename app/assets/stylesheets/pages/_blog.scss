@@ -275,7 +275,7 @@ blockquote::before {
 }
 #liste_blog {
   padding: 0;
-  border: solid 1px;
+  margin-top: 48px;
   list-style: none;
   min-height: 100vh;
   display: grid;
@@ -290,20 +290,35 @@ blockquote::before {
   .cover_blog {
     grid-area: a;
     height: 100%;
-    border: solid 2px red;
   }
 }
 .cover_blog {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+.cover_blog > a {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   box-sizing: border-box;
   padding: 24px;
   .cover_blog_article_headline {
-    border: solid 1px;
     padding: 32px 24px;
+    background-color: #F6F4EE;
+    border-radius: 4px 4px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > div {
+      display: grid;
+      row-gap: 8px;
+    }
   }
 }
+
+
 .blog_cover_strike {
   border: solid 2px $green;
 }
@@ -364,6 +379,25 @@ blockquote::before {
   gap:4px;
 }
 
+#headline_cover {
+  height: fit-content;
+  position: relative;
+  width: fit-content;
+  padding-left: 12px;
+  #headline_titre_cover {
+    color:white;
+    font-size: 4.5em;
+    font-weight: 500;
+    line-height: normal;
+    font-style: normal;
+  }
+  .blog_cover_strike {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8em
+  }
+}
 
 
 @media only screen and (max-width: 40em) {

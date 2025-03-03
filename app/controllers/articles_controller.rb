@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
     @articles = Article.where(lang:params[:locale])
     @article = Article.last
 
+    @headline = Article.where(headline:true).first
+
     add_breadcrumb "Blog", :blog_path
   end
 
@@ -95,17 +97,19 @@ class ArticlesController < ApplicationController
 
       @articles = Article.where(id: articles_filtered.map(&:id))
     else
-        @articles = Article.where(lang: params[:locale])
+      @articles = Article.where(lang: params[:locale])
     end
 
+    @headline = Article.where(headline:true).first
+
     respond_to do |format|
-      format.turbo_stream { render 'category_filter', locals: { articles: @articles,category: category }}
+      format.turbo_stream { render 'category_filter', locals: { articles: @articles,category: category,headline:@headline }}
       format.html { redirect_to blog_category_path(category)}
     end
   end
   private
   def article_params
-    params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:summary,categories:[])
+    params.require(:article).permit(:titre,:content,:slug_authors,:slug,:lang,:title,:meta_description,:indexed,:follow,:intro,:read_time,:cover,:legend_cover,:headline,:summary,categories:[])
   end
 
   def set_categories
