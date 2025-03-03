@@ -96,11 +96,13 @@ class ArticlesController < ApplicationController
 
       @articles = Article.where(id: articles_filtered.map(&:id))
     else
-        @articles = Article.where(lang: params[:locale])
+      @articles = Article.where(lang: params[:locale])
     end
 
+    @headline = Article.where(headline:true).first
+
     respond_to do |format|
-      format.turbo_stream { render 'category_filter', locals: { articles: @articles,category: category }}
+      format.turbo_stream { render 'category_filter', locals: { articles: @articles,category: category,headline:@headline }}
       format.html { redirect_to blog_category_path(category)}
     end
   end
