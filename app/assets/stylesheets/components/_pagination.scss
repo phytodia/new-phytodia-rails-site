@@ -6,8 +6,7 @@
   gap: 4px;
   font-family: "Rubik", sans-serif;
   .page {
-    border: solid 1px;
-    //padding: 10px;
+    border: 1px solid;
     width: 40px;
     height: 40px;
     display: flex;
@@ -31,3 +30,12 @@
     }
   }
 }
+
+
+/* ↳ Pills-tab
+
+⚠️ État disable possible
+→ mettre à 24% d’opacité
+⚠️ Chaque Tab peut être un UL
+→ appel en dropdown du menu
+*/
