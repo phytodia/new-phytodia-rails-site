@@ -21,7 +21,10 @@
               <% end %>
             </div>
             <div>
-              <p><%= author.firstname%> <%= author.lastname %></p>
+              <p><%= link_to author_path(author) do %>
+              <%= author.firstname%> <%= author.lastname %>
+              <% end %>
+              </p>
               <p><%= author.function %></p>
             </div>
             </div>
@@ -29,11 +32,11 @@
         </div>
         <div class="post_header_date_time">
           <div>
-            <p>Publié le <%= @article.created_at %></p>
+            <p>Publié le <b><%= l @article.created_at, format: :short %></b></p>
             <span>-</span>
-            <p>Mis à jour le: <%= @article.updated_at %></p>
+            <p>Mis à jour le: <b><%= l @article.created_at, format: :short %></b></p>
           </div>
-          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %> xx min</p>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><b><%= @article.reading_time(@article.content.to_plain_text) %> min</b></p>
         </div>
       </div>
     </div>

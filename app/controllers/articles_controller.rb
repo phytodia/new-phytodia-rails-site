@@ -2,8 +2,9 @@ class ArticlesController < ApplicationController
   before_action :set_categories
   def index
     #@articles = Article.where(lang:params[:locale])
-
-    @headline = Article.where(headline:true).first
+    if !params[:page].present?
+      @headline = Article.where(headline:true).first
+    end
 
     @articles = Article.where(lang:params[:locale]).order(:titre).page params[:page]
 

@@ -1,4 +1,7 @@
 es:
+  time:
+    formats:
+      short: "%d/%m/%Y"
   blog:
   breaking_news: "Titulares"
   routes:
