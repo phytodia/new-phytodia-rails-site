@@ -6,11 +6,11 @@
   background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 42.32%, rgba(81, 153, 75, 0.096) 100%), #F6F4EE;
   border-radius: 0px 0px 64px 64px;
 }
-#landing_header_content {
+.landing_header_content {
     max-width: 1440px;
     margin: auto;
     display: flex;
-    //padding-top: 3em;
+    padding-top: 3em;
     padding-bottom: 3em;
     gap:2em;
     div {max-width: 70%;}
