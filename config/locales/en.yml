@@ -28,6 +28,9 @@
 #       enabled: "ON"
 
 en:
+  time:
+    formats:
+      short: "%Y/%m/%d"
   hello: "Hello world"
   navbar:
     logo: "Phytodia | Plant laboratory, r&d and cosmetologye"

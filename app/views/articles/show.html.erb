@@ -29,11 +29,11 @@
         </div>
         <div class="post_header_date_time">
           <div>
-            <p>Publié le <%= @article.created_at %></p>
+            <p>Publié le <%= l @article.created_at, format: :short %></p>
             <span>-</span>
-            <p>Mis à jour le: <%= @article.updated_at %></p>
+            <p>Mis à jour le: <%= l @article.created_at, format: :short %></p>
           </div>
-          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %> xx min</p>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><%= @article.reading_time(@article.content.to_plain_text) %> min</p>
         </div>
       </div>
     </div>
