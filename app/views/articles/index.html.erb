@@ -3,7 +3,7 @@
       <h1>Blog</h1>
       <nav>
       <ul id="filters_list_blog">
-      <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter active" %>
+      <%= link_to "Tous", blog_path(),class:"tag_filter active" %>
         <% @categories.each do |cat_filter| %>
           <%= button_to cat_filter.titre,blog_filter_path(cat:cat_filter.titre.downcase),class:"tag_filter" %>
         <% end %>
@@ -124,3 +124,5 @@
 </li>
 <% end %>
 </ul>
+
+<%= paginate @articles %>

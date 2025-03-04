@@ -16,6 +16,7 @@ class Article < ApplicationRecord
 
   after_validation :slug_authors, on: [ :create, :update ]
 
+  paginates_per 8
 
   def slug_authors
     slug = []
