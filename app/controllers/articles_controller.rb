@@ -1,10 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_categories
   def index
-    @articles = Article.where(lang:params[:locale])
-    @article = Article.last
+    #@articles = Article.where(lang:params[:locale])
 
     @headline = Article.where(headline:true).first
+
+    @articles = Article.where(lang:params[:locale]).order(:titre).page params[:page]
 
     add_breadcrumb "Blog", :blog_path
   end

@@ -1,9 +1,5 @@
 <ul id="filters_list_blog">
-    <% if category.blank?  %>
-      <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter active" %>
-    <% else %>
-      <%= button_to "Tous",blog_filter_path(cat:""),class:"tag_filter" %>
-    <% end %>
+    <%= link_to "Tous", blog_path(),class:"tag_filter" %>
     <% @categories.each do |cat_filter| %>
       <% if cat_filter.titre.downcase == category %>
         <%= button_to cat_filter.titre,blog_filter_path(cat:cat_filter.titre.downcase),class:"tag_filter active" %>
