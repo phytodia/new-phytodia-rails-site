@@ -5,7 +5,7 @@
       <div id="about_author" class="inside">
         <div class="author_img">
           <span class="border_circle"></span>
-          <%= image_tag @author.avatar %>
+          <%= image_tag @author.avatar if @author.avatar.attached? %>
         </div>
         <h1 class="author_name"><%= @author.firstname%>  <%= @author.lastname %></h1>
         <div class="author_cats">

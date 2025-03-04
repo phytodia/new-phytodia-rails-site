@@ -64,7 +64,7 @@
       grid-template-columns: minmax(64px, 1fr);
       & > div {
         grid-area: name;
-        p:first-child {color:$green; text-transform: capitalize;}
+        p:first-child > a {color:$green; text-transform: capitalize;}
         p:last-child {color: black; opacity: 0.64; text-transform: capitalize;}
       }
       .img_author_detail_article {

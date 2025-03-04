@@ -21,7 +21,10 @@
               <% end %>
             </div>
             <div>
-              <p><%= author.firstname%> <%= author.lastname %></p>
+              <p><%= link_to author_path(author) do %>
+              <%= author.firstname%> <%= author.lastname %>
+              <% end %>
+              </p>
               <p><%= author.function %></p>
             </div>
             </div>
