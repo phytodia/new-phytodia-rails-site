@@ -1,2 +1,13 @@
-<h1>Prestation - <%= @prestation.titre %></h1>
-<%= @prestation.content %>
+<div id="landing_header">
+  <div class="landing_header_content prestation">
+    <span class="line_green"></span>
+    <div>
+      <div><%= image_tag "fiole-verte-labo.svg", alt:""%>Laboratoire des plantes</div>
+      <h1><%= @prestation.titre %></h1>
+      <p>Notre laboratoire des plantes propose une expertise complète pour valoriser les substances naturelles et molécules végétales, marines ou fongiques. Nous réalisons des analyses moléculaires, des extractions sur mesure et une caractérisation approfondie d'extraits.</p>
+    </div>
+  </div>
+</div>
+<div id="landing_main_content" data-controller="accordeon" class="prestation_show">
+  <%= @prestation.content %>
+</div>

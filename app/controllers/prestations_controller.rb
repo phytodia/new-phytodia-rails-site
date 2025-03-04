@@ -1,6 +1,7 @@
 class PrestationsController < ApplicationController
   def show
     @prestation = Prestation.find(params[:id])
+    add_breadcrumb "<span>#{@prestation.titre}</span>".html_safe
   end
 
   def new
