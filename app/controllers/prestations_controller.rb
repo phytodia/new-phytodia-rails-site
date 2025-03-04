@@ -25,6 +25,6 @@ class PrestationsController < ApplicationController
 
   private
   def prestation_params
-    params.require(:prestation).permit(:titre,:content,:lang,:intro,:title,:meta_description,:indexed,:follow,:canonical)
+    params.require(:prestation).permit(:titre,:content,:lang,:intro,:title,:meta_description,:indexed,:follow,:canonical,categories:[])
   end
 end

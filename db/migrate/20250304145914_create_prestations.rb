@@ -10,6 +10,7 @@ class CreatePrestations < ActiveRecord::Migration[7.2]
       t.boolean :indexed, default: true
       t.boolean :follow, default: true
       t.string :canonical
+      t.text "categories", default: [], array: true
 
       t.timestamps
     end

@@ -171,6 +171,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_04_145914) do
     t.boolean "indexed", default: true
     t.boolean "follow", default: true
     t.string "canonical"
+    t.text "categories", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
