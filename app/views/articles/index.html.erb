@@ -33,7 +33,7 @@
               </div>
               <div class="card_blog_metadonnes">
                 <p>Publié le <%= l @headline.created_at, format: :short %></p>
-                <p>Temps de lecture</p>
+                <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><%= @headline.reading_time(@headline.content.to_plain_text) %> min</p>
               </div>
             </div>
           <% end %>
@@ -50,7 +50,7 @@
               </div>
               <div class="card_blog_metadonnes">
                 <p>Publié le <%= l @headline.created_at, format: :short %></p>
-                <p>Temps de lecture</p>
+                <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><%= @headline.reading_time(@headline.content.to_plain_text) %> min</p>
               </div>
             </div>
           <% end %>
@@ -79,7 +79,7 @@
         </div>
         <div class="card_blog_metadonnes">
           <p>Publié le <%= l article.created_at, format: :short %></p>
-          <p>Temps de lecture</p>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><%= article.reading_time(article.content.to_plain_text) %> min</p>
         </div>
       <% end %>
     <% else %>
@@ -102,7 +102,7 @@
         </div>
         <div class="card_blog_metadonnes">
           <p>Publié le <%= l article.created_at, format: :short %></p>
-          <p>Temps de lecture</p>
+          <p>Temps de lecture : <%= image_tag "pictos/chrono.svg" %><%= article.reading_time(article.content.to_plain_text) %> min</p>
         </div>
       <% end %>
     <% end %>

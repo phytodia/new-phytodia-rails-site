@@ -93,7 +93,8 @@
     border: solid 1px;
     display: flex;
     justify-content: space-between;
-    & > div {display: flex;}
+    font-size: 0.8em;
+    & > div,p {display: flex; align-items: center;}
   }
 }
 #blog_article {
