@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     get "/blog/:slug_authors/:id", to: "articles#show", as: :post_author
     get "/blog/:category", to: "articles#category", as: :blog_category
     post "/blog/category_filter", to: "articles#category_filter", as: :blog_filter
-    get "prestation",to: "prestations#show", as: :prestation_show
+    get "prestation/:id",to: "prestations#show", as: :prestation_show
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do

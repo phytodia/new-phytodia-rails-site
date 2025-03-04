@@ -1,6 +1,6 @@
 class PrestationsController < ApplicationController
   def show
-
+    @prestation = Prestation.find(params[:id])
   end
 
   def new
@@ -15,9 +15,14 @@ class PrestationsController < ApplicationController
   end
 
   def edit
+    @prestation = Prestation.find(params[:id])
   end
 
   def update
+    @prestation = Prestation.find(params[:id])
+    @prestation.update(prestation_params)
+    @prestation.save
+    redirect_to admins_path()
   end
 
   def destroy

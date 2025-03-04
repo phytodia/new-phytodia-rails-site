@@ -2,3 +2,6 @@
 <p>Find me in app/views/admins/index.html.erb</p>
 
 <%= link_to "Nouvelle prestation",new_prestation_path()%>
+<% Prestation.all.each do |presta|%>
+<%= link_to presta.titre, edit_prestation_path(presta) %>
+<% end %>
