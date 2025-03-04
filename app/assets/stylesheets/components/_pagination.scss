@@ -1,0 +1,33 @@
+.pagination {
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-family: "Rubik", sans-serif;
+  .page {
+    border: solid 1px;
+    //padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: solid 1px;
+    //font-family: "Rubik", sans-serif;
+    &.current {
+      background-color: $green-dark;
+      color: white;
+      border: solid 1px $green-dark;
+      //font-family: "Rubik", sans-serif;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
