@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_03_123047) do
+ActiveRecord::Schema[7.2].define(version: 2025_03_04_145914) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -159,6 +159,20 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_03_123047) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "prestations", force: :cascade do |t|
+    t.text "titre"
+    t.text "content"
+    t.string "lang"
+    t.text "intro"
+    t.text "title"
+    t.text "meta_description"
+    t.boolean "indexed", default: true
+    t.boolean "follow", default: true
+    t.string "canonical"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "richer_text_json_texts", force: :cascade do |t|

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
     get "actifs", to: "admins#actifs", as: :actifs_backoff
     resources :articles, only: [:new,:create,:edit,:update,:destroy]
+    resources :prestations, only: [:new, :create,:edit,:update,:destroy]
   end
 
   scope "/:locale" do
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
     get "/blog/:slug_authors/:id", to: "articles#show", as: :post_author
     get "/blog/:category", to: "articles#category", as: :blog_category
     post "/blog/category_filter", to: "articles#category_filter", as: :blog_filter
+    get "prestation",to: "prestations#show", as: :prestation_show
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do

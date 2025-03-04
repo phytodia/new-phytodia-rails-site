@@ -1,0 +1,14 @@
+<h1>Prestations#new</h1>
+<p>Find me in app/views/prestations/new.html.erb</p>
+<%=  simple_form_for @prestation do |f|%>
+<%= f.input :titre %>
+<%= f.input :intro %>
+<%= f.input :lang %>
+<%= f.input :title %>
+<%= f.input :meta_description %>
+<%= f.input :indexed %>
+<%= f.input :follow %>
+<%= f.input :canonical %>
+
+<%= f.submit "Sauvegarder"%>
+<% end %>
