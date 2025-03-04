@@ -273,6 +273,18 @@ blockquote::before {
   //
   border: solid 1px;
 }
+
+#blog_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 40px; font-weight: 500; font-style: normal;
+    color: $dark;
+    margin:0;
+  }
+}
+
 #liste_blog {
   padding: 0;
   margin-top: 48px;
@@ -400,6 +412,7 @@ blockquote::before {
 }
 
 
+
 @media only screen and (max-width: 40em) {
   #post_header,#post_header_intro > div {
     padding-top: 0;
@@ -428,13 +441,19 @@ blockquote::before {
     blockquote{display: block;}
   }
   #liste_blog {
-    grid-template-areas:
-    "a"
-    "b"
-    "c"
-    "d"
-    "e"
-    ;
     grid-template-columns: 1fr;
+    grid-template:
+    "a" auto // hauteur row 40px
+    "b" auto
+    "c" auto
+    "d" auto
+    "e" auto;
+
+    padding: $padding-mobile;
+    box-sizing: border-box;
+    .cover_blog > a {
+      grid-template-columns: 1fr;
+      //grid-template-rows: 300px;
+    }
   }
 }
