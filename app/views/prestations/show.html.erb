@@ -1,8 +1,13 @@
 <div id="landing_header">
   <div class="landing_header_content prestation">
     <span class="line_green"></span>
-    <div>
-      <div><%= image_tag "fiole-verte-labo.svg", alt:""%>Laboratoire des plantes</div>
+    <div class="header_prestation">
+      <div>
+        <div class="picto_prestation">
+          <%= image_tag "fiole-verte-labo.svg", alt:"", width:24 %>
+        </div>
+        <span>Laboratoire des plantes</span>
+      </div>
       <h1><%= @prestation.titre %></h1>
       <p>Notre laboratoire des plantes propose une expertise complète pour valoriser les substances naturelles et molécules végétales, marines ou fongiques. Nous réalisons des analyses moléculaires, des extractions sur mesure et une caractérisation approfondie d'extraits.</p>
     </div>

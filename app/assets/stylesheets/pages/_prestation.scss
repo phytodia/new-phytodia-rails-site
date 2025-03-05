@@ -1,7 +1,6 @@
 .landing_header_content.prestation {
   max-width: 1044px !important;
   //gap:0 !important;
-  color:red;
   //flex-direction: column;
   h1 {
     margin-top: 0;
@@ -34,4 +33,22 @@
     content: "@" counter(h2) " ";
     color: lightgreen;
   }
+  .picto_prestation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    img {display: flex;width: 1.5em;}
+  }
+}
+
+.header_prestation {
+  font-family: "Rubik", sans-serif;
+  & > div {
+    display: flex; align-items: center;
+    font-weight: 500;
+    gap: 8px;
+  }
+  p {font-weight: 300; font-size: 1.2em;line-height: 1.4em;}
+
 }
