@@ -52,3 +52,26 @@
   p {font-weight: 300; font-size: 1.2em;line-height: 1.4em;}
 
 }
+.prestation_show .richer-text {
+  border: solid 1px;
+  .callout {
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  .callout[data-color="gray"] {
+    display: inline-flex;
+    width: 49.5%;
+    border: solid 1px;
+    &::before {
+      content: "feuille-phyto";
+    }
+  }
+  .callout[data-color="blue"] {
+    width: 99.3%;
+    //width: -webkit-fill-available;
+    &::before{
+      content: "feuille-phyto";
+    }
+  }
+}
