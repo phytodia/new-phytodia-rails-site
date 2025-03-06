@@ -2,6 +2,7 @@
   padding: 4em 0;
   .faq_header {
     display: flex;
+    flex-wrap: wrap;
     gap:16px;
     padding-bottom: 2em;
     padding-top: 2em;
@@ -18,6 +19,7 @@
     .faq_header_link {
       display: flex;
       align-items: flex-end;
+      flex-wrap: wrap;
       a {
         display: flex;
         align-items: flex-end;

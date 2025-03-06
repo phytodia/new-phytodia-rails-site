@@ -1,7 +1,7 @@
 <div class="faq_partial">
   <div class="faq_header">
     <%= image_tag "pictos/faq.svg"%>
-    <h2 class="fag_header_titre">Questions fréquentes</h2>
+    <h2 class="fag_header_titre"><%= t("faq.faq_titre") %></h2>
     <div class="faq_header_link">
       <%= link_to send("faqs_#{locale.to_s}_path") do %>
         <span><%= t("faq.faq_all") %></span>

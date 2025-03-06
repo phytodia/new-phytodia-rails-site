@@ -23,7 +23,7 @@ fr:
     breaking_news: "À la une"
   faq:
     faq_all: "Toutes vos questions"
-    faq_titre: "Foire Aux Questions"
+    faq_titre: "Questions fréquentes"
   views:
     pagination:
       first: "&laquo; Premier"
