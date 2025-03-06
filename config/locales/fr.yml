@@ -15,6 +15,17 @@ fr:
     btn_contact: "Nous contacter"
     contact_titre: "Nous contacter"
     contact_accroche: "Notre équipe se tient à votre entière disposition pour répondre à toute question concernant Phytodia."
+
+    siege_social: "Siège social"
+    subject_info: "Demande d'informations"
+    anchor_info: "Nous envoyer un email"
+
+    call_us: "Nous appeler"
+
+    livraison: "Livraison"
+    livraison_points: "Points de livraison"
+    subject_livraison: "Livraison"
+
   actifs:
     actifs_titre: "Nos actifs"
   breadcrumbs:

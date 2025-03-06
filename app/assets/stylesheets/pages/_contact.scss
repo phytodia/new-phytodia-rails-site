@@ -2,3 +2,32 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('banners/contact-banner.jpeg');
   background-position: center;
 }
+#contact_main {
+  border: solid 1px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 32px;
+  height: 100%;
+  .contacts_livraison {
+    width: 100%;
+    border: solid 1px red;
+  }
+}
+
+
+.contacts {
+
+}
+.livraison {
+
+}
+.contact_form{
+  min-height: 20px;
+  border: solid 1px;
+  width: 100%;
+}
+.contact_address {
+}
+.contact_titre {
+  border-bottom: solid 3px $blue;
+}

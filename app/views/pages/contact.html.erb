@@ -6,7 +6,36 @@
       </p>
     </div>
   </div>
-
-  <div class="">
+  <div id="contact_main" class="inside">
+    <div class="contacts_livraison">
+      <div class="contacts">
+        <h2 class="contact_titre">Contacts</h2>
+        <div class="contact_address">
+          <h3><%= t('contact.siege_social')%></h3>
+          <address>
+            300 boulevard Sebastien Brant 67412 Illkirch-Graffenstaden - France
+          </address>
+          <%= mail_to "labo@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_info')} | Phytodia"%>
+        </div>
+        <div class="contact_call">
+          <h3><%= t('contact.call_us') %></h3>
+          <ul class="list_tels">
+            <li>...</li>
+          </ul>
+        </div>
+      </div>
+      <div class="livraison">
+        <h2 class="contact_titre"><%= t('contact.livraison')%></h2>
+        <div class="contact_address">
+          <h3><%= t('contact.livraison_points')%></h3>
+          <address>
+            300 boulevard Sebastien Brant 67412 Illkirch-Graffenstaden - France
+          </address>
+          <%= mail_to "logistique@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_livraison')} | Phytodia"%>
+          <%= phone_to "+33368854842", country_code: ""%>
+        </div>
+      </div>
+    </div>
+    <div class="contact_form"></div>
   </div>
 </article>
