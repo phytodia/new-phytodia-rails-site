@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     get "actifs", to: "admins#actifs", as: :actifs_backoff
     resources :articles, only: [:new,:create,:edit,:update,:destroy]
     resources :prestations, only: [:new, :create,:edit,:update,:destroy]
-    resources :faqs, only:[:new,:create,:edit,:update,:drestroy],path: "faq"
+    resources :faqs, except:[:index],path: :faq
   end
 
   scope "/:locale" do

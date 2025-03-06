@@ -5,6 +5,7 @@
 <%= f.input :titre %>
 <%= f.input :intro %>
 <%= f.input :lang, collection:["fr","en","de","es"], selected:0 %>
+ <%= f.input :categories,as: :check_boxes, collection: Prestation::CATEGORIES %>
 <%= f.input :title %>
 <%= f.input :meta_description %>
 <%= f.input :indexed %>

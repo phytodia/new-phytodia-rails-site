@@ -1,6 +1,11 @@
 class PrestationsController < ApplicationController
   def show
     @prestation = Prestation.find(params[:id])
+    categorie = @prestation.categories[0]
+    @faqs = []
+    Faq.where(lang:locale).each do |faq|
+      @faqs << faq if faq.categories.include?(categorie)
+    end
     add_breadcrumb "<span>#{@prestation.titre}</span>".html_safe
   end
 
@@ -10,6 +15,7 @@ class PrestationsController < ApplicationController
 
   def create
     @prestation = Prestation.new(prestation_params)
+    @prestation.categories = @prestation.categories.reject { |c| c.empty? }
     @prestation.save
 
     redirect_to admins_path()
@@ -22,6 +28,7 @@ class PrestationsController < ApplicationController
   def update
     @prestation = Prestation.find(params[:id])
     @prestation.update(prestation_params)
+    @prestation.categories = @prestation.categories.reject { |c| c.empty? }
     @prestation.save
     redirect_to admins_path()
   end
