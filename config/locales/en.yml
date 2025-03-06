@@ -53,6 +53,9 @@ en:
     partager_article: "Share this article"
     sur_cette_page: "On this page"
     breaking_news: "Headlines"
+  faq:
+    faq_all: "All your questions"
+    faq_titre: "Frequently Asked Questions"
 
   views:
     pagination:
@@ -78,3 +81,4 @@ en:
     laboratoire-cosmetologie: cosmetics-laboratory
     actifs: ingredients
     authors: "experts"
+    faqs: "faq"

@@ -1,0 +1,77 @@
+.landing_header_content.prestation {
+  max-width: 1044px !important;
+  //gap:0 !important;
+  //flex-direction: column;
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.prestation_show {
+  h2 {
+    color: $green-dark;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    border-left: 3px solid black;
+    padding-left: 8px;
+    margin-bottom: 16px;
+    //margin-top: 40px;
+  }
+  h2#0 {
+    margin-top: 0 !important;
+  }
+
+
+  h3 {
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  h3::marker {
+    display: list-item;
+    content: "@" counter(h2) " ";
+    color: lightgreen;
+  }
+  .picto_prestation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    img {display: flex;width: 1.5em;}
+  }
+}
+
+.header_prestation {
+  font-family: "Rubik", sans-serif;
+  & > div {
+    display: flex; align-items: center;
+    font-weight: 500;
+    gap: 8px;
+  }
+  p {font-weight: 300; font-size: 1.2em;line-height: 1.4em;}
+
+}
+.prestation_show .richer-text {
+  border: solid 1px;
+  .callout {
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  .callout[data-color="gray"] {
+    display: inline-flex;
+    width: 49.5%;
+    border: solid 1px;
+    &::before {
+      content: "feuille-phyto";
+    }
+  }
+  .callout[data-color="blue"] {
+    width: 99.3%;
+    //width: -webkit-fill-available;
+    &::before{
+      content: "feuille-phyto";
+    }
+  }
+}

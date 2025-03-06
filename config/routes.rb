@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     resources :actifs, only: [:new,:create,:edit,:update,:destroy], as: :actif_backoff
     get "actifs", to: "admins#actifs", as: :actifs_backoff
     resources :articles, only: [:new,:create,:edit,:update,:destroy]
+    resources :prestations, only: [:new, :create,:edit,:update,:destroy]
+    resources :faqs, except:[:index],path: :faq
   end
 
   scope "/:locale" do
@@ -28,11 +30,12 @@ Rails.application.routes.draw do
     get "about", to: "pages#about"
     resources :actifs, only:[:index,:show]
     resources :authors,path:"/experts"
-    get "/blog", to: "articles#index"
-    get "/blog/:id", to: "articles#show", as: :post
-    get "/blog/:slug_authors/:id", to: "articles#show", as: :post_author
-    get "/blog/:category", to: "articles#category", as: :blog_category
-    post "/blog/category_filter", to: "articles#category_filter", as: :blog_filter
+    get "blog", to: "articles#index"
+    get "blog/:id", to: "articles#show", as: :post
+    get "blog/:slug_authors/:id", to: "articles#show", as: :post_author
+    get "blog/:category", to: "articles#category", as: :blog_category
+    post "blog/category_filter", to: "articles#category_filter", as: :blog_filter
+    get "prestation/:id",to: "prestations#show", as: :prestation_show
     #get "/actifs", controller: "actifs", action: "index"
     #get "/actifs/:id", controller: "actifs", action: "show"
     localized do
@@ -40,6 +43,7 @@ Rails.application.routes.draw do
       get "analyse-recherche-developpement",to: "pages#analyses"
       get "laboratoire-cosmetologie",to: "pages#cosmetologie"
       get "actifs",to: "actifs#index",as: :actifs
+      get "faqs",to: "faqs#index",as: :faqs
       get "authors",to: "authors#index",as: :authors
       #resources :actifs, only:[:index,:show]
     end

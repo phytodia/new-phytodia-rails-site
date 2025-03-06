@@ -21,7 +21,9 @@ fr:
     partager_article: "Partager cet article"
     sur_cette_page: "Sur cette page"
     breaking_news: "À la une"
-
+  faq:
+    faq_all: "Toutes vos questions"
+    faq_titre: "Questions fréquentes"
   views:
     pagination:
       first: "&laquo; Premier"
@@ -42,3 +44,4 @@ fr:
 
   routes:
     authors: "nos-experts"
+    faqs: "faq"

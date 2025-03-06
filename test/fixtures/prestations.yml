@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titre: MyText
+  content: MyText
+  lang: MyString
+  intro: MyText
+  title: MyText
+  meta_description: MyText
+  indexed: false
+  follow: false
+  canonical: MyString
+
+two:
+  titre: MyText
+  content: MyText
+  lang: MyString
+  intro: MyText
+  title: MyText
+  meta_description: MyText
+  indexed: false
+  follow: false
+  canonical: MyString

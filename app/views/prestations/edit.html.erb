@@ -1,0 +1,19 @@
+<h1>Prestations#edit</h1>
+<p>Find me in app/views/prestations/edit.html.erb</p>
+<p>callout blue = block blanc</p>
+<%=  simple_form_for @prestation do |f|%>
+<%= f.input :titre %>
+<%= f.input :intro %>
+<%= f.input :lang, collection:["fr","en","de","es"], selected:0 %>
+ <%= f.input :categories,as: :check_boxes, collection: Prestation::CATEGORIES %>
+<%= f.input :title %>
+<%= f.input :meta_description %>
+<%= f.input :indexed %>
+<%= f.input :follow %>
+<%= f.input :canonical %>
+<div>
+  <%= f.label :content %>
+  <%= f.richer_text_area :content,tables:true,callouts:true %>
+</div>
+<%= f.submit "Sauvegarder"%>
+<% end %>

@@ -16,3 +16,10 @@
   <li><%= link_to "actifs", send("actifs_#{locale.to_s}_path" )%></li>
   <li><%= link_to "auteurs", send("authors_#{locale.to_s}_path")%></li>
 </ul>
+
+<h2>Prestations</h2>
+<ul>
+<% Prestation.all.each do |presta|%>
+<li><%= link_to presta.titre, prestation_show_path(presta)%> | <%= link_to "Edit",edit_prestation_path(presta)%></li>
+<% end %>
+</ul>
