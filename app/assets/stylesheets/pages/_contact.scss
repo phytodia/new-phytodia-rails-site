@@ -1,3 +1,4 @@
 .page_custom_header.contact_us {
-  background-image: image-url('banners/contact-banner.jpeg');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('banners/contact-banner.jpeg');
+  background-position: center;
 }
