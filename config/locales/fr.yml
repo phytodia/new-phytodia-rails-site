@@ -13,6 +13,8 @@ fr:
 
   contact:
     btn_contact: "Nous contacter"
+    contact_titre: "Nous contacter"
+    contact_accroche: "Notre équipe se tient à votre entière disposition pour répondre à toute question concernant Phytodia."
   actifs:
     actifs_titre: "Nos actifs"
   breadcrumbs:
@@ -45,3 +47,4 @@ fr:
   routes:
     authors: "nos-experts"
     faqs: "faq"
+    contact: "contact"

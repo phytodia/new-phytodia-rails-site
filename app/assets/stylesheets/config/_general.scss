@@ -45,8 +45,48 @@ section {
 }
 section:first-of-type {padding: 60px 0;}
 
+.page_custom {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "filtre"
+  "actifs"
+  "description"
+  ;
+}
+.page_custom_header {
+  grid-area:header;
+  height: 18em;
+  display: flex;
+  align-items: center;
+  background-image: image-url('banners/actifs-banner.jpeg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 6em;
+}
+.page_custom_header_text{
+  h1 {font-size: 3em; color: white; font-weight: 500;}
+  p{color: white;}
+}
+.page_custom_text_presentation {
+
+}
+
 @media only screen and (max-width: 40em) {
   section:first-of-type {
     padding-top: 0;
+  }
+  .page_custom {
+    padding-top: 4em;
+  }
+  .page_custom_header {
+    padding: 15px;
+  }
+  .pages_custom_header_text {
+    background: linear-gradient(180deg, rgba(81, 153, 75, 2e-05) 52.55%, rgba(81, 153, 75, 0.08) 100%), #FFFFFF;
+    padding: 1.5em 1em;
+    h1 {margin: 0; color: black !important;}
+    p {
+    }
   }
 }

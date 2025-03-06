@@ -43,6 +43,8 @@ en:
 
   contact:
     btn_contact: "Contact Us"
+    contact_titre: "Contact Us"
+    contact_accroche: "..."
 
   actifs:
     actifs_titre: "Ingredients"
@@ -82,3 +84,4 @@ en:
     actifs: ingredients
     authors: "experts"
     faqs: "faq"
+    contact: "contact-us"

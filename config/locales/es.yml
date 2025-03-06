@@ -3,6 +3,10 @@ es:
     formats:
       short: "%d/%m/%Y"
   blog:
+  contact:
+    btn_contact: "Contáctanos"
+    contact_titre: "Contáctanos"
+    contact_accroche: "..."
   faq:
     faq_all: "Todas sus preguntas"
     faq_titre: "Preguntas Frecuentes"
@@ -10,3 +14,4 @@ es:
   routes:
     authors: "expertos"
     faqs: "preguntas-frecuentes"
+    contact: "contacto"

@@ -4,9 +4,14 @@ de:
       short: "%d/%m/%Y"
   blog:
     breaking_news: "Schlagzeilen"
+  contact:
+    btn_contact: "Kontakt"
+    contact_titre: "Kontaktieren Sie uns"
+    contact_accroche: "..."
   faq:
     faq_all: "Alle Ihre Fragen"
     faq_titre: "Häufig gestellte Fragen"
   routes:
     authors: "experten"
     faqs: "w-fragen"
+    contact: "kontakt"

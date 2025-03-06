@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def contact
+  end
+
   def laboratoire_plantes
     @prestations = ["Analyse molécules végétales","Mise en conformité réglementaire","Analyse & conseil","Chimie analytique & Phytochimie","Extraction végétale","Full caractérisation","Analyse de tout type de plantes"]
   end
@@ -12,7 +15,6 @@ class PagesController < ApplicationController
 
   end
   def cosmetologie
-
   end
   def prestation_displayed
     fail

@@ -48,7 +48,7 @@
       <li><%= link_to t('navbar.about'),"",class:"header_nav_link_secondary" %></li>
       <li><%= link_to t('navbar.blog'),blog_path,class:"header_nav_link_secondary" %></li>
       <div id="contact_and_langues">
-        <li><%= link_to t('contact.btn_contact').upcase,"", class:"btn_contact" %></li>
+        <li><%= link_to t('contact.btn_contact').upcase,send("contact_#{locale.to_s}_path" ), class:"btn_contact" %></li>
         <div id="selector_langues">
           <%= image_tag "globe.svg"%>
           <% @langues.each do |langue|%>

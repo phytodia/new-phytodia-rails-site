@@ -45,6 +45,7 @@ Rails.application.routes.draw do
       get "actifs",to: "actifs#index",as: :actifs
       get "faqs",to: "faqs#index",as: :faqs
       get "authors",to: "authors#index",as: :authors
+      get "contact",to: "pages#contact"
       #resources :actifs, only:[:index,:show]
     end
   end
