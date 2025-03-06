@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    add_breadcrumb t("contact.contact_titre") , :contact_path
   end
 
   def laboratoire_plantes
