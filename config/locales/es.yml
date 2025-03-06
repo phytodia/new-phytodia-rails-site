@@ -3,6 +3,10 @@ es:
     formats:
       short: "%d/%m/%Y"
   blog:
+  faq:
+    faq_all: "Todas sus preguntas"
+    faq_titre: "Preguntas Frecuentes"
   breaking_news: "Titulares"
   routes:
     authors: "expertos"
+    faqs: "preguntas-frecuentes"
