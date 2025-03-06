@@ -2,7 +2,7 @@
   <div class="faq_header">
     <%= image_tag "pictos/faq.svg"%>
     <h2 class="fag_header_titre">Questions fréquentes</h2>
-    <%= link_to "Toutes vos questions",send("faqs_#{locale.to_s}_path")%>
+    <%= link_to t("faq.faq_all"),send("faqs_#{locale.to_s}_path")%>
   </div>
   <div class="accordions_list" data-controller="accordeon">
     <div class="accordion">
