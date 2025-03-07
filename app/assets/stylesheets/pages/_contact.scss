@@ -21,15 +21,16 @@
     line-height: 24px;
     font-weight: 500;
   }
+
+  hr {margin:0;}
+}
+.contacts, .livraison {
   a {
     color:$green;
     text-decoration: underline;
     white-space:nowrap;
+    font-size: 1rem;
   }
-  hr {margin:0;}
-}
-.contacts {
-
 }
 .livraison {
 
@@ -48,12 +49,18 @@
   width: 100%;
 }
 .contact_address_call {
+  padding: 1em 8px;
+  display: grid;
+  gap: 16px;
   h3 {}
 }
 .contact_titre {
   border-bottom: solid 3px $blue;
   padding: 8px;
   box-sizing: content-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .contact_titre_icon {
   display: grid;
@@ -62,14 +69,17 @@
     width: 100%;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
 }
 .list_tels {
   padding: 0;
   box-sizing: content-box;
   list-style: none;
-  padding: 8px;
+  //padding: 8px;
+  display: grid;
+  gap: 10px;
+  margin: 0;
   li {
     font-weight: 400;
     font-style: normal;
