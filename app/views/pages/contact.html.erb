@@ -32,7 +32,7 @@
             300 boulevard Sebastien Brant 67412 Illkirch-Graffenstaden - France
           </address>
           <%= mail_to "logistique@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_livraison')} | Phytodia"%>
-          <%= phone_to "+33368854842", country_code: ""%>
+          <%= link_to "+33 (0)3 68 85 48 42", "tel:+#{33368854842}" %>
         </div>
       </div>
     </div>

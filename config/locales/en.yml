@@ -46,6 +46,16 @@ en:
     contact_titre: "Contact Us"
     contact_accroche: "..."
 
+    siege_social: "Headquarters"
+    subject_info: "Request for information"
+    anchor_info: "Send us an email"
+
+    call_us: "Call us"
+
+    livraison: "Delivery"
+    livraison_points: "Delivery points"
+    subject_livraison: "Delivery"
+
   actifs:
     actifs_titre: "Ingredients"
 

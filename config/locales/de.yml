@@ -2,6 +2,22 @@ de:
   time:
     formats:
       short: "%d/%m/%Y"
+
+  contact:
+    btn_contact: "Uns kontaktieren"
+    contact_titre: "Uns kontaktieren"
+    contact_accroche: "..."
+
+    siege_social: "Hauptsitz"
+    subject_info: "Anfrage nach Informationen"
+    anchor_info: "Uns eine E-Mail senden"
+
+    call_us: "Uns anrufen"
+
+    livraison: "Lieferung"
+    livraison_points: "Lieferstellen"
+    subject_livraison: "Lieferung"
+
   blog:
     breaking_news: "Schlagzeilen"
   contact:

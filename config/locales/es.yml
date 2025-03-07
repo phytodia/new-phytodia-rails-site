@@ -7,6 +7,16 @@ es:
     btn_contact: "Contáctanos"
     contact_titre: "Contáctanos"
     contact_accroche: "..."
+
+    siege_social: "Sede central"
+    subject_info: "Solicitud de información"
+    anchor_info: "Enviarnos un correo electrónico"
+
+    call_us: "Llamarnos"
+
+    livraison: "Entrega"
+    livraison_points: "Puntos de entrega"
+    subject_livraison: "Entrega"
   faq:
     faq_all: "Todas sus preguntas"
     faq_titre: "Preguntas Frecuentes"
