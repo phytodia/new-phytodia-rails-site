@@ -17,15 +17,16 @@
 .contacts_livraison {
   h2,h3 {
     font-size: normal;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     font-weight: 500;
   }
   a {
     color:$green;
     text-decoration: underline;
+    white-space:nowrap;
   }
-  hr {margin:0;margin-bottom:32px;}
+  hr {margin:0;}
 }
 .contacts {
 
@@ -62,5 +63,21 @@
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+}
+.list_tels {
+  padding: 0;
+  box-sizing: content-box;
+  list-style: none;
+  padding: 8px;
+  li {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.85em;
+    line-height: 20px;
+    color: $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
