@@ -2,3 +2,26 @@
   display: flex;
   width: 100%;
 }
+
+.simple_form {
+  box-sizing: border-box;
+  .flex_form {
+    display: flex;
+    gap: 8px;
+  }
+  .grid_form {
+    display: grid;
+    row-gap: 8px;
+  }
+  &.contact {
+    display: grid;
+    gap: 8px;
+    .input {
+      box-sizing: border-box;
+      border: solid 1px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

@@ -85,19 +85,23 @@
       </div>
     </div>
     <div class="contact_form">
-      <%= simple_form_for :contact do |f| %>
+      <%= simple_form_for :contact, class:"form" do |f| %>
         <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:t('form.subject'), placeholder:"Selectionner" %>
         <h2>Vos coordonnées</h2>
-        <div>
-          <%= f.input :name,label:t('form.name'), required:true %>
-          <%= f.input :firstname, label:t('form.firstname') %>
-          <%= f.input :mail, label:t('form.mail') %>
-          <%= f.input :address, label:t('form.address') %>
-          <%= f.input :zip_code, label:t('form.city') %>
-          <%= f.input :city, label:t('form.city') %>
+        <div class="grid_form">
+          <div class="flex_form">
+            <%= f.input :name,label:t('form.name'), required:true %>
+            <%= f.input :firstname, label:t('form.firstname') %>
+          </div>
+            <%= f.input :mail, label:t('form.mail') %>
+            <%= f.input :address, label:t('form.address') %>
+          <div class="flex_form">
+            <%= f.input :zip_code, label:t('form.city') %>
+            <%= f.input :city, label:t('form.city') %>
+          </div>
           <%= f.input :tel, label:t('form.tel') %>
         </div>
-        <div>
+        <div class="grid_form">
           <h2>Votre message</h2>
           <%= f.input :message %>
         </div>
