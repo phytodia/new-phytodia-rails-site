@@ -35,7 +35,9 @@
             <h3><%= t('contact.call_us') %></h3>
           </div>
           <ul class="list_tels">
-            <li>...</li>
+            <% @tels.keys.each do |key| %>
+              <li><%= @tels[key]["name_#{locale.to_s}"] %>...<%= link_to @tels[key]["tel"],"tel: #{@tels[key]["phone"]}" %></li>
+            <% end %>
           </ul>
         </div>
 

@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @tels =  YAML.load_file("#{Rails.root.to_s}/db/contacts.yml")['tels']
     add_breadcrumb t("contact.contact_titre") , :contact_path
   end
 
