@@ -14,20 +14,53 @@
   }
 }
 
-
+.contacts_livraison {
+  h2,h3 {
+    font-size: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  a {
+    color:$green;
+    text-decoration: underline;
+  }
+  hr {margin:0;margin-bottom:32px;}
+}
 .contacts {
 
 }
 .livraison {
 
 }
+.map_contact {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  img {
+    display: flex;
+    width: inherit;}
+}
 .contact_form{
   min-height: 20px;
   border: solid 1px;
   width: 100%;
 }
-.contact_address {
+.contact_address_call {
+  h3 {}
 }
 .contact_titre {
   border-bottom: solid 3px $blue;
+  padding: 8px;
+  box-sizing: content-box;
+}
+.contact_titre_icon {
+  display: grid;
+  grid-template-columns: 32px auto;
+  & > div {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }

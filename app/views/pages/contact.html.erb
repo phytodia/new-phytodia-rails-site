@@ -9,31 +9,71 @@
   <div id="contact_main" class="inside">
     <div class="contacts_livraison">
       <div class="contacts">
-        <h2 class="contact_titre">Contacts</h2>
-        <div class="contact_address">
-          <h3><%= t('contact.siege_social')%></h3>
+        <div class="contact_titre">
+          <h2>Contacts</h2>
+        </div>
+        <div class="contact_address_call">
+          <div class="contact_titre_icon">
+            <div>
+              <%= image_tag "pictos/map-marker.svg"%>
+            </div>
+            <h3><%= t('contact.siege_social')%></h3>
+          </div>
           <address>
             300 boulevard Sebastien Brant 67412 Illkirch-Graffenstaden - France
           </address>
           <%= mail_to "labo@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_info')} | Phytodia"%>
         </div>
-        <div class="contact_call">
-          <h3><%= t('contact.call_us') %></h3>
+
+        <hr>
+
+        <div class="contact_address_call">
+          <div class="contact_titre_icon">
+            <div>
+              <%= image_tag "pictos/phone-contact.svg"%>
+            </div>
+            <h3><%= t('contact.call_us') %></h3>
+          </div>
           <ul class="list_tels">
             <li>...</li>
           </ul>
         </div>
+
+        <div class="map_contact">
+          <img
+  alt="static Mapbox map of the San Francisco bay area"
+  src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/-122.337798,37.810550,9.67,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoidGhvbWFzcGh5dG8iLCJhIjoiY2xvNzllZjBvMDQxbDJqcWdzZjMxbzF4cCJ9.zYH9-kiyhPByGsVabpaGgA "
+/>
+        </div>
+
       </div>
       <div class="livraison">
-        <h2 class="contact_titre"><%= t('contact.livraison')%></h2>
-        <div class="contact_address">
-          <h3><%= t('contact.livraison_points')%></h3>
+        <div class="contact_titre">
+          <h2><%= t('contact.livraison')%></h2>
+        </div>
+        <div class="contact_address_call">
+          <div class="contact_titre_icon">
+            <div>
+              <%= image_tag "pictos/map-marker.svg"%>
+            </div>
+            <h3><%= t('contact.livraison_points')%></h3>
+          </div>
           <address>
             300 boulevard Sebastien Brant 67412 Illkirch-Graffenstaden - France
           </address>
           <%= mail_to "logistique@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_livraison')} | Phytodia"%>
           <%= link_to "+33 (0)3 68 85 48 42", "tel:+#{33368854842}" %>
         </div>
+
+        <hr>
+
+        <div class="map_contact">
+          <img
+  alt="static Mapbox map of the San Francisco bay area"
+  src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/-122.337798,37.810550,9.67,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoidGhvbWFzcGh5dG8iLCJhIjoiY2xvNzllZjBvMDQxbDJqcWdzZjMxbzF4cCJ9.zYH9-kiyhPByGsVabpaGgA "
+/>
+        </div>
+
       </div>
     </div>
     <div class="contact_form"></div>
