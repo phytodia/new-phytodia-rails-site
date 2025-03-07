@@ -78,6 +78,8 @@ en:
     zip_code: "Postal code"
     city: "City"
     tel: "Phone"
+    send: "Send"
+    subject: "Subject"
 
   views:
     pagination:

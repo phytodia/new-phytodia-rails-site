@@ -30,6 +30,8 @@ es:
     zip_code: "Código postal"
     city: "Ciudad"
     tel: "Teléfono"
+    send: "Enviar"
+    subject: "Asunto"
 
   breaking_news: "Titulares"
   routes:

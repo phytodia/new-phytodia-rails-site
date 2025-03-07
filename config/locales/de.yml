@@ -37,6 +37,8 @@ de:
     zip_code: "Postleitzahl"
     city: "Stadt"
     tel: "Teléfono"
+    send: "Senden"
+    subject: "Betreff"
 
   routes:
     authors: "experten"

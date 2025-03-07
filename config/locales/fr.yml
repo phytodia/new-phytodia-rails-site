@@ -47,6 +47,8 @@ fr:
     zip_code: "Code postal"
     city: "Ville"
     tel: "Téléphone"
+    send: "Envoyer"
+    subject: "Sujet"
 
   views:
     pagination:
