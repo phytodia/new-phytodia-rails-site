@@ -28,6 +28,16 @@ de:
   faq:
     faq_all: "Alle Ihre Fragen"
     faq_titre: "Häufig gestellte Fragen"
+
+  form:
+    name: "Nachname"
+    firstname: "Vorname"
+    mail: "E-mail"
+    address: "Adresse"
+    zip_code: "Postleitzahl"
+    city: "Stadt"
+    tel: "Teléfono"
+
   routes:
     authors: "experten"
     faqs: "w-fragen"

@@ -84,6 +84,32 @@
 
       </div>
     </div>
-    <div class="contact_form"></div>
+    <div class="contact_form">
+      <%= simple_form_for :contact do |f| %>
+        <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:"Sujet", placeholder:"Selectionner" %>
+        <h2>Vos coordonnées</h2>
+        <div>
+          <%= f.input :name,label:"Nom", required:true %>
+          <%= f.input :firstname, label:"Prénom" %>
+          <%= f.input :mail, label:"E-mail" %>
+          <%= f.input :address, label:"Adresse" %>
+          <%= f.input :zip_code, label:"Code postal" %>
+          <%= f.input :city, label:"Ville" %>
+          <%= f.input :tel, label:"Téléphone" %>
+        </div>
+        <div>
+          <h2>Votre message</h2>
+          <%= f.input :message %>
+        </div>
+        <div>
+          <h2>Joindre un document</h2>
+          ...
+        </div>
+        <div class="rgpd"></div>
+        <div>
+          <%= f.submit "envoyer"%>
+        </div>
+      <% end %>
+    </div>
   </div>
 </article>

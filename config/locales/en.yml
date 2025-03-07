@@ -70,6 +70,15 @@ en:
     faq_all: "All your questions"
     faq_titre: "Frequently Asked Questions"
 
+  form:
+    name: "Lastname"
+    firstname: "Firstname"
+    mail: "Email"
+    address: "Address"
+    zip_code: "Postal code"
+    city: "City"
+    tel: "Phone"
+
   views:
     pagination:
       first: "&laquo; First"

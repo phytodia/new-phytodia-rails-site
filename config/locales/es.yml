@@ -21,6 +21,16 @@ es:
   faq:
     faq_all: "Todas sus preguntas"
     faq_titre: "Preguntas Frecuentes"
+
+  form:
+    name: "Apellido"
+    firstname: "Nombre"
+    mail: "Correo electrónico"
+    address: "Dirección"
+    zip_code: "Código postal"
+    city: "Ciudad"
+    tel: "Teléfono"
+
   breaking_news: "Titulares"
   routes:
     authors: "expertos"

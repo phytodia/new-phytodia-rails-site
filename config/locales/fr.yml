@@ -38,6 +38,16 @@ fr:
   faq:
     faq_all: "Toutes vos questions"
     faq_titre: "Questions fréquentes"
+
+  form:
+    name: "Nom"
+    firstname: "Prénom"
+    mail: "E-mail"
+    address: "Adresse"
+    zip_code: "Code postal"
+    city: "Ville"
+    tel: "Téléphone"
+
   views:
     pagination:
       first: "&laquo; Premier"
