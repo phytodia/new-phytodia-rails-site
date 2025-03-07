@@ -1,36 +1,36 @@
 tels:
   administration:
     name_fr: Administratif/Gestion
-    name_de: Administratif/Gestion
-    name_en: Administratif/Gestion
-    name_es: Administratif/Gestion
+    name_de: Verwaltung/Management
+    name_en: Administrative/Management
+    name_es: Administrativo/Gestión
     tel: "+33 (0)3 68 85 48 42"
     phone: "+33368854842"
   laboratoire_plantes:
     name_fr: Laboratoire des plantes
-    name_de: Laboratoire des plantes
-    name_en: Laboratoire des plantes
-    name_es: Laboratoire des plantes
+    name_de: Pflanzenlabor
+    name_en: Plant Laboratory
+    name_es: Laboratorio de plantas
     tel: "+33 (0)3 68 85 48 42"
     phone: "+33368854842"
   analyses_recherches:
     name_fr: Analyses & Recherches
-    name_de: Analyses & Recherches
-    name_en: Analyses & Recherches
-    name_es: Analyses & Recherches
+    name_de: Analysen & Forschung
+    name_en: Analyses & Research
+    name_es: Análisis e investigaciones
     tel: "+33 (0)3 68 85 48 42"
     phone: "+33368854842"
   laboratoire_cosmetologie:
     name_fr: Laboratoire cosmétologique
-    name_de: Laboratoire cosmétologique
-    name_en: Laboratoire cosmétologique
-    name_es: Laboratoire cosmétologique
+    name_de: Kosmetiklabor
+    name_en: Cosmetology Laboratory
+    name_es: Laboratorio cosmético
     tel: "+33 (0)3 68 85 48 42"
     phone: "+33368854842"
   developpement_distribution_actifs:
     name_fr: Développement et distribution d'actifs
-    name_de: Développement et distribution d'actifs
-    name_en: Développement et distribution d'actifs
-    name_es: Développement et distribution d'actifs
+    name_de: Entwicklung und Vertrieb von Wirkstoffen
+    name_en: Development and Distribution of Active Ingredients
+    name_es: Desarrollo y distribución de activos
     tel: "+33 (0)3 68 85 48 42"
     phone: "+33368854842"
