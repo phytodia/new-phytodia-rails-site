@@ -103,7 +103,7 @@
         </div>
         <div class="grid_form">
           <h2>Votre message</h2>
-          <%= f.input :message %>
+          <%= f.input :message,as: :text,:input_html => { :rows => 10} %>
         </div>
         <div>
           <h2>Joindre un document</h2>
