@@ -58,7 +58,25 @@
   label {
     color: $green;
     font-weight: 500;
-    abbr {display: none;}
+    position: relative;
+    abbr{
+      visibility: hidden; width: 0;
+      display: none;
+    }
+    abbr::before {
+      content: none;
+      width: 0;
+    }
+  }
+  label::after{
+    content: asset_url("pictos/required-star.svg");
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    //required-star.svg
+  }
+  .input.select label::after{
+    content: none;
   }
   input,select {
     line-height: 1.5em;

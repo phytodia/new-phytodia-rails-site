@@ -86,7 +86,7 @@
     </div>
     <div class="contact_form">
       <%= simple_form_for :contact, class:"form" do |f| %>
-        <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:t('form.subject'), placeholder:"Selectionner" %>
+        <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:t('form.subject'), placeholder:"Selectionner",required:false %>
         <h2>Vos coordonnées</h2>
         <div class="grid_form">
           <div class="flex_form">
