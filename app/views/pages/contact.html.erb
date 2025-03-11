@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="contact_form">
-      <%= simple_form_for :contact, class:"form" do |f| %>
+      <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
         <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",required:false,prompt: "#{t('form.selectionnez')}..." %>
         <h2><%= t('form.coordonnees')%></h2>
         <div class="grid_form">
