@@ -5,8 +5,10 @@
 #contact_main {
   border: solid 1px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 32px;
+  //grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% 60%;
+  //column-gap: 32px;
+  column-gap: 10%;
   height: 100%;
   .contacts_livraison {
     width: 100%;
@@ -28,6 +30,15 @@
   }
 
   hr {margin:0;}
+}
+.form_attachements {
+  border: dotted;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  //border-radius: 3px;
 }
 .contact_us {
   margin-bottom: 6em;
@@ -97,6 +108,17 @@
       width: 100%;
       height: 100%;
     }
+  }
+  .send_contact_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+  .btn_round{
+    border: solid 1px;
+    line-height: 0px;
+    padding: 16px 24px;
   }
 }
 .contact_address_call {
