@@ -33,6 +33,21 @@ es:
     send: "Enviar"
     subject: "Asunto"
 
+    selectionnez: "Seleccione"
+
+    cosmetique: "Cosmética"
+    analyse: "Análisis"
+    extraction: "Extracción vegetal"
+    ingredient: "Ingredientes"
+
+    coordonnees: "Sus datos de contacto"
+    votre_message: "Su mensaje"
+    joindre_document: "Adjuntar un documento"
+
+    accepted_files: "Archivos aceptados: jpg, png, pdf, doc, xls. Tamaño máximo: 10,00 MB. Hasta 3 archivos adjuntos."
+    rgpd: "Al marcar esta casilla, acepto que mis datos personales sean utilizados por Phytodia para responder a mi solicitud."
+    fields_necessary: "Campos obligatorios"
+
   breaking_news: "Titulares"
   routes:
     authors: "expertos"

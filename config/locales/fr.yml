@@ -50,6 +50,21 @@ fr:
     send: "Envoyer"
     subject: "Sujet"
 
+    selectionnez: "Sélectionnez"
+
+    cosmetique: "Cosmétique"
+    analyse: "Analyse"
+    extraction: "Extraction végétale"
+    ingredient: "Ingrédients"
+
+    coordonnees: "Vos coordonnées"
+    votre_message: "Votre message"
+    joindre_document: "Joindre un document"
+
+    accepted_files: "Fichier acceptés : jpg, png, pdf, doc, xls. Poids max: 10.00 Mo. 3 pièces jointes maximum."
+    rgpd: "En cochant cette case, j'accepte que mes données personnelles soient utilisées par Phytodia pour répondre à ma demande"
+    fields_necessary: "Champs obligatoires"
+
   views:
     pagination:
       first: "&laquo; Premier"
