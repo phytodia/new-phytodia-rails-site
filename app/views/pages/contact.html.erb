@@ -86,7 +86,7 @@
     </div>
     <div class="contact_form">
       <%= simple_form_for :contact, class:"form" do |f| %>
-        <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:t('form.subject'), placeholder:"Selectionner",required:false %>
+        <%= f.input :subject, as: :select, collection:["Cosmétique","Analyse"], label:t('form.subject'), placeholder:"Selectionner",required:false,prompt: "Séléctionnez..." %>
         <h2>Vos coordonnées</h2>
         <div class="grid_form">
           <div class="flex_form">
@@ -99,7 +99,7 @@
             <%= f.input :zip_code, label:t('form.city') %>
             <%= f.input :city, label:t('form.city') %>
           </div>
-          <%= f.input :tel, label:t('form.tel') %>
+          <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36' %>
         </div>
         <div class="grid_form">
           <h2>Votre message</h2>
@@ -107,11 +107,16 @@
         </div>
         <div>
           <h2>Joindre un document</h2>
-          <div class="form_attachements">
-            <%= f.file_field :attachments, multiple: true, direct_upload: true %>
+          <div class="form_field_attachements">
+          <i>Fichier acceptés : jpg, png, pdf, doc, xls. Poids max: 10.00 Mo. 3 pièces jointes maximum.</i>
+            <div class="form_attachements">
+              <%= f.file_field :attachments, multiple: true, direct_upload: true %>
+            </div>
           </div>
         </div>
-        <div class="rgpd"></div>
+        <div class="rgpd">
+          <%= f.input :rgpd,as: :boolean, label: "En cochant cette case, j'accepte que mes données personnelles soient utilisées par Phytodia pour répondre à ma demande. *"%>
+        </div>
         <div class="send_contact_form">
           <p><%= image_tag "pictos/required-star.svg"%>Champs obligatoires</p>
           <%= f.submit t('form.send'),class:"btn_round"%>

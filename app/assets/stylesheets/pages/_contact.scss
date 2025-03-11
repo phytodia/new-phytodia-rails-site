@@ -36,7 +36,7 @@
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  padding: 10px;
+  padding: 5px;
   align-items: center;
   //border-radius: 3px;
 }
@@ -94,6 +94,7 @@
     height: 1.5em;
     border: none;
   }
+
   textarea {border:none;}
   .input {
     background-color: white;
@@ -119,6 +120,14 @@
     border: solid 1px;
     line-height: 0px;
     padding: 16px 24px;
+  }
+  input[type="file"]{
+    padding: 2px;
+  }
+  input.select.optional {
+    option:first-child {
+      color: red;
+    }
   }
 }
 .contact_address_call {
@@ -163,4 +172,16 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+.rgpd {
+  .input {
+    background-color: transparent;
+  }
+  label {
+    color: black; font-weight: normal;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+  }
+  label::after {content: none;}
 }
