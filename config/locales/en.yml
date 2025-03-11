@@ -82,11 +82,14 @@ en:
     subject: "Subject"
 
     selectionnez: "Select"
-
-    cosmetique: "Cosmetics"
-    analyse: "Analysis"
-    extraction: "Plant extraction"
-    ingredient: "Ingredients"
+    objects:
+      cosmetique: "Cosmetics"
+      analyse: "Analysis"
+      extraction: "Plant extraction"
+      ingredient: "Ingredients"
+      informations: "Information"
+      stage: "Internship/Job"
+      autre: "Other"
 
     coordonnees: "Your contact details"
     votre_message: "Your message"

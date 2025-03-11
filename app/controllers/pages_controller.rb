@@ -7,6 +7,8 @@ class PagesController < ApplicationController
 
   def contact
     @tels =  YAML.load_file("#{Rails.root.to_s}/db/contacts.yml")['tels']
+    @objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
+
     add_breadcrumb t("contact.contact_titre") , :contact_path
   end
 

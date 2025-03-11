@@ -51,11 +51,14 @@ fr:
     subject: "Sujet"
 
     selectionnez: "Sélectionnez"
-
-    cosmetique: "Cosmétique"
-    analyse: "Analyse"
-    extraction: "Extraction végétale"
-    ingredient: "Ingrédients"
+    objects:
+      cosmetique: "Cosmétique"
+      analyse: "Analyse"
+      extraction: "Extraction végétale"
+      ingredient: "Ingrédients"
+      informations: "Informations"
+      stage: "Stage/emploi"
+      autre: "Autre"
 
     coordonnees: "Vos coordonnées"
     votre_message: "Votre message"

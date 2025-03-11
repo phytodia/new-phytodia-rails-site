@@ -34,11 +34,14 @@ es:
     subject: "Asunto"
 
     selectionnez: "Seleccione"
-
-    cosmetique: "Cosmética"
-    analyse: "Análisis"
-    extraction: "Extracción vegetal"
-    ingredient: "Ingredientes"
+    objects:
+      cosmetique: "Cosmética"
+      analyse: "Análisis"
+      extraction: "Extracción vegetal"
+      ingredient: "Ingredientes"
+      informations: "Información"
+      stage: "Prácticas/Empleo"
+      autre: "Otro"
 
     coordonnees: "Sus datos de contacto"
     votre_message: "Su mensaje"

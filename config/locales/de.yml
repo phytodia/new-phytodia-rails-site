@@ -41,11 +41,15 @@ de:
     subject: "Betreff"
 
     selectionnez: "Auswählen"
+    objects:
+      cosmetique: "Kosmetik"
+      analyse: "Analyse"
+      extraction: "Pflanzenextraktion"
+      ingredient: "Inhaltsstoffe"
+      informations: "Informationen"
+      stage: "Praktikum/Anstellung"
+      autre: "Andere"
 
-    cosmetique: "Kosmetik"
-    analyse: "Analyse"
-    extraction: "Pflanzenextraktion"
-    ingredient: "Inhaltsstoffe"
 
     coordonnees: "Ihre Kontaktdaten"
     votre_message: "Ihre Nachricht"
