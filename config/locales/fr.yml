@@ -13,6 +13,20 @@ fr:
 
   contact:
     btn_contact: "Nous contacter"
+    contact_titre: "Nous contacter"
+    contact_accroche: "Notre équipe se tient à votre entière disposition pour répondre à toute question concernant Phytodia."
+
+    contacts: "Contacts"
+    siege_social: "Siège social"
+    subject_info: "Demande d'informations"
+    anchor_info: "Nous envoyer un email"
+
+    call_us: "Nous appeler"
+
+    livraison: "Livraison"
+    livraison_points: "Points de livraison"
+    subject_livraison: "Livraison"
+
   actifs:
     actifs_titre: "Nos actifs"
   breadcrumbs:
@@ -24,6 +38,36 @@ fr:
   faq:
     faq_all: "Toutes vos questions"
     faq_titre: "Questions fréquentes"
+
+  form:
+    name: "Nom"
+    firstname: "Prénom"
+    mail: "E-mail"
+    address: "Adresse"
+    zip_code: "Code postal"
+    city: "Ville"
+    tel: "Téléphone"
+    send: "Envoyer"
+    subject: "Sujet"
+
+    selectionnez: "Sélectionnez"
+    objects:
+      cosmetique: "Cosmétique"
+      analyse: "Analyse"
+      extraction: "Extraction végétale"
+      ingredient: "Ingrédients"
+      informations: "Informations"
+      stage: "Stage/emploi"
+      autre: "Autre"
+
+    coordonnees: "Vos coordonnées"
+    votre_message: "Votre message"
+    joindre_document: "Joindre un document"
+
+    accepted_files: "Fichier acceptés : jpg, png, pdf, doc, xls. Poids max: 10.00 Mo. 3 pièces jointes maximum."
+    rgpd: "En cochant cette case, j'accepte que mes données personnelles soient utilisées par Phytodia pour répondre à ma demande"
+    fields_necessary: "Champs obligatoires"
+
   views:
     pagination:
       first: "&laquo; Premier"
@@ -45,3 +89,4 @@ fr:
   routes:
     authors: "nos-experts"
     faqs: "faq"
+    contact: "contact"

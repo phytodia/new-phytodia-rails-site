@@ -43,6 +43,19 @@ en:
 
   contact:
     btn_contact: "Contact Us"
+    contact_titre: "Contact Us"
+    contact_accroche: "..."
+
+    contacts: "Contacts"
+    siege_social: "Headquarters"
+    subject_info: "Request for information"
+    anchor_info: "Send us an email"
+
+    call_us: "Call us"
+
+    livraison: "Delivery"
+    livraison_points: "Delivery points"
+    subject_livraison: "Delivery"
 
   actifs:
     actifs_titre: "Ingredients"
@@ -56,6 +69,35 @@ en:
   faq:
     faq_all: "All your questions"
     faq_titre: "Frequently Asked Questions"
+
+  form:
+    name: "Lastname"
+    firstname: "Firstname"
+    mail: "Email"
+    address: "Address"
+    zip_code: "Postal code"
+    city: "City"
+    tel: "Phone"
+    send: "Send"
+    subject: "Subject"
+
+    selectionnez: "Select"
+    objects:
+      cosmetique: "Cosmetics"
+      analyse: "Analysis"
+      extraction: "Plant extraction"
+      ingredient: "Ingredients"
+      informations: "Information"
+      stage: "Internship/Job"
+      autre: "Other"
+
+    coordonnees: "Your contact details"
+    votre_message: "Your message"
+    joindre_document: "Attach a document"
+
+    accepted_files: "Accepted files: jpg, png, pdf, doc, xls. Max size: 10.00 MB. Up to 3 attachments."
+    rgpd: "By checking this box, I agree that my personal data may be used by Phytodia to respond to my request."
+    fields_necessary: "Required fields"
 
   views:
     pagination:
@@ -82,3 +124,4 @@ en:
     actifs: ingredients
     authors: "experts"
     faqs: "faq"
+    contact: "contact-us"

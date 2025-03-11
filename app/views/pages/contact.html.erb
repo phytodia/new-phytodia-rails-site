@@ -1,0 +1,127 @@
+<article class="page_custom">
+  <div class="page_custom_header contact_us">
+    <div class="inside page_custom_header_text">
+      <h1 class=""><%= t("contact.contact_titre")%></h1>
+      <p class="page_custom_text_presentation"><%= t("contact.contact_accroche")%>
+      </p>
+    </div>
+  </div>
+  <div id="contact_main" class="inside">
+    <div class="contacts_livraison">
+      <div class="contacts">
+        <div class="contact_titre">
+          <h2><%= t('contact.contacts')%></h2>
+          <%= image_tag "pictos/croix-black.svg"%>
+        </div>
+        <div>
+          <div class="contact_address_call">
+            <div class="contact_titre_icon">
+              <div>
+                <%= image_tag "pictos/map-marker.svg"%>
+              </div>
+              <h3><%= t('contact.siege_social')%></h3>
+            </div>
+            <address>
+              300 boulevard Sebastien Brant<br> 67412 Illkirch-Graffenstaden - France
+            </address>
+            <%= mail_to "labo@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_info')} | Phytodia"%>
+          </div>
+
+          <hr>
+
+          <div class="contact_address_call">
+            <div class="contact_titre_icon">
+              <div>
+                <%= image_tag "pictos/phone-contact.svg"%>
+              </div>
+              <h3><%= t('contact.call_us') %></h3>
+            </div>
+            <ul class="list_tels">
+              <% @tels.keys.each do |key| %>
+                <li><%= @tels[key]["name_#{locale.to_s}"] %>...<%= link_to @tels[key]["tel"],"tel: #{@tels[key]["phone"]}" %></li>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="map_contact">
+            <img
+    alt="static Mapbox map of the San Francisco bay area"
+    src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/-122.337798,37.810550,9.67,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoidGhvbWFzcGh5dG8iLCJhIjoiY2xvNzllZjBvMDQxbDJqcWdzZjMxbzF4cCJ9.zYH9-kiyhPByGsVabpaGgA "
+  />
+          </div>
+        </div>
+
+      </div>
+      <div class="livraison">
+        <div class="contact_titre">
+          <h2><%= t('contact.livraison')%></h2>
+          <%= image_tag "pictos/croix-black.svg"%>
+        </div>
+        <div>
+          <div class="contact_address_call">
+            <div class="contact_titre_icon">
+              <div>
+                <%= image_tag "pictos/map-marker.svg"%>
+              </div>
+              <h3><%= t('contact.livraison_points')%></h3>
+            </div>
+            <address>
+              300 boulevard Sebastien Brant<br> 67412 Illkirch-Graffenstaden - France
+            </address>
+            <%= mail_to "logistique@phytodia.com",t('contact.anchor_info'),subject:"#{t('contact.subject_livraison')} | Phytodia"%>
+            <%= link_to "+33 (0)3 68 85 48 42", "tel:+#{33368854842}" %>
+          </div>
+
+          <hr>
+
+          <div class="map_contact">
+            <img
+    alt="static Mapbox map of the San Francisco bay area"
+    src="https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/-122.337798,37.810550,9.67,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoidGhvbWFzcGh5dG8iLCJhIjoiY2xvNzllZjBvMDQxbDJqcWdzZjMxbzF4cCJ9.zYH9-kiyhPByGsVabpaGgA "
+  />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="contact_form">
+      <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
+        <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",required:false,prompt: "#{t('form.selectionnez')}..." %>
+        <h2><%= t('form.coordonnees')%></h2>
+        <div class="grid_form">
+          <div class="flex_form">
+            <%= f.input :name,label:t('form.name'), required:true %>
+            <%= f.input :firstname, label:t('form.firstname') %>
+          </div>
+            <%= f.input :mail, label:t('form.mail') %>
+            <%= f.input :address, label:t('form.address') %>
+          <div class="flex_form">
+            <%= f.input :zip_code, label:t('form.zip_code') %>
+            <%= f.input :city, label:t('form.city') %>
+          </div>
+          <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36' %>
+        </div>
+        <div class="grid_form">
+          <h2><%= t('form.votre_message')%></h2>
+          <%= f.input :message,as: :text,:input_html => { :rows => 10} %>
+        </div>
+        <div>
+          <h2><%= t('form.joindre_document')%></h2>
+          <div class="form_field_attachements">
+            <i><%= t('form.accepted_files')%></i>
+            <div class="form_attachements">
+              <%= f.file_field :attachments, multiple: true, direct_upload: true %>
+            </div>
+          </div>
+        </div>
+        <div class="rgpd">
+          <%= f.input :rgpd,as: :boolean, label: t('form.rgpd')%>
+        </div>
+        <div class="send_contact_form">
+          <p><%= image_tag "pictos/required-star.svg"%><%= t('form.fields_necessary')%></p>
+          <%= f.submit t('form.send'),class:"btn_round"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</article>

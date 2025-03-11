@@ -3,10 +3,56 @@ es:
     formats:
       short: "%d/%m/%Y"
   blog:
+  contact:
+    btn_contact: "Contáctanos"
+    contact_titre: "Contáctanos"
+    contact_accroche: "..."
+
+    contacts: "Contactos"
+    siege_social: "Sede central"
+    subject_info: "Solicitud de información"
+    anchor_info: "Enviarnos un correo electrónico"
+
+    call_us: "Llamarnos"
+
+    livraison: "Entrega"
+    livraison_points: "Puntos de entrega"
+    subject_livraison: "Entrega"
   faq:
     faq_all: "Todas sus preguntas"
     faq_titre: "Preguntas Frecuentes"
+
+  form:
+    name: "Apellido"
+    firstname: "Nombre"
+    mail: "Correo electrónico"
+    address: "Dirección"
+    zip_code: "Código postal"
+    city: "Ciudad"
+    tel: "Teléfono"
+    send: "Enviar"
+    subject: "Asunto"
+
+    selectionnez: "Seleccione"
+    objects:
+      cosmetique: "Cosmética"
+      analyse: "Análisis"
+      extraction: "Extracción vegetal"
+      ingredient: "Ingredientes"
+      informations: "Información"
+      stage: "Prácticas/Empleo"
+      autre: "Otro"
+
+    coordonnees: "Sus datos de contacto"
+    votre_message: "Su mensaje"
+    joindre_document: "Adjuntar un documento"
+
+    accepted_files: "Archivos aceptados: jpg, png, pdf, doc, xls. Tamaño máximo: 10,00 MB. Hasta 3 archivos adjuntos."
+    rgpd: "Al marcar esta casilla, acepto que mis datos personales sean utilizados por Phytodia para responder a mi solicitud."
+    fields_necessary: "Campos obligatorios"
+
   breaking_news: "Titulares"
   routes:
     authors: "expertos"
     faqs: "preguntas-frecuentes"
+    contact: "contacto"

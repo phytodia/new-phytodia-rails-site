@@ -1,8 +1,37 @@
 class PagesController < ApplicationController
+
+  before_action :set_objects_contact
+
   def home
   end
 
   def about
+  end
+
+  def contact
+    @tels =  YAML.load_file("#{Rails.root.to_s}/db/contacts.yml")['tels']
+    #@objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
+
+    add_breadcrumb t("contact.contact_titre") , :contact_path
+  end
+
+  def send_contact
+    object = params[:contact][:subject]
+    index_object = @objects_form.index object
+    subject = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"].keys[index_object]
+    subject_fr = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"][subject]
+
+    case subject #key of objects form
+    when subject == cosmetique
+    when subject == analyse
+    when subject == extraction
+    when subject == ingredient
+    when subject == informations
+    when subject == stage
+    when subject == autre
+    else
+    end
+
   end
 
   def laboratoire_plantes
@@ -12,9 +41,15 @@ class PagesController < ApplicationController
 
   end
   def cosmetologie
-
   end
   def prestation_displayed
     fail
   end
+
+  private
+  def set_objects_contact
+    @objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
+  end
+
+
 end
