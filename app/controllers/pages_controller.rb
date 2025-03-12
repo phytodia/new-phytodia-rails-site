@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_action :set_objects_contact
+  before_action :set_objects_contact, only: [:contact,:send_contact]
 
   def home
   end
