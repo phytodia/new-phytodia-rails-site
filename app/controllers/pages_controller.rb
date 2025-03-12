@@ -31,8 +31,7 @@ class PagesController < ApplicationController
     when subject == "autre"
     else
     end
-    fail
-    ContactMailer.with(subject:subject_fr).new_contact.deliver_later
+    ContactMailer.with(subject:"test sujet").new_contact.deliver_later
 
     if params[:locale] == "fr"
       redirect_to contact_fr_path

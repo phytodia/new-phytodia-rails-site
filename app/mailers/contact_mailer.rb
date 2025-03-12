@@ -1,8 +1,8 @@
 class ContactMailer < ApplicationMailer
   def new_contact
 
-    @destinataire_service_phytodia = ""
-    @subject = subject
+    @destinataire_service_phytodia = "hunckler.thomas@hotmail.fr"
+    @subject = "test sujet 2"
 
     @sender_email = ""
     @sender_lastname = ""
