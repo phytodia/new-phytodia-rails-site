@@ -2,10 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="contact"
 export default class extends Controller {
-  static targets = ["accordeon"]
+  static targets = ["accordeon","headerAccordeon"]
   connect() {
   }
-  toggleAccordeon(){
-    this.accordeonTarget.classList.toggle("open")
+  toggleAccordeon(event){
+    this.accordeonTargets[this.headerAccordeonTargets.indexOf(event.currentTarget)].classList.toggle("open")
   }
 }

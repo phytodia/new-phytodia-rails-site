@@ -9,7 +9,7 @@
   <div id="contact_main" class="inside">
     <div class="contacts_livraison">
       <div class="contacts">
-        <div class="contact_titre" data-action="click->contact#toggleAccordeon">
+        <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
           <h2><%= t('contact.contacts')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
         </div>
@@ -53,7 +53,7 @@
 
       </div>
       <div class="livraison">
-        <div class="contact_titre" data-action="click->contact#toggleAccordeon">
+        <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
           <h2><%= t('contact.livraison')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
         </div>
@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="contact_form">
-      <div class="contact_titre" data-action="click->contact#toggleAccordeon">
+      <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
           <h2><%= t('form.send_message')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
       </div>
