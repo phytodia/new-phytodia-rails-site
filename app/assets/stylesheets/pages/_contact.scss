@@ -143,6 +143,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: normal;
+  h2,h3 {
+    font-size: 1em;
+    line-height: 24px;
+    font-weight: 500;
+  }
 }
 .contact_titre_icon {
   display: grid;
@@ -185,6 +191,9 @@
   }
   label::after {content: none;}
 }
+.contact_form {
+  .contact_titre {display: none;}
+}
 @media only screen and (max-width: 40em) {
   #contact_main {
     grid-template-columns: 1fr;
@@ -193,5 +202,16 @@
     .flex_form {
       display: grid;
     }
+  }
+  .contact_accordeon {
+    visibility: hidden;
+    height: 0;
+    &.open {
+      height: auto;
+      visibility: visible;
+    }
+  }
+  .contact_form {
+    .contact_titre {display:flex;}
   }
 }
