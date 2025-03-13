@@ -107,11 +107,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address: 'smtp.sendgrid.net',
   port: 587,
-  domain: 'phytodia.xyz', # Use your custom domain here
-  user_name: 'PHYTODIA_SENDGRID', # This should always be 'apikey'
+  domain: 'phytodia-8e139429eeac.herokuapp.com', # Use your custom domain here
+  user_name: 'apikey', # This should always be 'apikey'
   password: ENV['SENDGRID_API_KEY'],
   authentication: :plain,
   enable_starttls_auto: true
   }
-  config.action_mailer.default_url_options = { host: 'phytodia.xyz' }
+  config.action_mailer.default_url_options = { host: 'phytodia-8e139429eeac.herokuapp.com' }
 end
