@@ -103,15 +103,4 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address: 'smtp.sendgrid.net',
-  port: 587,
-  domain: 'phytodia-8e139429eeac.herokuapp.com', # Use your custom domain here
-  user_name: 'apikey', # This should always be 'apikey'
-  password: ENV['SENDGRID_API_KEY'],
-  authentication: :plain,
-  enable_starttls_auto: true
-  }
-  config.action_mailer.default_url_options = { host: 'phytodia-8e139429eeac.herokuapp.com' }
 end
