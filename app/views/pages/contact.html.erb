@@ -13,7 +13,7 @@
           <h2><%= t('contact.contacts')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
         </div>
-        <div data-contact-target="accordeon" class="contact_accordeon">
+        <div data-contact-target="accordeon" class="contact_accordeon open">
           <div class="contact_address_call">
             <div class="contact_titre_icon">
               <div>
@@ -92,41 +92,41 @@
       <div data-contact-target="accordeon" class="contact_accordeon">
         <h2><%= t('form.your_request')%></h2>
         <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
-          <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...", input_html:{required: true} %>
-          <h2><%= t('form.coordonnees')%></h2>
-          <div class="grid_form">
-            <div class="flex_form">
-              <%= f.input :name,label:t('form.name'), input_html:{required: true} %>
-              <%= f.input :firstname, label:t('form.firstname'),input_html:{required: true} %>
+        <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...", input_html:{required: true} %>
+        <h2><%= t('form.coordonnees')%></h2>
+        <div class="grid_form">
+          <div class="flex_form">
+            <%= f.input :name,label:t('form.name'), input_html:{required: true} %>
+            <%= f.input :firstname, label:t('form.firstname'),input_html:{required: true} %>
+          </div>
+            <%= f.input :mail, label:t('form.mail'), input_html:{required: true} %>
+            <%= f.input :address, label:t('form.address'), input_html:{required: true} %>
+          <div class="flex_form">
+            <%= f.input :zip_code, label:t('form.zip_code'), input_html:{required: true} %>
+            <%= f.input :city, label:t('form.city'), input_html:{required: true} %>
+          </div>
+          <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36', input_html:{required: true} %>
+        </div>
+        <div class="grid_form">
+          <h2><%= t('form.votre_message')%></h2>
+          <%= f.input :message,as: :text,:input_html => { :rows => 10} %>
+        </div>
+        <div>
+          <h2><%= t('form.joindre_document')%></h2>
+          <div class="form_field_attachements">
+            <p><%= t('form.accepted_files')%></p>
+            <div class="form_attachements">
+              <%= f.file_field :attachments, multiple: true, direct_upload: true %>
             </div>
-              <%= f.input :mail, label:t('form.mail'), input_html:{required: true} %>
-              <%= f.input :address, label:t('form.address'), input_html:{required: true} %>
-            <div class="flex_form">
-              <%= f.input :zip_code, label:t('form.zip_code'), input_html:{required: true} %>
-              <%= f.input :city, label:t('form.city'), input_html:{required: true} %>
-            </div>
-            <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36', input_html:{required: true} %>
           </div>
-          <div class="grid_form">
-            <h2><%= t('form.votre_message')%></h2>
-            <%= f.input :message,as: :text,:input_html => { :rows => 10} %>
-          </div>
-          <div>
-            <h2><%= t('form.joindre_document')%></h2>
-            <div class="form_field_attachements">
-              <p><%= t('form.accepted_files')%></p>
-              <div class="form_attachements">
-                <%= f.file_field :attachments, multiple: true, direct_upload: true %>
-              </div>
-            </div>
-          </div>
-          <div class="rgpd">
-            <%= f.input :rgpd,as: :boolean, label: t('form.rgpd'), input_html:{required: true}%>
-          </div>
-          <div class="send_contact_form">
-            <p><%= image_tag "pictos/required-star.svg"%><%= t('form.fields_necessary')%></p>
-            <%= f.submit t('form.send'),class:"btn_round"%>
-          </div>
+        </div>
+        <div class="rgpd">
+          <%= f.input :rgpd,as: :boolean, label: t('form.rgpd'), input_html:{required: true}%>
+        </div>
+        <div class="send_contact_form">
+          <p><%= image_tag "pictos/required-star.svg"%><%= t('form.fields_necessary')%></p>
+          <%= f.submit t('form.send'),class:"btn_round"%>
+        </div>
         <% end %>
       </div>
     </div>

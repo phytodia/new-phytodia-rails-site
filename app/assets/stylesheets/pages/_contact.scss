@@ -191,7 +191,12 @@
   }
   label::after {content: none;}
 }
+.contact_titre {
+  img {visibility: hidden;}
+}
 .contact_form {
+  border: solid 1px green;
+  //.contact_titre {display: none;}
   .contact_titre {display: none;}
 }
 @media only screen and (max-width: 40em) {
@@ -213,5 +218,15 @@
   }
   .contact_form {
     .contact_titre {display:flex;}
+    .simple_form.contact {display: none;}
   }
+  .contact_titre {
+    img {visibility: visible;}
+  }
+  .contact_accordeon.open {
+    h2, .simple_form.contact {
+      display: block;
+    }
+  }
+
 }
