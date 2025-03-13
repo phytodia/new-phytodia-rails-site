@@ -21,46 +21,45 @@ class PagesController < ApplicationController
     subject = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"].keys[index_object]
     subject_fr = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"][subject]
 
-    case subject #key of objects form
-    when subject == "cosmetique"
+    if subject == "cosmetique"
       service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
-    when subject == "analyse"
+    elsif subject == "analyse"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
-    when subject == "extraction"
+    elsif subject == "extraction"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
-    when subject == "ingredient"
+    elsif subject == "ingredient"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
-    when subject == "informations"
+    elsif subject == "informations"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
-    when subject == "stage"
+    elsif subject == "stage"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
-    when subject == "autre"
+    elsif subject == "autre"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"] #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
     else
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = ["tf@phytodia.com"]
     end
 
     elements_mail = params[:contact]
     service_phytodia_mail.each do |destinataire|
-    ContactMailer.with(
-      service_phytodia: destinataire,
-      subject:subject_fr,
-      sender_email:elements_mail[:mail],
-      sender_lastname:elements_mail[:name],
-      sender_firstname:elements_mail[:firstname],
-      sender_address:elements_mail[:address],
-      sender_zip_code:elements_mail[:zip_code],
-      sender_city:elements_mail[:city],
-      sender_phone:elements_mail[:tel],
-      sender_message:elements_mail[:message],
-      sender_files:"",
-      sender_rgpd:elements_mail[:rgpd],
-      sender_lang: params[:locale]
-    ).new_contact.deliver_now
-    puts "--- Email envoyé ---"
-    puts subject
-    puts subject_fr
-    puts destinataire
+      ContactMailer.with(
+        service_phytodia: destinataire,
+        subject:subject_fr,
+        sender_email:elements_mail[:mail],
+        sender_lastname:elements_mail[:name],
+        sender_firstname:elements_mail[:firstname],
+        sender_address:elements_mail[:address],
+        sender_zip_code:elements_mail[:zip_code],
+        sender_city:elements_mail[:city],
+        sender_phone:elements_mail[:tel],
+        sender_message:elements_mail[:message],
+        sender_files:"",
+        sender_rgpd:elements_mail[:rgpd],
+        sender_lang: params[:locale]
+      ).new_contact.deliver_now
+      puts "--- Email envoyé ---"
+      puts subject
+      puts subject_fr
+      puts destinataire
     end
 
     if params[:locale] == "fr"
