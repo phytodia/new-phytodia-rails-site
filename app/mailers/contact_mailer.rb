@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: "contact@phytodia.com"
+  default from: "contact@phytodia.xyz"
   def new_contact
 
     @destinataire_service_phytodia = params[:service_phytodia]
