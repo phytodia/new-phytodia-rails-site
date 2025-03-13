@@ -108,7 +108,7 @@ Rails.application.configure do
   address: 'smtp.sendgrid.net',
   port: 587,
   domain: 'phytodia.xyz', # Use your custom domain here
-  user_name: 'apikey', # This should always be 'apikey'
+  user_name: 'PHYTODIA_SENDGRID', # This should always be 'apikey'
   password: ENV['SENDGRID_API_KEY'],
   authentication: :plain,
   enable_starttls_auto: true
