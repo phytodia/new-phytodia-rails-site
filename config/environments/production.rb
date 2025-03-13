@@ -103,15 +103,27 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
-    password: Rails.application.credentials.dig(:sendgrid,:api_key), # This is the secret sendgrid API key which was issued during API key creation
-    domain:'phytodia-8e139429eeac.herokuapp.com',
-    address: 'smtp.sendgrid.net',
-    port: 587,
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #  user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
+  #  password: Rails.application.credentials.dig(:sendgrid,:api_key), # This is the secret sendgrid API key which was issued during API key creation
+  #  domain:'phytodia-8e139429eeac.herokuapp.com',
+  #  address: 'smtp.sendgrid.net',
+  #  port: 587,
+  #  authentication: "plain",
+  #  enable_starttls_auto: true
+  #}
+
+  config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+    address: "mail.smtp2go.com",
+    port: 2525, # 8025, 587 and 25 can also be used.
+    domain: "phytodia-8e139429eeac.herokuapp.com",
     authentication: "plain",
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    user_name: "phytodia.com",
+    password: ENV["SMTP2GO_PASSWORD"]
   }
 
 end
