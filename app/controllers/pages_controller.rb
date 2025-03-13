@@ -23,21 +23,21 @@ class PagesController < ApplicationController
 
     case subject #key of objects form
     when subject == "cosmetique"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
     when subject == "analyse"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     when subject == "extraction"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     when subject == "ingredient"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     when subject == "informations"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     when subject == "stage"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     when subject == "autre"
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr" #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com"] #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
     else
-      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
+      service_phytodia_mail = ["th@phytodia.com"]
     end
 
     elements_mail = params[:contact]
