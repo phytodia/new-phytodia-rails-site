@@ -23,26 +23,27 @@ class PagesController < ApplicationController
 
     case subject #key of objects form
     when subject == "cosmetique"
-      service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "analyse"
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "extraction"
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "ingredient"
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "informations"
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "stage"
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "autre"
-      service_phytodia_mail = ["th@phytodia.com"] #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"] #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
     else
-      service_phytodia_mail = ["th@phytodia.com"]
+      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     end
 
     elements_mail = params[:contact]
+    service_phytodia_mail.each do |destinataire|
     ContactMailer.with(
-      service_phytodia: service_phytodia_mail,
+      service_phytodia: destinataire,
       subject:subject_fr,
       sender_email:elements_mail[:mail],
       sender_lastname:elements_mail[:name],
@@ -56,8 +57,8 @@ class PagesController < ApplicationController
       sender_rgpd:elements_mail[:rgpd],
       sender_lang: params[:locale]
     ).new_contact.deliver_now
-
     puts "--- Email envoyé ---"
+    end
 
     if params[:locale] == "fr"
       redirect_to contact_fr_path
