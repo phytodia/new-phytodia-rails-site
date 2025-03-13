@@ -58,9 +58,10 @@
   width: 100%;
   display: flex;
   max-width: 100%;
-  img {
-    display: flex;
-    width: inherit;}
+  aspect-ratio: 16/9;
+  //img {
+  //  display: flex;
+  //  width: inherit;}
 }
 .contact_form{
   min-height: 20px;
