@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
     case subject #key of objects form
     when subject == "cosmetique"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
     when subject == "analyse"
       service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
     when subject == "extraction"
