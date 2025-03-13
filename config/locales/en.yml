@@ -80,6 +80,8 @@ en:
     tel: "Phone"
     send: "Send"
     subject: "Subject"
+    your_request: "Your inquiry is about"
+    send_message: "Send a message"
 
     selectionnez: "Select"
     objects:

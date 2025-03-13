@@ -1,4 +1,4 @@
-<article class="page_custom">
+<article class="page_custom" data-controller="contact">
   <div class="page_custom_header contact_us">
     <div class="inside page_custom_header_text">
       <h1 class=""><%= t("contact.contact_titre")%></h1>
@@ -9,11 +9,11 @@
   <div id="contact_main" class="inside">
     <div class="contacts_livraison">
       <div class="contacts">
-        <div class="contact_titre">
+        <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
           <h2><%= t('contact.contacts')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
         </div>
-        <div>
+        <div data-contact-target="accordeon" class="contact_accordeon open">
           <div class="contact_address_call">
             <div class="contact_titre_icon">
               <div>
@@ -53,11 +53,11 @@
 
       </div>
       <div class="livraison">
-        <div class="contact_titre">
+        <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
           <h2><%= t('contact.livraison')%></h2>
           <%= image_tag "pictos/croix-black.svg"%>
         </div>
-        <div>
+        <div data-contact-target="accordeon" class="contact_accordeon">
           <div class="contact_address_call">
             <div class="contact_titre_icon">
               <div>
@@ -85,7 +85,13 @@
       </div>
     </div>
     <div class="contact_form">
-      <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
+      <div class="contact_titre" data-contact-target="headerAccordeon" data-action="click->contact#toggleAccordeon">
+          <h2><%= t('form.send_message')%></h2>
+          <%= image_tag "pictos/croix-black.svg"%>
+      </div>
+      <div data-contact-target="accordeon" class="contact_accordeon">
+        <h2><%= t('form.your_request')%></h2>
+        <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
         <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...", input_html:{required: true} %>
         <h2><%= t('form.coordonnees')%></h2>
         <div class="grid_form">
@@ -121,7 +127,8 @@
           <p><%= image_tag "pictos/required-star.svg"%><%= t('form.fields_necessary')%></p>
           <%= f.submit t('form.send'),class:"btn_round"%>
         </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </article>

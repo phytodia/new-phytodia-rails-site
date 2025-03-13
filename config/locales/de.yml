@@ -39,6 +39,8 @@ de:
     tel: "Teléfono"
     send: "Senden"
     subject: "Betreff"
+    your_request: "Ihr Anliegen betrifft"
+    send_message: "Eine Nachricht senden"
 
     selectionnez: "Auswählen"
     objects:

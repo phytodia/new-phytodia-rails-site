@@ -49,6 +49,8 @@ fr:
     tel: "Téléphone"
     send: "Envoyer"
     subject: "Sujet"
+    your_request: "Votre sujet concerne"
+    send_message: "Envoyer un message"
 
     selectionnez: "Sélectionnez"
     objects:
