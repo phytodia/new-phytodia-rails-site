@@ -23,21 +23,21 @@ class PagesController < ApplicationController
 
     case subject #key of objects form
     when subject == "cosmetique"
-      service_phytodia_mail = ["cj@phytodia.com","th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "analyse"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "extraction"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "ingredient"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "informations"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "stage"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     when subject == "autre"
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr" #["hunckler.thomas@hotmail.fr","cj@phytodia.com"]
     else
-      service_phytodia_mail = ["th@phytodia.com","hunckler.thomas@hotmail.fr"]
+      service_phytodia_mail = "hunckler.thomas@hotmail.fr"
     end
 
     elements_mail = params[:contact]
@@ -55,7 +55,9 @@ class PagesController < ApplicationController
       sender_files:"",
       sender_rgpd:elements_mail[:rgpd],
       sender_lang: params[:locale]
-    ).new_contact.deliver_later
+    ).new_contact.deliver_now
+
+    puts "--- Email envoyé ---"
 
     if params[:locale] == "fr"
       redirect_to contact_fr_path
