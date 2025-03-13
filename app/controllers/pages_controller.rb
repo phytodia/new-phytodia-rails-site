@@ -58,6 +58,9 @@ class PagesController < ApplicationController
       sender_lang: params[:locale]
     ).new_contact.deliver_now
     puts "--- Email envoyé ---"
+    puts subject
+    puts subject_fr
+    puts destinataire
     end
 
     if params[:locale] == "fr"
