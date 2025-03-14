@@ -87,7 +87,7 @@
         <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
 
         <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...",input_html:{required: true,data:{controller:"contact",action:"change->contact#selectObject",contact_target:"formObject"}} %>
-        <%= f.input :cosmetic_prestas, label:t('form.cosmetic_prestas'),as: :check_boxes, collection: [['Full service', 1], ['Formulation', 2],['Règlementation', 3],['Fabrication', 4]],required:false, data:{controller:"contact",contact_target:"cosmecticPresta"} %>
+        <%= f.input :cosmetic_prestas, label:t('form.cosmetic_prestas'),as: :check_boxes, collection:@cosmetic_prestas, data:{controller:"contact",contact_target:"cosmecticPresta"},required:false %>
         <h2><%= t('form.coordonnees')%></h2>
         <div class="grid_form">
           <div class="flex_form">
@@ -101,9 +101,9 @@
             <%= f.input :city, label:t('form.city'), input_html:{required: true} %>
           </div>
           <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36', input_html:{required: true} %>
-          <%= f.input :emploi, label:t('form.emploi_type'), as: :select, placeholder:"Type d'emploi",prompt:"#{t('form.selectionnez')}...", collection:[t('form.cdd/cdi'),t('form.stage'),t('form.alternance')],input_html:{data:{controller:"contact",action:"change->contact#selectStage",contact_target:"stageSelect"}} %>
-          <%= f.input :duree_stage,label:t('form.stage_duree'),as: :select, placeholder:"#{t('form.stage_duree')}",prompt:"#{t('form.selectionnez')}...", collection:[t('form.moins_8_semaines'),t('form.plus_8_semaines')] %>
-          <%= f.input :a_partir_de, label:t('form.a_partir_de'),as: :date, html5: true %>
+          <%= f.input :emploi, label:t('form.emploi_type'), as: :select, placeholder:"Type d'emploi",prompt:"#{t('form.selectionnez')}...", collection:[t('form.cdd/cdi'),t('form.stage'),t('form.alternance')],input_html:{data:{controller:"contact",action:"change->contact#selectStage",contact_target:"stageSelect"}},required:false %>
+          <%= f.input :duree_stage,label:t('form.stage_duree'),as: :select, placeholder:"#{t('form.stage_duree')}",prompt:"#{t('form.selectionnez')}...", collection:[t('form.moins_8_semaines'),t('form.plus_8_semaines')],required:false %>
+          <%= f.input :a_partir_de, label:t('form.a_partir_de'),as: :date, html5: true,required:false %>
         </div>
         <div class="grid_form">
           <h2><%= t('form.votre_message')%></h2>

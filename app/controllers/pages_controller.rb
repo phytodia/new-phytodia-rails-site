@@ -10,6 +10,15 @@ class PagesController < ApplicationController
 
   def contact
     @tels =  YAML.load_file("#{Rails.root.to_s}/db/contacts.yml")['tels']
+    #@cosmetic_prestas = ["Full service","Formulation","Règlementation","Fabrication"]
+
+    #@cosmetic_prestas = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["cosmetic_prestations_liste"].keys
+    #@cosmetic_prestas
+    cosmetic_prestas = []
+    @cosmetic_prestas.each_with_index do |item,index|
+      cosmetic_prestas << [item,index + 1]
+    end
+    @cosmetic_prestas = cosmetic_prestas
     #@objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
 
     @marker = [48.526229995125526,7.7391784820052605]
@@ -22,6 +31,12 @@ class PagesController < ApplicationController
     index_object = @objects_form.index object
     subject = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"].keys[index_object]
     subject_fr = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"][subject]
+
+    cosmetic_prestations_selected_index = params[:contact][:cosmetic_prestas].reject { |c| c.empty? }
+    array_prestas_selected = []
+    cosmetic_prestations_selected_index.each do |num|
+      array_prestas_selected << @cosmetic_prestas[num.to_i - 1 ]
+    end
 
     if subject == "cosmetique"
       service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
@@ -56,7 +71,8 @@ class PagesController < ApplicationController
         sender_message:elements_mail[:message],
         sender_files:"",
         sender_rgpd:elements_mail[:rgpd],
-        sender_lang: params[:locale]
+        sender_lang: params[:locale],
+        prestations_cosmetics: array_prestas_selected
       ).new_contact.deliver_now
       puts "--- Email envoyé ---"
       puts subject
@@ -93,6 +109,7 @@ class PagesController < ApplicationController
   private
   def set_objects_contact
     @objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
+    @cosmetic_prestas = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["cosmetic_prestations_liste"].values
   end
 
 

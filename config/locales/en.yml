@@ -95,6 +95,12 @@ en:
 
     cosmetic_prestas: "Types of service"
 
+    cosmetic_prestations_liste:
+      full_service: "Full Service"
+      formulation: "Formulation"
+      reglementation: "Regulation"
+      fabrication: "Manufacturing"
+
     selectionnez: "Select"
     objects:
       cosmetique: "Cosmetics"
