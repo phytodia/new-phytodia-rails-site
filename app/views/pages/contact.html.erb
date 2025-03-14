@@ -100,9 +100,9 @@
             <%= f.input :city, label:t('form.city'), input_html:{required: true} %>
           </div>
           <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36', input_html:{required: true} %>
-          <%= f.input :emploi, label:"Type d'emploi", as: :select, placeholder:"Type d'emploi",prompt:"Sélectionnez...", collection:["CDD/CDI","Stage","Alternance"],input_html:{data:{controller:"contact",action:"change->contact#selectStage",contact_target:"stageSelect"}} %>
-          <%= f.input :duree_stage,label:"Durée du stage",as: :select, placeholder:"Durée du stage",prompt:"Sélectionnez...", collection:["- moins de 8 semaines","+ plus de 8 semaines"] %>
-          <%= f.input :a_partir_de, label:"À partir de",as: :date, html5: true %>
+          <%= f.input :emploi, label:t('form.emploi_type'), as: :select, placeholder:"Type d'emploi",prompt:"#{t('form.selectionnez')}...", collection:[t('form.cdd/cdi'),t('form.stage'),t('form.alternance')],input_html:{data:{controller:"contact",action:"change->contact#selectStage",contact_target:"stageSelect"}} %>
+          <%= f.input :duree_stage,label:t('form.stage_duree'),as: :select, placeholder:"#{t('form.stage_duree')}",prompt:"#{t('form.selectionnez')}...", collection:[t('form.moins_8_semaines'),t('form.plus_8_semaines')] %>
+          <%= f.input :a_partir_de, label:t('form.a_partir_de'),as: :date, html5: true %>
         </div>
         <div class="grid_form">
           <h2><%= t('form.votre_message')%></h2>

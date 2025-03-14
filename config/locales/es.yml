@@ -35,6 +35,16 @@ es:
     your_request: "Su asunto concierne"
     send_message: "Enviar un mensaje"
 
+    emploi_type: "Tipo de empleo"
+    stage_duree: "Duración de la colocación"
+    a_partir_de: "Fecha de inicio"
+
+    cdd/cdi: "CONTRATO DE DURACIÓN DETERMINADA"
+    stage: "Prácticas"
+    alternance: "A tiempo parcial"
+    moins_8_semaines: "- menos de 8 semanas"
+    plus_8_semaines: "+ más de 8 semanas"
+
     selectionnez: "Seleccione"
     objects:
       cosmetique: "Cosmética"
