@@ -19,6 +19,7 @@ class ContactMailer < ApplicationMailer
 
     mail(
       to: @destinataire_service_phytodia,
+      reply_to:@sender_email,
       subject:"#{@subject} | Nouvelle demande | Phytodia",
       sender_email:@sender_email,
       sender_lastname:@sender_lastname,
