@@ -63,6 +63,11 @@ fr:
     plus_8_semaines: "+ plus de 8 semaines"
 
     cosmetic_prestas: "Types de prestation"
+    cosmetic_prestations_liste:
+      full_service: "Full Service"
+      formulation: "Formulation"
+      reglementation: "Règlementation"
+      fabrication: "Fabrication"
 
     selectionnez: "Sélectionnez"
     objects:

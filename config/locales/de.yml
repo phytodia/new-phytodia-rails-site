@@ -54,6 +54,12 @@ de:
 
     cosmetic_prestas: "Arten von Leistungen"
 
+    cosmetic_prestations_liste:
+      full_service: "Full Service"
+      formulation: "Formulierung"
+      reglementation: "Vorschriften"
+      fabrication: "Herstellung"
+
     selectionnez: "Auswählen"
     objects:
       cosmetique: "Kosmetik"

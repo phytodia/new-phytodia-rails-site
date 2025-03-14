@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def contact
     @tels =  YAML.load_file("#{Rails.root.to_s}/db/contacts.yml")['tels']
+    @cosmetic_prestas = ["Full service","Formulation","Règlementation","Fabrication"]
     #@objects_form = YAML.load_file("#{Rails.root.to_s}/config/locales/#{locale.to_s}.yml")["#{locale.to_s}"]["form"]["objects"].values
 
     @marker = [48.526229995125526,7.7391784820052605]
@@ -22,7 +23,7 @@ class PagesController < ApplicationController
     index_object = @objects_form.index object
     subject = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"].keys[index_object]
     subject_fr = YAML.load_file("#{Rails.root.to_s}/config/locales/fr.yml")["fr"]["form"]["objects"][subject]
-
+    fail
     if subject == "cosmetique"
       service_phytodia_mail = ["th@phytodia.com","cj@phytodia.com"]
     elsif subject == "analyse"
