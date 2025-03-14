@@ -93,6 +93,8 @@ en:
     moins_8_semaines: "- less than 8 weeks"
     plus_8_semaines: "+ more than 8 weeks"
 
+    cosmetic_prestas: "Types of service"
+
     selectionnez: "Select"
     objects:
       cosmetique: "Cosmetics"

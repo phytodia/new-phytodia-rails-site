@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="contact"
 export default class extends Controller {
-  static targets = ["accordeon","headerAccordeon","formObject","stageSelect"]
+  static targets = ["accordeon","headerAccordeon","formObject","stageSelect","cosmecticPresta"]
   connect() {
   }
   toggleAccordeon(event){
@@ -28,17 +28,17 @@ export default class extends Controller {
       document.querySelector(".contact_emploi").classList.remove("visible")
       document.querySelector(".contact_duree_stage").classList.remove("visible")
       document.querySelector(".contact_a_partir_de").classList.remove("visible")
+      document.querySelector(".contact_cosmetic_prestas").classList.remove("visible")
     }
     //if(event.currentTarget.value === "Cosmétique")
   }
   displayCosmetique(){
     //let classElement = document.querySelector(classAfterInsert)
-    debugger;
+    document.querySelector(".contact_cosmetic_prestas").classList.add("visible")
   }
   displayStage(){
     //let classElement = document.querySelector(classAfterInsert)
     document.querySelector(".contact_emploi").classList.add("visible")
-    ``
   }
   selectStage(event){
     //"CDD/CDI","Stage","Alternance"

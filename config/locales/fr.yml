@@ -62,6 +62,8 @@ fr:
     moins_8_semaines: "- moins de 8 semaines"
     plus_8_semaines: "+ plus de 8 semaines"
 
+    cosmetic_prestas: "Types de prestation"
+
     selectionnez: "Sélectionnez"
     objects:
       cosmetique: "Cosmétique"
