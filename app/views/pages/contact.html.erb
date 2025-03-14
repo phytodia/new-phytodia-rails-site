@@ -87,7 +87,7 @@
         <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
 
         <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...",input_html:{required: true,data:{controller:"contact",action:"change->contact#selectObject",contact_target:"formObject"}} %>
-        <%= f.input :cosmetic_prestas, label:t('form.cosmetic_prestas'),as: :check_boxes, collection: [['Full service', 1], ['Formulation', 2],['Règlementation', 3],['Fabrication', 4]], data:{controller:"contact",contact_target:"cosmecticPresta"},required:false %>
+        <%= f.input :cosmetic_prestas, label:t('form.cosmetic_prestas'),as: :check_boxes, collection:@cosmetic_prestas, data:{controller:"contact",contact_target:"cosmecticPresta"},required:false %>
         <h2><%= t('form.coordonnees')%></h2>
         <div class="grid_form">
           <div class="flex_form">

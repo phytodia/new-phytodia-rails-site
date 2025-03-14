@@ -46,5 +46,9 @@
       <td>RGPD</td>
       <td><%= @sender_rgpd%></td>
     </tr>
+    <% if !@prestations_cosmetics.empty?%>
+      <td>Prestations cosmétiques</td>
+      <td><%= @prestations_cosmetics %></td>
+    <% end %>
   </tbody>
 </table>

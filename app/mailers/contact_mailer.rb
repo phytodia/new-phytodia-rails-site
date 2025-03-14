@@ -15,6 +15,7 @@ class ContactMailer < ApplicationMailer
     @sender_files = params[:sender_files]
     @sender_rgpd = params[:sender_rgpd]
     @sender_lang = params[:sender_lang]
+    @prestations_cosmetics = params[:prestations_cosmetics]
 
     mail(
       to: @destinataire_service_phytodia,
@@ -29,7 +30,8 @@ class ContactMailer < ApplicationMailer
       sender_message:@sender_message,
       sender_files:@sender_files,
       sender_rgpd:@sender_rgpd,
-      lang_sender:@sender_lang
+      lang_sender:@sender_lang,
+      prestations_cosmetics: @prestations_cosmetics
     )
   end
 end

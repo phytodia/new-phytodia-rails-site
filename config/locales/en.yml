@@ -101,12 +101,6 @@ en:
       reglementation: "Regulation"
       fabrication: "Manufacturing"
 
-    cosmetic_prestations_liste:
-      full_service: "Full Service"
-      formulation: "Formulation"
-      reglementation: "Règlementation"
-      fabrication: "Fabrication"
-
     selectionnez: "Select"
     objects:
       cosmetique: "Cosmetics"
