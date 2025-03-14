@@ -52,6 +52,18 @@ fr:
     your_request: "Votre sujet concerne"
     send_message: "Envoyer un message"
 
+    emploi_type: "Type d'emploi"
+    stage_duree: "Durée du stage"
+    a_partir_de: "À partir de"
+
+    cdd/cdi: "CDD/CDI"
+    stage: "Stage"
+    alternance: "Alternance"
+    moins_8_semaines: "- moins de 8 semaines"
+    plus_8_semaines: "+ plus de 8 semaines"
+
+    cosmetic_prestas: "Types de prestation"
+
     selectionnez: "Sélectionnez"
     objects:
       cosmetique: "Cosmétique"

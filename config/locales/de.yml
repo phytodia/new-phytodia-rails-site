@@ -42,6 +42,18 @@ de:
     your_request: "Ihr Anliegen betrifft"
     send_message: "Eine Nachricht senden"
 
+    emploi_type: "Art der Beschäftigung"
+    stage_duree: "Dauer des Praktikums"
+    a_partir_de: "Ab"
+
+    cdd/cdi: "CDD/CDI"
+    stage: "Praktikum"
+    alternance: "Alternierende Tätigkeit"
+    moins_8_semaines: "- weniger als 8 Wochen"
+    plus_8_semaines: "+ mehr als 8 Wochen"
+
+    cosmetic_prestas: "Arten von Leistungen"
+
     selectionnez: "Auswählen"
     objects:
       cosmetique: "Kosmetik"

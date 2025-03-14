@@ -83,6 +83,18 @@ en:
     your_request: "Your inquiry is about"
     send_message: "Send a message"
 
+    emploi_type: "Type of employment"
+    stage_duree: "Duration of internship"
+    a_partir_de: "Starting date"
+
+    cdd/cdi: "FIXED-TERM CONTRACT"
+    stage: "Internship"
+    alternance: "Part-time"
+    moins_8_semaines: "- less than 8 weeks"
+    plus_8_semaines: "+ more than 8 weeks"
+
+    cosmetic_prestas: "Types of service"
+
     selectionnez: "Select"
     objects:
       cosmetique: "Cosmetics"

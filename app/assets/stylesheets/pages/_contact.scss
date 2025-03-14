@@ -71,6 +71,7 @@
     color: $green;
     font-weight: 500;
     position: relative;
+    white-space: nowrap;
     abbr{
       visibility: hidden; width: 0;
       display: none;
@@ -87,7 +88,11 @@
     right: 0;
     //required-star.svg
   }
+  .checkbox label {display: flex; align-items: center;}
   .input.select label::after{
+    content: none;
+  }
+  .check_boxes.optional label::after{
     content: none;
   }
   input,select {
@@ -199,6 +204,18 @@
   border: solid 1px green;
   //.contact_titre {display: none;}
   .contact_titre {display: none;}
+}
+
+.contact_form {
+  .contact_emploi,.contact_duree_stage,.contact_a_partir_de,.contact_cosmetic_prestas
+  {
+    height: 0;visibility: hidden;
+    display: none !important;
+  }
+  .contact_emploi,.contact_duree_stage,.contact_a_partir_de,.contact_cosmetic_prestas {
+    &.visible {display: flex !important; height: inherit;visibility: visible;}
+  }
+
 }
 @media only screen and (max-width: 40em) {
   #contact_main {
