@@ -85,7 +85,8 @@
       <div data-contact-target="accordeon" class="contact_accordeon">
         <h2><%= t('form.your_request')%></h2>
         <%= simple_form_for :contact, url: send_path, class:"form" do |f| %>
-        <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...", input_html:{required: true} %>
+
+        <%= f.input :subject, as: :select, collection:@objects_form, label:t('form.subject'), placeholder:"Selectionner",prompt: "#{t('form.selectionnez')}...",input_html:{required: true,data:{controller:"contact",action:"change->contact#selectObject",contact_target:"formObject"}} %>
         <h2><%= t('form.coordonnees')%></h2>
         <div class="grid_form">
           <div class="flex_form">
@@ -99,6 +100,9 @@
             <%= f.input :city, label:t('form.city'), input_html:{required: true} %>
           </div>
           <%= f.input :tel, label:t('form.tel'), placeholder:'i.e 06 27 43 12 36', input_html:{required: true} %>
+          <%= f.input :emploi, label:"Type d'emploi", as: :select, placeholder:"Type d'emploi",prompt:"Sélectionnez...", collection:["CDD/CDI","Stage","Alternance"],input_html:{data:{controller:"contact",action:"change->contact#selectStage",contact_target:"stageSelect"}} %>
+          <%= f.input :duree_stage,label:"Durée du stage",as: :select, placeholder:"Durée du stage",prompt:"Sélectionnez...", collection:["- moins de 8 semaines","+ plus de 8 semaines"] %>
+          <%= f.input :a_partir_de, label:"À partir de",as: :date, html5: true %>
         </div>
         <div class="grid_form">
           <h2><%= t('form.votre_message')%></h2>
