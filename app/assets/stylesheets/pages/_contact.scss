@@ -194,6 +194,7 @@
     display: flex;
     align-items: center;
     font-size: 0.8em;
+    white-space: normal !important;
   }
   label::after {content: none;}
 }
@@ -210,10 +211,10 @@
   .contact_emploi,.contact_duree_stage,.contact_a_partir_de,.contact_cosmetic_prestas
   {
     height: 0;visibility: hidden;
-    display: none !important;
+    display: none;
   }
   .contact_emploi,.contact_duree_stage,.contact_a_partir_de,.contact_cosmetic_prestas {
-    &.visible {display: flex !important; height: inherit;visibility: visible;}
+    &.visible {display: flex; height:auto;visibility: visible; box-sizing: border-box;}
   }
 
 }
